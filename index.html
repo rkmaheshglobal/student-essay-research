@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Essay Research 2026</title>
+  <style>
+    :root {
+      --navy: #0d1b2a;
+      --blue: #1b4f8a;
+      --accent: #2e86de;
+      --gold: #f5a623;
+      --green: #27ae60;
+      --light: #f4f7fb;
+      --white: #ffffff;
+      --text: #2c3e50;
+      --muted: #6c7a89;
+      --border: #dce3ed;
+      --shadow: 0 4px 24px rgba(13,27,42,0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: var(--white);
+      padding: 72px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section { padding: 60px 0; }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 36px;
+      font-size: 0.95rem;
+    }
+
+    /* ── COMPETITION CARDS ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(13,27,42,0.15);
+    }
+
+    .card-header {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .tag-cambridge { background: #e8f4fd; color: #1565c0; }
+    .tag-johnlocke { background: #fef3e2; color: #e65100; }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .card-org {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card-body { padding: 20px 28px; }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .meta-item { }
+    .meta-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .meta-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .meta-value.free { color: var(--green); }
+    .meta-value.deadline { color: #c0392b; }
+
+    .card-links { display: flex; flex-direction: column; gap: 10px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: #1a6fc4; }
+    .btn-secondary {
+      background: var(--light);
+      color: var(--blue);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: #e2eaf5; }
+
+    /* ── VISUAL GUIDES ── */
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .guide-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--accent);
+      transition: transform 0.2s;
+    }
+    .guide-card:hover { transform: translateY(-3px); }
+    .guide-card.gold { border-left-color: var(--gold); }
+    .guide-card.green { border-left-color: var(--green); }
+
+    .guide-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .guide-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .guide-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .guide-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .tab-pill {
+      background: var(--light);
+      color: var(--muted);
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .timeline-items { display: flex; flex-direction: column; gap: 0; }
+    .tl-item {
+      display: flex;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .tl-item:last-child { border-bottom: none; }
+    .tl-date {
+      min-width: 130px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--accent);
+    }
+    .tl-event {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    /* ── PRINCIPLES ── */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .principle {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .principle-num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .principle-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 48px 16px 40px; }
+      .hero-stats { gap: 24px; }
+      .meta-grid { grid-template-columns: 1fr; }
+      .tl-item { flex-direction: column; gap: 4px; }
+      .tl-date { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">🎓 University Essay Competitions · 2026</div>
+  <h1>Student Essay <span>Research</span></h1>
+  <p>Research notes, visual guides, and preparation tools for two of the world's most prestigious university essay competitions for students aged 14–18.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">2</span>
+      <span class="stat-label">Competitions</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Visual Guides</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">20+</span>
+      <span class="stat-label">Programs Covered</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">FREE</span>
+      <span class="stat-label">Entry Fee</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── COMPETITIONS ── -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Competitions</h2>
+    <p class="section-sub">Two flagship essay competitions with Oxford and Cambridge connections — both free to enter.</p>
+    <div class="cards">
+
+      <!-- John Locke -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-tag tag-johnlocke">Oxford-Affiliated</span>
+          <div class="card-title">John Locke Institute Essay Competition</div>
+          <div class="card-org">John Locke Institute · Oxford</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="meta-label">Entry Fee</div>
+              <div class="meta-value free">FREE</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Age Range</div>
+              <div class="meta-value">16 – 18</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Deadline</div>
+              <div class="meta-value deadline">April 2026</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Prize</div>
+              <div class="meta-value">Oxford Summer School</div>
+            </div>
+          </div>
+          <div class="card-links">
+            <a class="btn btn-primary" href="john-locke-essay/outputs/essay-prep-app.html">
+              📖 Open Interactive Prep Guide
+            </a>
+            <a class="btn btn-secondary" href="https://www.johnlockeinstitute.com/essay-competition" target="_blank" rel="noopener">
+              🔗 Official Website
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cambridge -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-tag tag-cambridge">Cambridge</span>
+          <div class="card-title">Cambridge Re:think Essay Competition</div>
+          <div class="card-org">Cambridge Centre for International Research (CCIR)</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="meta-label">Entry Fee</div>
+              <div class="meta-value free">FREE</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Age Range</div>
+              <div class="meta-value">14 – 18</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Next Cycle</div>
+              <div class="meta-value deadline">January 2027</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Prize</div>
+              <div class="meta-value">$650 + King's College Ceremony</div>
+            </div>
+          </div>
+          <div class="card-links">
+            <a class="btn btn-primary" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">
+              📖 Open Visual Guide
+            </a>
+            <a class="btn btn-secondary" href="https://cambridge-research.org/essay-competition/" target="_blank" rel="noopener">
+              🔗 Official Website
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── VISUAL GUIDES ── -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Visual Guides</h2>
+    <p class="section-sub">Open directly in any browser — no server, no dependencies, no installation required.</p>
+    <div class="guides-grid">
+
+      <div class="guide-card">
+        <div class="guide-icon">📚</div>
+        <div class="guide-title">John Locke Essay Prep App</div>
+        <div class="guide-desc">Interactive preparation guide for the John Locke Institute competition with question analysis and strategy.</div>
+        <div class="guide-tabs">
+          <span class="tab-pill">Overview</span>
+          <span class="tab-pill">Questions</span>
+          <span class="tab-pill">Strategy</span>
+          <span class="tab-pill">Structure</span>
+          <span class="tab-pill">Reading Lists</span>
+        </div>
+        <a class="btn btn-primary" href="john-locke-essay/outputs/essay-prep-app.html">Open Guide →</a>
+      </div>
+
+      <div class="guide-card gold">
+        <div class="guide-icon">🏛️</div>
+        <div class="guide-title">Cambridge Re:think Visual Guide</div>
+        <div class="guide-desc">Full 7-tab guide covering all 9 prompts, essay structure, reading lists, timeline, and checklist.</div>
+        <div class="guide-tabs">
+          <span class="tab-pill">Overview</span>
+          <span class="tab-pill">9 Prompts</span>
+          <span class="tab-pill">Strategy</span>
+          <span class="tab-pill">Structure</span>
+          <span class="tab-pill">Timeline</span>
+          <span class="tab-pill">Checklist</span>
+        </div>
+        <a class="btn btn-primary" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">Open Guide →</a>
+      </div>
+
+      <div class="guide-card green">
+        <div class="guide-icon">🌍</div>
+        <div class="guide-title">20+ Premium University Programs</div>
+        <div class="guide-desc">Comprehensive guide to essay competitions, summer programs, and research opportunities at top universities worldwide.</div>
+        <div class="guide-tabs">
+          <span class="tab-pill">Essay Competitions</span>
+          <span class="tab-pill">Summer Programs</span>
+          <span class="tab-pill">Research Programs</span>
+          <span class="tab-pill">Strategy</span>
+        </div>
+        <a class="btn btn-primary" href="cambridge-essay/outputs/premium-university-competitions-2026.html">Open Guide →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── KEY DATES ── -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Key Dates — 2026</h2>
+    <p class="section-sub">Important deadlines and milestones to track.</p>
+    <div class="timeline">
+      <div class="timeline-items">
+        <div class="tl-item">
+          <div class="tl-date">April 2026</div>
+          <div class="tl-event">📝 John Locke Institute Essay Competition deadline</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">May 2026</div>
+          <div class="tl-event">🚀 Breakthrough Junior Challenge deadline</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">10 May 2026</div>
+          <div class="tl-event">📣 Cambridge Re:think results announced</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">26 May 2026</div>
+          <div class="tl-event">📜 Cambridge Re:think certificates sent to winners</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">31 July 2026</div>
+          <div class="tl-event">🎓 Cambridge Re:think Award Ceremony — King's College, Cambridge</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">January 2027</div>
+          <div class="tl-event">🔄 Cambridge Re:think 2027 cycle opens</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── WINNING PRINCIPLES ── -->
+<section>
+  <div class="container">
+    <h2 class="section-title">What Wins</h2>
+    <p class="section-sub">Five principles that separate winning essays from the rest.</p>
+    <div class="principles-grid">
+      <div class="principle">
+        <div class="principle-num">01</div>
+        <div class="principle-text">Clear, specific, arguable thesis stated in the introduction</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">02</div>
+        <div class="principle-text">Academic sources from professor reading lists — not Wikipedia</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">03</div>
+        <div class="principle-text">Full paragraph dedicated to the strongest counterargument</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">04</div>
+        <div class="principle-text">Distinction between types or cases — not all X is the same</div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">05</div>
+        <div class="principle-text">Conclusion with a broader implication, not just a summary</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>
+    Student Essay Research 2026 ·
+    <a href="https://github.com/rkmaheshglobal/student-essay-research" target="_blank" rel="noopener">GitHub Repository</a>
+    · Last updated March 2026
+  </p>
+</footer>
+
+</body>
+</html>
