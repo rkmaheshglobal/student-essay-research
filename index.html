@@ -4,407 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Essay Research 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --navy: #0d1b2a;
-      --blue: #1b4f8a;
-      --accent: #2e86de;
-      --gold: #f5a623;
-      --green: #27ae60;
-      --light: #f4f7fb;
-      --white: #ffffff;
-      --text: #2c3e50;
-      --muted: #6c7a89;
-      --border: #dce3ed;
-      --shadow: 0 4px 24px rgba(13,27,42,0.10);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-      color: var(--white);
-      padding: 72px 24px 60px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 20px;
-      padding: 6px 18px;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
-    .hero h1 span { color: var(--gold); }
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.85;
-      max-width: 620px;
-      margin: 0 auto 36px;
-    }
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .stat { text-align: center; }
-    .stat-num {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--gold);
-      display: block;
-    }
-    .stat-label {
-      font-size: 0.8rem;
-      opacity: 0.75;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    /* ── LAYOUT ── */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    section { padding: 60px 0; }
-
-    .section-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .section-sub {
-      color: var(--muted);
-      margin-bottom: 36px;
-      font-size: 0.95rem;
-    }
-
-    /* ── COMPETITION CARDS ── */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(13,27,42,0.15);
-    }
-
-    .card-header {
-      padding: 24px 28px 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .card-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 4px 12px;
-      border-radius: 12px;
-      margin-bottom: 12px;
-    }
-    .tag-cambridge { background: #e8f4fd; color: #1565c0; }
-    .tag-johnlocke { background: #fef3e2; color: #e65100; }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-    .card-org {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .card-body { padding: 20px 28px; }
-
-    .meta-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .meta-item { }
-    .meta-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--muted);
-      font-weight: 600;
-    }
-    .meta-value {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .meta-value.free { color: var(--green); }
-    .meta-value.deadline { color: #c0392b; }
-
-    .card-links { display: flex; flex-direction: column; gap: 10px; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-    }
-    .btn-primary:hover { background: #1a6fc4; }
-    .btn-secondary {
-      background: var(--light);
-      color: var(--blue);
-      border: 1px solid var(--border);
-    }
-    .btn-secondary:hover { background: #e2eaf5; }
-
-    /* ── VISUAL GUIDES ── */
-    .guides-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .guide-card {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--accent);
-      transition: transform 0.2s;
-    }
-    .guide-card:hover { transform: translateY(-3px); }
-    .guide-card.gold { border-left-color: var(--gold); }
-    .guide-card.green { border-left-color: var(--green); }
-
-    .guide-icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-    .guide-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-    .guide-desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-    .guide-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 18px;
-    }
-    .tab-pill {
-      background: var(--light);
-      color: var(--muted);
-      font-size: 0.72rem;
-      padding: 3px 10px;
-      border-radius: 10px;
-      font-weight: 500;
-    }
-
-    /* ── TIMELINE ── */
-    .timeline {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 36px;
-      box-shadow: var(--shadow);
-    }
-    .timeline-items { display: flex; flex-direction: column; gap: 0; }
-    .tl-item {
-      display: flex;
-      gap: 20px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .tl-item:last-child { border-bottom: none; }
-    .tl-date {
-      min-width: 130px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--accent);
-    }
-    .tl-event {
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    /* ── PRINCIPLES ── */
-    .principles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-    .principle {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-    .principle-num {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--border);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .principle-text {
-      font-size: 0.9rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.6);
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.85rem;
-    }
-    footer a { color: var(--gold); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* ── DIVIDER ── */
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 0;
-    }
-
-    @media (max-width: 600px) {
-      .hero { padding: 48px 16px 40px; }
-      .hero-stats { gap: 24px; }
-      .meta-grid { grid-template-columns: 1fr; }
-      .tl-item { flex-direction: column; gap: 4px; }
-      .tl-date { min-width: unset; }
-    }
+    :root{--primary:#1a237e;--accent:#ff6f00;--accent-light:#ffa000;--teal:#00897b;--white:#ffffff;--light:#f5f7ff;--light2:#fafafa;--text:#2d3748;--muted:#718096;--border:#e2e8f0;--shadow:0 4px 20px rgba(26,35,126,0.10);--shadow-hover:0 12px 40px rgba(26,35,126,0.18)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins','Segoe UI',sans-serif;background:var(--light2);color:var(--text);line-height:1.6}
+    .topbar{background:var(--primary);padding:14px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+    .topbar-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+    .logo-text{color:var(--white);font-size:16px;font-weight:700}
+    .logo-text span{color:#ffa000}
+    .nav-links{display:flex;gap:6px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13px;font-weight:500;padding:6px 14px;border-radius:6px;transition:all .2s}
+    .nav-links a:hover{background:rgba(255,255,255,.12);color:var(--white)}
+    .hero{background:linear-gradient(135deg,#1a237e 0%,#311b92 50%,#4a148c 100%);color:var(--white);padding:90px 24px 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(255,111,0,.08) 0%,transparent 60%)}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,111,0,.25);border:1px solid rgba(255,111,0,.5);color:#ffcc80;border-radius:30px;padding:6px 20px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.03em;margin-bottom:18px;line-height:1.15}
+    .hero h1 span{color:#ffcc02}
+    .hero p{font-size:1.05rem;opacity:.85;max-width:600px;margin:0 auto 40px;font-weight:300}
+    .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
+    .btn-hero{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;transition:all .25s;font-family:'Poppins',sans-serif}
+    .btn-hero-primary{background:var(--accent);color:var(--white);box-shadow:0 4px 20px rgba(255,111,0,.4)}
+    .btn-hero-primary:hover{background:#e65100;transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,111,0,.5)}
+    .btn-hero-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.5)}
+    .btn-hero-outline:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+    .hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+    .stat{text-align:center}
+    .stat-num{font-size:2.2rem;font-weight:800;color:#ffcc02;display:block;line-height:1}
+    .stat-label{font-size:.75rem;opacity:.7;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+    .container{max-width:1140px;margin:0 auto;padding:0 24px}
+    section{padding:72px 0}
+    .bg-light{background:var(--light)}
+    .section-label{display:inline-block;background:rgba(26,35,126,.08);color:var(--primary);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:5px 14px;border-radius:20px;margin-bottom:12px}
+    .section-title{font-size:2rem;font-weight:700;color:var(--primary);margin-bottom:10px;letter-spacing:-.02em}
+    .section-sub{color:var(--muted);margin-bottom:44px;font-size:.95rem;max-width:560px}
+    .divider{height:1px;background:var(--border)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+    .card{background:var(--white);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;transition:transform .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+    .card-top{height:6px}
+    .card-top.blue{background:linear-gradient(90deg,var(--primary),#5c6bc0)}
+    .card-top.orange{background:linear-gradient(90deg,var(--accent),var(--accent-light))}
+    .card-header{padding:24px 28px 18px;border-bottom:1px solid var(--border)}
+    .card-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+    .tag-cambridge{background:#e8eaf6;color:var(--primary)}
+    .tag-johnlocke{background:#fff3e0;color:var(--accent)}
+    .card-title{font-size:1.15rem;font-weight:700;color:var(--primary);margin-bottom:4px}
+    .card-org{font-size:.82rem;color:var(--muted)}
+    .card-body{padding:22px 28px}
+    .meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+    .meta-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:2px}
+    .meta-value{font-size:.88rem;font-weight:600;color:var(--text)}
+    .meta-value.free{color:var(--teal)}
+    .meta-value.deadline{color:#c62828}
+    .card-links{display:flex;flex-direction:column;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;transition:all .2s;font-family:'Poppins',sans-serif}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),#3949ab);color:var(--white);box-shadow:0 4px 14px rgba(26,35,126,.25)}
+    .btn-primary:hover{background:linear-gradient(135deg,#0d1b6e,var(--primary));box-shadow:0 6px 20px rgba(26,35,126,.35);transform:translateY(-1px)}
+    .btn-secondary{background:var(--light);color:var(--primary);border:1.5px solid var(--border)}
+    .btn-secondary:hover{background:#e8eaf6;border-color:#9fa8da}
+    .guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+    .guide-card{background:var(--white);border-radius:18px;padding:30px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+    .guide-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+    .guide-card.blue::before{background:linear-gradient(90deg,var(--primary),#5c6bc0)}
+    .guide-card.orange::before{background:linear-gradient(90deg,var(--accent),var(--accent-light))}
+    .guide-card.teal::before{background:linear-gradient(90deg,var(--teal),#26a69a)}
+    .guide-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+    .guide-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px}
+    .guide-icon.blue{background:#e8eaf6}
+    .guide-icon.orange{background:#fff3e0}
+    .guide-icon.teal{background:#e0f2f1}
+    .guide-title{font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:8px}
+    .guide-desc{font-size:.85rem;color:var(--muted);margin-bottom:18px;line-height:1.6}
+    .guide-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+    .tab-pill{background:var(--light);color:var(--muted);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+    .timeline-wrap{background:var(--white);border-radius:20px;padding:40px;box-shadow:var(--shadow)}
+    .tl-item{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+    .tl-item:last-child{border-bottom:none}
+    .tl-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px;flex-shrink:0}
+    .tl-date{min-width:140px;font-weight:600;font-size:13px;color:var(--primary)}
+    .tl-event{font-size:14px;color:var(--text)}
+    .principles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+    .principle{background:var(--white);border-radius:16px;padding:28px 24px;box-shadow:var(--shadow);border-bottom:3px solid var(--accent);transition:transform .2s}
+    .principle:hover{transform:translateY(-3px)}
+    .principle-num{font-size:2.5rem;font-weight:800;color:#e8eaf6;line-height:1;margin-bottom:10px}
+    .principle-text{font-size:.88rem;color:var(--text);font-weight:500;line-height:1.5}
+    footer{background:var(--primary);color:rgba(255,255,255,.6);text-align:center;padding:36px 24px;font-size:13px}
+    footer a{color:#ffcc02;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    .footer-brand{font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px}
+    .footer-brand span{color:#ffcc02}
+    @media(max-width:640px){.hero{padding:60px 16px 50px}.hero-stats{gap:28px}.meta-grid{grid-template-columns:1fr}.tl-item{flex-direction:column;gap:4px}.tl-date{min-width:unset}.nav-links{display:none}.timeline-wrap{padding:24px 20px}}
   </style>
 </head>
 <body>
-
-<!-- ── HERO ── -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="#">
+      <div class="logo-icon">&#128218;</div>
+      <span class="logo-text">Student Essay <span>Research</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#competitions">Competitions</a></li>
+      <li><a href="#guides">Visual Guides</a></li>
+      <li><a href="#dates">Key Dates</a></li>
+      <li><a href="https://github.com/rkmaheshglobal/student-essay-research" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="hero">
-  <div class="hero-badge">🎓 University Essay Competitions · 2026</div>
-  <h1>Student Essay <span>Research</span></h1>
-  <p>Research notes, visual guides, and preparation tools for two of the world's most prestigious university essay competitions for students aged 14–18.</p>
+  <div class="hero-badge">&#127891; University Essay Competitions &middot; 2026</div>
+  <h1>Ace Your <span>Essay</span><br>Competition</h1>
+  <p>Research notes, visual guides, and preparation tools for two of the world&rsquo;s most prestigious university essay competitions for students aged 14&ndash;18.</p>
+  <div class="hero-cta">
+    <a class="btn-hero btn-hero-primary" href="john-locke-essay/outputs/essay-prep-app.html">&#128214; Open JLI Prep Guide</a>
+    <a class="btn-hero btn-hero-outline" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">&#127963; Cambridge Guide</a>
+  </div>
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num">2</span>
-      <span class="stat-label">Competitions</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">3</span>
-      <span class="stat-label">Visual Guides</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">20+</span>
-      <span class="stat-label">Programs Covered</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">FREE</span>
-      <span class="stat-label">Entry Fee</span>
-    </div>
+    <div class="stat"><span class="stat-num">2</span><span class="stat-label">Competitions</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Visual Guides</span></div>
+    <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Programs Covered</span></div>
+    <div class="stat"><span class="stat-num">FREE</span><span class="stat-label">Entry Fee</span></div>
   </div>
 </div>
-
-<!-- ── COMPETITIONS ── -->
-<section>
+<!-- COMPETITIONS -->
+<section id="competitions">
   <div class="container">
-    <h2 class="section-title">Competitions</h2>
-    <p class="section-sub">Two flagship essay competitions with Oxford and Cambridge connections — both free to enter.</p>
+    <span class="section-label">&#127942; Competitions</span>
+    <h2 class="section-title">Two Flagship Competitions</h2>
+    <p class="section-sub">Oxford and Cambridge-affiliated essay competitions &mdash; both completely free to enter.</p>
     <div class="cards">
-
-      <!-- John Locke -->
       <div class="card">
+        <div class="card-top blue"></div>
         <div class="card-header">
           <span class="card-tag tag-johnlocke">Oxford-Affiliated</span>
           <div class="card-title">John Locke Institute Essay Competition</div>
-          <div class="card-org">John Locke Institute · Oxford</div>
+          <div class="card-org">John Locke Institute &middot; Oxford</div>
         </div>
         <div class="card-body">
           <div class="meta-grid">
-            <div class="meta-item">
-              <div class="meta-label">Entry Fee</div>
-              <div class="meta-value free">FREE</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Age Range</div>
-              <div class="meta-value">16 – 18</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Deadline</div>
-              <div class="meta-value deadline">April 2026</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Prize</div>
-              <div class="meta-value">Oxford Summer School</div>
-            </div>
+            <div><div class="meta-label">Entry Fee</div><div class="meta-value free">&#9989; FREE</div></div>
+            <div><div class="meta-label">Age Range</div><div class="meta-value">16 &ndash; 18</div></div>
+            <div><div class="meta-label">Deadline</div><div class="meta-value deadline">May 31, 2026</div></div>
+            <div><div class="meta-label">Prize</div><div class="meta-value">Oxford Summer School</div></div>
           </div>
           <div class="card-links">
-            <a class="btn btn-primary" href="john-locke-essay/outputs/essay-prep-app.html">
-              📖 Open Interactive Prep Guide
-            </a>
-            <a class="btn btn-secondary" href="https://www.johnlockeinstitute.com/essay-competition" target="_blank" rel="noopener">
-              🔗 Official Website
-            </a>
+            <a class="btn btn-primary" href="john-locke-essay/outputs/essay-prep-app.html">&#128214; Open Interactive Prep Guide</a>
+            <a class="btn btn-secondary" href="https://www.johnlockeinstitute.com/essay-competition" target="_blank" rel="noopener">&#128279; Official JLI Website</a>
           </div>
         </div>
       </div>
-
-      <!-- Cambridge -->
       <div class="card">
+        <div class="card-top orange"></div>
         <div class="card-header">
           <span class="card-tag tag-cambridge">Cambridge</span>
           <div class="card-title">Cambridge Re:think Essay Competition</div>
@@ -412,171 +165,98 @@
         </div>
         <div class="card-body">
           <div class="meta-grid">
-            <div class="meta-item">
-              <div class="meta-label">Entry Fee</div>
-              <div class="meta-value free">FREE</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Age Range</div>
-              <div class="meta-value">14 – 18</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Next Cycle</div>
-              <div class="meta-value deadline">January 2027</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Prize</div>
-              <div class="meta-value">$650 + King's College Ceremony</div>
-            </div>
+            <div><div class="meta-label">Entry Fee</div><div class="meta-value free">&#9989; FREE</div></div>
+            <div><div class="meta-label">Age Range</div><div class="meta-value">14 &ndash; 18</div></div>
+            <div><div class="meta-label">Next Cycle</div><div class="meta-value deadline">January 2027</div></div>
+            <div><div class="meta-label">Prize</div><div class="meta-value">$650 + King&rsquo;s College Ceremony</div></div>
           </div>
           <div class="card-links">
-            <a class="btn btn-primary" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">
-              📖 Open Visual Guide
-            </a>
-            <a class="btn btn-secondary" href="https://cambridge-research.org/essay-competition/" target="_blank" rel="noopener">
-              🔗 Official Website
-            </a>
+            <a class="btn btn-primary" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">&#128214; Open Visual Guide</a>
+            <a class="btn btn-secondary" href="https://cambridge-research.org/essay-competition/" target="_blank" rel="noopener">&#128279; Official Cambridge Website</a>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- ── VISUAL GUIDES ── -->
-<section>
+<!-- VISUAL GUIDES -->
+<section id="guides" class="bg-light">
   <div class="container">
+    <span class="section-label">&#128218; Resources</span>
     <h2 class="section-title">Visual Guides</h2>
-    <p class="section-sub">Open directly in any browser — no server, no dependencies, no installation required.</p>
+    <p class="section-sub">Open directly in any browser &mdash; no server, no dependencies, no installation required.</p>
     <div class="guides-grid">
-
-      <div class="guide-card">
-        <div class="guide-icon">📚</div>
+      <div class="guide-card blue">
+        <div class="guide-icon blue">&#128218;</div>
         <div class="guide-title">John Locke Essay Prep App</div>
-        <div class="guide-desc">Interactive preparation guide for the John Locke Institute competition with question analysis and strategy.</div>
+        <div class="guide-desc">Interactive preparation guide for the JLI Economics competition with question analysis, thesis options, key data, and strategy.</div>
         <div class="guide-tabs">
-          <span class="tab-pill">Overview</span>
-          <span class="tab-pill">Questions</span>
-          <span class="tab-pill">Strategy</span>
-          <span class="tab-pill">Structure</span>
-          <span class="tab-pill">Reading Lists</span>
+          <span class="tab-pill">Dashboard</span><span class="tab-pill">Q1&ndash;Q3 Analysis</span><span class="tab-pill">Frameworks</span><span class="tab-pill">Reading List</span><span class="tab-pill">Checklist</span>
         </div>
-        <a class="btn btn-primary" href="john-locke-essay/outputs/essay-prep-app.html">Open Guide →</a>
+        <a class="btn btn-primary" href="john-locke-essay/outputs/essay-prep-app.html">Open Prep App &rarr;</a>
       </div>
-
-      <div class="guide-card gold">
-        <div class="guide-icon">🏛️</div>
+      <div class="guide-card orange">
+        <div class="guide-icon orange">&#127963;</div>
         <div class="guide-title">Cambridge Re:think Visual Guide</div>
-        <div class="guide-desc">Full 7-tab guide covering all 9 prompts, essay structure, reading lists, timeline, and checklist.</div>
+        <div class="guide-desc">Full 7-tab guide covering all 9 prompts, essay structure, reading lists, timeline, and submission checklist.</div>
         <div class="guide-tabs">
-          <span class="tab-pill">Overview</span>
-          <span class="tab-pill">9 Prompts</span>
-          <span class="tab-pill">Strategy</span>
-          <span class="tab-pill">Structure</span>
-          <span class="tab-pill">Timeline</span>
-          <span class="tab-pill">Checklist</span>
+          <span class="tab-pill">Overview</span><span class="tab-pill">9 Prompts</span><span class="tab-pill">Strategy</span><span class="tab-pill">Structure</span><span class="tab-pill">Timeline</span><span class="tab-pill">Checklist</span>
         </div>
-        <a class="btn btn-primary" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">Open Guide →</a>
+        <a class="btn btn-primary" href="cambridge-essay/outputs/cambridge-essay-visual-guide.html">Open Guide &rarr;</a>
       </div>
-
-      <div class="guide-card green">
-        <div class="guide-icon">🌍</div>
+      <div class="guide-card teal">
+        <div class="guide-icon teal">&#127758;</div>
         <div class="guide-title">20+ Premium University Programs</div>
         <div class="guide-desc">Comprehensive guide to essay competitions, summer programs, and research opportunities at top universities worldwide.</div>
         <div class="guide-tabs">
-          <span class="tab-pill">Essay Competitions</span>
-          <span class="tab-pill">Summer Programs</span>
-          <span class="tab-pill">Research Programs</span>
-          <span class="tab-pill">Strategy</span>
+          <span class="tab-pill">Essay Competitions</span><span class="tab-pill">Summer Programs</span><span class="tab-pill">Research Programs</span><span class="tab-pill">Strategy</span>
         </div>
-        <a class="btn btn-primary" href="cambridge-essay/outputs/premium-university-competitions-2026.html">Open Guide →</a>
+        <a class="btn btn-primary" href="cambridge-essay/outputs/premium-university-competitions-2026.html">Open Guide &rarr;</a>
       </div>
-
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- ── KEY DATES ── -->
-<section>
+<!-- KEY DATES -->
+<section id="dates">
   <div class="container">
-    <h2 class="section-title">Key Dates — 2026</h2>
+    <span class="section-label">&#128197; Calendar</span>
+    <h2 class="section-title">Key Dates &mdash; 2026</h2>
     <p class="section-sub">Important deadlines and milestones to track.</p>
-    <div class="timeline">
-      <div class="timeline-items">
-        <div class="tl-item">
-          <div class="tl-date">April 2026</div>
-          <div class="tl-event">📝 John Locke Institute Essay Competition deadline</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">May 2026</div>
-          <div class="tl-event">🚀 Breakthrough Junior Challenge deadline</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">10 May 2026</div>
-          <div class="tl-event">📣 Cambridge Re:think results announced</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">26 May 2026</div>
-          <div class="tl-event">📜 Cambridge Re:think certificates sent to winners</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">31 July 2026</div>
-          <div class="tl-event">🎓 Cambridge Re:think Award Ceremony — King's College, Cambridge</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">January 2027</div>
-          <div class="tl-event">🔄 Cambridge Re:think 2027 cycle opens</div>
-        </div>
-      </div>
+    <div class="timeline-wrap">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">March 13, 2026</div><div class="tl-event">&#127919; Start preparation &mdash; read all three question deep dives</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">April 1, 2026</div><div class="tl-event">&#127919; JLI Economics questions released &mdash; choose your question immediately</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">April 3&ndash;9, 2026</div><div class="tl-event">&#128221; Develop thesis and outline; get mentor feedback</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">April 10&ndash;16, 2026</div><div class="tl-event">&#9997; Complete first draft (~2,000 words)</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">May 10, 2026</div><div class="tl-event">&#128203; JLI Secondary Competition deadline &mdash; submit for early feedback</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">May 31, 2026</div><div class="tl-event">&#127937; JLI Final Deadline &mdash; submit polished essay</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">July 31, 2026</div><div class="tl-event">&#127942; Cambridge Re:think Award Ceremony at King&rsquo;s College, Cambridge</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">January 2027</div><div class="tl-event">&#127963; Cambridge Re:think 2027 cycle opens &mdash; start preparing now</div></div>
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- ── WINNING PRINCIPLES ── -->
-<section>
+<!-- WINNING PRINCIPLES -->
+<section class="bg-light">
   <div class="container">
-    <h2 class="section-title">What Wins</h2>
-    <p class="section-sub">Five principles that separate winning essays from the rest.</p>
+    <span class="section-label">&#127942; Strategy</span>
+    <h2 class="section-title">What Winning Essays Have in Common</h2>
+    <p class="section-sub">Based on analysis of past JLI and Cambridge winning essays.</p>
     <div class="principles-grid">
-      <div class="principle">
-        <div class="principle-num">01</div>
-        <div class="principle-text">Clear, specific, arguable thesis stated in the introduction</div>
-      </div>
-      <div class="principle">
-        <div class="principle-num">02</div>
-        <div class="principle-text">Academic sources from professor reading lists — not Wikipedia</div>
-      </div>
-      <div class="principle">
-        <div class="principle-num">03</div>
-        <div class="principle-text">Full paragraph dedicated to the strongest counterargument</div>
-      </div>
-      <div class="principle">
-        <div class="principle-num">04</div>
-        <div class="principle-text">Distinction between types or cases — not all X is the same</div>
-      </div>
-      <div class="principle">
-        <div class="principle-num">05</div>
-        <div class="principle-text">Conclusion with a broader implication, not just a summary</div>
-      </div>
+      <div class="principle"><div class="principle-num">01</div><div class="principle-text">Original thesis that goes beyond the obvious &mdash; challenge the framing of the question</div></div>
+      <div class="principle"><div class="principle-num">02</div><div class="principle-text">Engages seriously with the strongest counterarguments, not strawmen</div></div>
+      <div class="principle"><div class="principle-num">03</div><div class="principle-text">Uses specific data and named academic sources &mdash; no vague &ldquo;studies show&rdquo;</div></div>
+      <div class="principle"><div class="principle-num">04</div><div class="principle-text">Applies economic theory precisely &mdash; Pareto, Kaldor-Hicks, consumer surplus</div></div>
+      <div class="principle"><div class="principle-num">05</div><div class="principle-text">Clear, memorable conclusion that synthesises rather than merely summarises</div></div>
     </div>
   </div>
 </section>
-
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
-  <p>
-    Student Essay Research 2026 ·
-    <a href="https://github.com/rkmaheshglobal/student-essay-research" target="_blank" rel="noopener">GitHub Repository</a>
-    · Last updated March 2026
-  </p>
+  <div class="footer-brand">Student Essay <span>Research</span> 2026</div>
+  <p>Preparation resources for the <a href="https://www.johnlockeinstitute.com/essay-competition" target="_blank" rel="noopener">John Locke Institute</a> and <a href="https://cambridge-research.org/essay-competition/" target="_blank" rel="noopener">Cambridge Re:think</a> essay competitions.</p>
+  <p style="margin-top:10px"><a href="https://github.com/rkmaheshglobal/student-essay-research" target="_blank" rel="noopener">&#128279; GitHub Repository</a></p>
 </footer>
-
 </body>
 </html>
