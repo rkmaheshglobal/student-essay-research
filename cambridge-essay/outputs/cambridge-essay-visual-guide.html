@@ -16,9 +16,9 @@ body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:#f5f7ff;color:
 .cd-box{background:rgba(255,255,255,0.15);border-radius:10px;padding:12px 20px;text-align:center;min-width:80px}
 .cd-box .num{font-size:28px;font-weight:800;display:block}
 .cd-box .lbl{font-size:11px;opacity:0.8;text-transform:uppercase;letter-spacing:1px}
-nav{background:#1a237e;display:flex;flex-wrap:wrap;gap:2px;padding:8px 12px;position:sticky;top:0;z-index:100}
-.nav-tab{background:transparent;border:none;color:#94a3b8;padding:7px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:all 0.2s}
-.nav-tab:hover,.nav-tab.active{background:#ff6f00;color:#fff}
+nav{background:#1a237e;display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.3)}nav::-webkit-scrollbar{display:none}
+.nav-tab{background:transparent;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,.6);padding:14px 20px;cursor:pointer;white-space:nowrap;font-size:11px;font-family:'Poppins',Arial,sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:all .2s}
+.nav-tab:hover{color:#fff;background:rgba(255,255,255,.05)}.nav-tab.active{color:#ff6f00;border-bottom-color:#ff6f00;background:transparent}
 .section{display:none;max-width:960px;margin:0 auto;padding:24px 16px}
 .section.active{display:block}
 .sh{font-size:18px;font-weight:700;color:#1a237e;border-left:4px solid #ff6f00;padding-left:12px;margin:24px 0 14px}
