@@ -19,7 +19,7 @@ body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:#f5f7ff;color:
 
 .nav-tab{background:transparent;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,.6);padding:14px 20px;cursor:pointer;white-space:nowrap;font-size:11px;font-family:'Poppins',Arial,sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:all .2s}
 .nav-tab:hover{color:#fff;background:rgba(255,255,255,.05)}.nav-tab.active{color:#ff6f00;border-bottom-color:#ff6f00;background:transparent}
-.section{display:none;max-width:960px;margin:0 auto;padding:24px 16px}
+.section{display:none;max-width:1100px;margin:0 auto;padding:24px 32px}
 .section.active{display:block}
 .sh{font-size:18px;font-weight:700;color:#1a237e;border-left:4px solid #ff6f00;padding-left:12px;margin:24px 0 14px}
 .card{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.07)}
@@ -82,9 +82,7 @@ tr:nth-child(even){background:#f8fafc}
 
     :root{--sw:230px}
     body{display:flex;min-height:100vh;margin:0}
-    #side
-    #side
-    #sidenav{width:var(--sw);background:#1a237e;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;transition:transform .3s;scrollbar-width:none;flex-shrink:0}
+    #sidenav{width:var(--sw);background:#1a237e!important;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;transition:transform .3s;scrollbar-width:none;flex-shrink:0}
     #sidenav::-webkit-scrollbar{display:none}
     #sidenav.open{transform:translateX(0)!important}
     .sh-nav{padding:20px 16px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -96,18 +94,30 @@ tr:nth-child(even){background:#f8fafc}
     .ni.active{background:#ff6f00;color:#fff;font-weight:700}
     .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:99}
     .overlay.on{display:block}
-    .hamburger{display:none;position:fixed;top:12px;left:12px;z-index:200;background:#1a237e;border:none;border-radius:8px;padding:9px 10px;cursor:pointer;flex-direction:column;gap:5px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+    .hamburger{display:none;position:fixed;top:10px;left:10px;z-index:10000;background:#1a237e;border:none;border-radius:8px;padding:9px 10px;cursor:pointer;flex-direction:column;gap:5px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
     .hamburger span{display:block;width:22px;height:2px;background:#ff6f00;border-radius:2px;transition:transform .3s,opacity .3s}
     .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .hamburger.open span:nth-child(2){opacity:0}
     .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
     main{margin-left:var(--sw);flex:1;min-width:0}
     @media(max-width:768px){
-      #side
+      #sidenav{transform:translateX(-100%)}
       .hamburger{display:flex}
       main{margin-left:0!important}
-      .section{padding:16px;padding-top:60px}
+      .section{padding:16px;padding-top:16px}
+      #site-topnav{padding-left:56px!important}
+      .cd-hero{padding:16px 12px;gap:12px}
+      .cd-num{font-size:40px}
     }
+  
+    .cd-hero{display:flex;gap:20px;padding:28px 24px;background:#f5f7ff;flex-wrap:wrap}
+    .cd-card{flex:1;min-width:200px;border-radius:14px;padding:28px 20px;text-align:center;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+    .cd-red{background:#c0392b}
+    .cd-orange{background:#d97706}
+    .cd-blue{background:#1a237e}
+    .cd-num{font-size:60px;font-weight:800;color:#ff6f00;display:block;line-height:1.1;font-family:'Poppins',Arial,sans-serif}
+    .cd-lbl{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-top:10px;opacity:0.9;font-family:'Poppins',Arial,sans-serif}
+    .cd-date{font-size:13px;opacity:0.65;margin-top:5px;font-family:sans-serif}
   </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -120,31 +130,32 @@ tr:nth-child(even){background:#f8fafc}
   <div class="sh-nav"><h1>Cambridge Re:think</h1><p>Essay Competition Guide 2026</p></div>
   <a href="../../index.html" style="display:flex;align-items:center;gap:8px;padding:9px 16px;font-size:12px;color:rgba(255,255,255,.75);font-family:sans-serif;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);transition:all .15s" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'" onmouseout="this.style.background='';this.style.color='rgba(255,255,255,.75)'">&#127968; Home</a>
   <div class="nl">Navigation</div>
-  <button class="ni active" onclick=\"go('overview',this)\">&#127968; Overview</button>
-  <button class="ni" onclick=\"go('prompts',this)\">&#10067; All 9 Prompts</button>
-  <button class="ni" onclick=\"go('strategy',this)\">&#127919; Strategy</button>
-  <button class="ni" onclick=\"go('structure',this)\">&#128196; Essay Structure</button>
-  <button class="ni" onclick=\"go('reading',this)\">&#128218; Reading Lists</button>
-  <button class="ni" onclick=\"go('timeline',this)\">&#128197; Timeline</button>
-  <button class="ni" onclick=\"go('checklist',this)\">&#9989; Checklist</button>
+  <button class="ni active" onclick="go('overview',this)">&#127968; Overview</button>
+  <button class="ni" onclick="go('prompts',this)">&#10067; All 9 Prompts</button>
+  <button class="ni" onclick="go('strategy',this)">&#127919; Strategy</button>
+  <button class="ni" onclick="go('structure',this)">&#128196; Essay Structure</button>
+  <button class="ni" onclick="go('reading',this)">&#128218; Reading Lists</button>
+  <button class="ni" onclick="go('timeline',this)">&#128197; Timeline</button>
+  <button class="ni" onclick="go('checklist',this)">&#9989; Checklist</button>
 </nav>
 <main>
 <div id="site-topnav" style="background:#1a237e;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;font-family:'Poppins','Segoe UI',sans-serif;position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,.3);"><a href="../../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;"><span style="width:32px;height:32px;background:#ff6f00;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:16px;">&#128218;</span><span style="color:#ffffff;font-size:14px;font-weight:700;">Student Essay <span style="color:#ffa000;">Research</span></span></a><span style="color:rgba(255,255,255,.6);font-size:12px;font-weight:500;">Cambridge Re:think Visual Guide</span></div>
 
-<div class="hero">
-<h1>&#127891; Cambridge Re:think Essay Competition 2026</h1>
-<div class="sub">Senior Division (Ages 14&ndash;18) &bull; Visual Study Guide &bull; 9 Prompts from Harvard, Stanford, Oxford &amp; Cambridge Professors</div>
-<div class="badges">
-<span class="badge">&#127381; FREE Entry</span>
-<span class="badge">&#128196; Max 2,000 Words</span>
-<span class="badge">&#127942; $150 Gold + Cambridge Ceremony</span>
-<span class="badge">&#127758; Open Worldwide</span>
-<span class="badge">&#128683; No AI Assistance</span>
+<div class="cd-hero">
+<div class="cd-card cd-red">
+  <span class="cd-num" id="d1">--</span>
+  <div class="cd-lbl">Days to Deadline</div>
+  <div class="cd-date">May 10, 2026</div>
 </div>
-<div class="countdown-row">
-<div class="cd-box"><span class="num" id="d1">--</span><span class="lbl">Days to Deadline</span></div>
-<div class="cd-box"><span class="num" id="d2">--</span><span class="lbl">Days to Results</span></div>
-<div class="cd-box"><span class="num" id="d3">--</span><span class="lbl">Days to Cambridge</span></div>
+<div class="cd-card cd-orange">
+  <span class="cd-num" id="d2">--</span>
+  <div class="cd-lbl">Days to Results</div>
+  <div class="cd-date">May 26, 2026</div>
+</div>
+<div class="cd-card cd-blue">
+  <span class="cd-num" id="d3">--</span>
+  <div class="cd-lbl">Days to Cambridge</div>
+  <div class="cd-date">July 31, 2026</div>
 </div>
 </div>
 
@@ -799,26 +810,26 @@ tr:nth-child(even){background:#f8fafc}
 
 <script>
 function toggleNav(){
-  var nav=document.getElementById('sidenav');
-  var btn=document.getElementById('hbtn');
-  var ov=document.getElementById('overlay');
-  nav.classList.toggle('open');
-  btn.classList.toggle('open');
-  ov.classList.toggle('on');
+  var sidenav=document.getElementById('sidenav');
+  var hbtn=document.getElementById('hbtn');
+  var overlay=document.getElementById('overlay');
+  sidenav.classList.toggle('open');
+  hbtn.classList.toggle('open');
+  overlay.classList.toggle('on');
 }
-function go(id,btn){
+function go(id,clickedBtn){
   document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active')});
   document.querySelectorAll('.ni').forEach(function(n){n.classList.remove('active')});
   var el=document.getElementById(id);
   if(el)el.classList.add('active');
-  if(btn)btn.classList.add('active');
+  if(clickedBtn)clickedBtn.classList.add('active');
   if(window.innerWidth<=768){
-    var nav=document.getElementById('sidenav');
-    var btn=document.getElementById('hbtn');
-    var ov=document.getElementById('overlay');
-    nav.classList.remove('open');
-    btn.classList.remove('open');
-    ov.classList.remove('on');
+    var sidenav=document.getElementById('sidenav');
+    var hbtn=document.getElementById('hbtn');
+    var overlay=document.getElementById('overlay');
+    sidenav.classList.remove('open');
+    hbtn.classList.remove('open');
+    overlay.classList.remove('on');
   }
 }
 function show(id){go_by_id(id);}
@@ -829,11 +840,11 @@ function go_by_id(id){
   if(el)el.classList.add('active');
   var map={overview:0,prompts:1,strategy:2,structure:3,reading:4,timeline:5,checklist:6};
   var btns=document.querySelectorAll('.ni');
-  if(map[id]!==undefined && btns[map[id]])btns[map[id]].classList.add('active');
+  if(map[id]!==undefined&&btns[map[id]])btns[map[id]].classList.add('active');
 }
 function toggle(id){
   var el=document.getElementById(id);
-  if(el)el.classList.toggle("open");
+  if(el)el.classList.toggle('open');
 }
 (function(){
   var dates=[new Date("2026-05-10"),new Date("2026-05-26"),new Date("2026-07-31")];
