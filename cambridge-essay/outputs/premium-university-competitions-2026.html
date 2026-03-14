@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Premium University Competitions 2026 — Student Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#f0f4f8;color:#1e293b;line-height:1.6}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#7c3aed 100%);color:#fff;padding:36px 24px 28px;text-align:center}
+.hero h1{font-size:clamp(20px,4vw,34px);font-weight:800;margin-bottom:8px}
+.hero .sub{font-size:14px;opacity:0.85;margin-bottom:16px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600}
+nav{background:#1e293b;display:flex;flex-wrap:wrap;gap:2px;padding:8px 12px;position:sticky;top:0;z-index:100}
+.nt{background:transparent;border:none;color:#94a3b8;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:500;transition:all 0.2s}
+.nt:hover,.nt.active{background:#7c3aed;color:#fff}
+.sec{display:none;max-width:1000px;margin:0 auto;padding:20px 16px}
+.sec.active{display:block}
+.sh{font-size:17px;font-weight:700;color:#1e3a5f;border-left:4px solid #7c3aed;padding-left:12px;margin:20px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:16px}
+.card{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,0.07);border-top:4px solid #7c3aed;transition:all 0.2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(124,58,237,0.15)}
+.cname{font-weight:700;font-size:15px;color:#1e293b;margin-bottom:3px}
+.corg{font-size:12px;color:#7c3aed;font-weight:600;margin-bottom:8px}
+.cmeta{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.tag{background:#f1f5f9;border-radius:10px;padding:2px 8px;font-size:11px;color:#475569;font-weight:500}
+.free{background:#f0fdf4!important;color:#16a34a!important}
+.paid{background:#fef2f2!important;color:#dc2626!important}
+.cdesc{font-size:13px;color:#475569;margin-bottom:8px;line-height:1.5}
+.clink{font-size:12px;color:#2563eb;text-decoration:none;font-weight:600}
+.clink:hover{text-decoration:underline}
+.tbadge{display:inline-block;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;margin-bottom:6px}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.stat{background:#fff;border-radius:10px;padding:14px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.sn{font-size:24px;font-weight:800;color:#7c3aed;display:block}
+.sl{font-size:11px;color:#64748b;margin-top:3px}
+.warn{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:13px;color:#dc2626}
+.tip{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:13px;color:#15803d}
+.info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:13px;color:#1d4ed8}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:14px}
+th{background:#1e293b;color:#fff;padding:9px;text-align:left}
+td{padding:8px 9px;border-bottom:1px solid #f1f5f9;vertical-align:top}
+tr:nth-child(even){background:#f8fafc}
+.footer{background:#1e293b;color:#94a3b8;text-align:center;padding:16px;font-size:12px;margin-top:20px}
+.footer a{color:#a78bfa;text-decoration:none}
+.al{list-style:none;padding:0}
+.al li{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #f1f5f9;font-size:13px;align-items:flex-start}
+.al li:last-child{border-bottom:none}
+.al li .n{background:#7c3aed;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>&#127891; Premium University Competitions 2026</h1>
+<div class="sub">Essay Competitions &bull; Summer Programs &bull; Research Opportunities &bull; For Students Ages 14&ndash;18 Worldwide</div>
+<div class="badges">
+<span class="badge">&#127881; 20+ Opportunities Listed</span>
+<span class="badge">&#127758; Open Worldwide</span>
+<span class="badge">&#127942; Harvard &bull; Oxford &bull; Cambridge &bull; MIT &bull; Yale &bull; Stanford</span>
+<span class="badge">&#128197; 2026 Deadlines</span>
+</div>
+</div>
+
+<nav>
+<button class="nt active" onclick="show('all')">&#127968; Overview</button>
+<button class="nt" onclick="show('essay')">&#128221; Essay Competitions</button>
+<button class="nt" onclick="show('summer')">&#9728;&#65039; Summer Programs</button>
+<button class="nt" onclick="show('research')">&#128300; Research Programs</button>
+<button class="nt" onclick="show('strategy')">&#127919; Strategy</button>
+</nav>
+
+<!-- OVERVIEW -->
+<div id="all" class="sec active">
+<div class="sh">&#127775; Top-Tier Opportunities at a Glance</div>
+<div class="stat-row">
+<div class="stat"><span class="sn">20+</span><div class="sl">Opportunities Listed</div></div>
+<div class="stat"><span class="sn">8</span><div class="sl">Free Essay Competitions</div></div>
+<div class="stat"><span class="sn">6</span><div class="sl">Ivy League / Oxbridge Programs</div></div>
+<div class="stat"><span class="sn">50+</span><div class="sl">Countries Eligible</div></div>
+</div>
+<div class="tip">&#128161; <strong>Strategy:</strong> Apply to 3&ndash;5 competitions per year. Mix essay competitions (build writing + critical thinking) with summer programs (build research skills + university exposure). Both are significant differentiators on university applications.</div>
+
+<div class="sh">&#128221; Essay Competitions &mdash; Quick Comparison</div>
+<div style="overflow-x:auto"><table>
+<tr><th>Competition</th><th>University</th><th>Age</th><th>Fee</th><th>Prize / Benefit</th><th>Deadline</th><th>Prestige</th></tr>
+<tr><td><strong>Cambridge Re:think</strong></td><td>Cambridge / CCIR</td><td>14&ndash;18</td><td class="free">FREE</td><td>$150 + $500 scholarship + Cambridge ceremony</td><td>Jan 2026</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>John Locke Institute</strong></td><td>Oxford-affiliated</td><td>16&ndash;18</td><td class="free">FREE</td><td>Oxford summer school ($2,000) + cash prizes</td><td>Apr 2026</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>LSE Essay Competition</strong></td><td>London School of Economics</td><td>16&ndash;18</td><td class="free">FREE</td><td>Recognition + LSE prize ceremony</td><td>Mar 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Warwick Economics Essay</strong></td><td>University of Warwick</td><td>16&ndash;18</td><td class="free">FREE</td><td>Cash prize + recognition</td><td>Mar 2026</td><td>&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>UCL Global Citizenship Essay</strong></td><td>University College London</td><td>16&ndash;18</td><td class="free">FREE</td><td>Recognition + UCL visit</td><td>Apr 2026</td><td>&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Concord Review</strong></td><td>Harvard-linked journal</td><td>14&ndash;18</td><td>$60</td><td>Publication in academic journal</td><td>Rolling</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Int'l Philosophy Olympiad</strong></td><td>International</td><td>16&ndash;18</td><td class="free">FREE</td><td>Gold/Silver/Bronze medal</td><td>Feb 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Int'l Economics Olympiad</strong></td><td>International</td><td>16&ndash;18</td><td class="free">FREE</td><td>Gold/Silver/Bronze medal</td><td>Mar 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Breakthrough Junior Challenge</strong></td><td>Breakthrough Prize Foundation</td><td>13&ndash;18</td><td class="free">FREE</td><td>$250,000 college scholarship</td><td>May 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+</table></div>
+
+<div class="sh">&#9728;&#65039; Summer Programs &mdash; Quick Comparison</div>
+<div style="overflow-x:auto"><table>
+<tr><th>Program</th><th>University</th><th>Age</th><th>Cost</th><th>Duration</th><th>Deadline</th><th>Prestige</th></tr>
+<tr><td><strong>Yale Young Global Scholars</strong></td><td>Yale University</td><td>15&ndash;17</td><td>$6,500 (aid available)</td><td>2 weeks</td><td>Jan 2026</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Harvard Secondary School Program</strong></td><td>Harvard University</td><td>15&ndash;18</td><td>$5,000&ndash;$15,000 (aid)</td><td>3&ndash;7 weeks</td><td>Jan 2026</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Stanford Pre-Collegiate Studies</strong></td><td>Stanford University</td><td>13&ndash;18</td><td>$4,000&ndash;$12,000</td><td>2&ndash;3 weeks</td><td>Feb 2026</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>MIT PRIMES</strong></td><td>MIT</td><td>15&ndash;18</td><td class="free">FREE</td><td>Year-long</td><td>Nov 2025</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Oxford Scholastica Academy</strong></td><td>University of Oxford</td><td>13&ndash;18</td><td>$3,500&ndash;$5,000</td><td>2 weeks</td><td>Mar 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Cambridge Immerse Education</strong></td><td>University of Cambridge</td><td>13&ndash;18</td><td>$3,500&ndash;$5,500</td><td>2 weeks</td><td>Mar 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>LSE Summer School</strong></td><td>London School of Economics</td><td>16&ndash;18</td><td>$3,000&ndash;$5,000</td><td>3 weeks</td><td>Feb 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+<tr><td><strong>Sutton Trust US Programme</strong></td><td>Harvard/Yale/MIT etc.</td><td>17&ndash;18</td><td class="free">FREE (UK only)</td><td>1 week</td><td>Jan 2026</td><td>&#11088;&#11088;&#11088;&#11088;</td></tr>
+</table></div>
+</div>
+
+<!-- ESSAY COMPETITIONS -->
+<div id="essay" class="sec">
+<div class="sh">&#128221; Premium Essay Competitions 2026</div>
+<div class="tip">&#128161; Essay competitions are the highest-ROI activity for university applications. A win or shortlist is a significant differentiator. Start with Cambridge Re:think and John Locke &mdash; both are free and globally recognised.</div>
+<div class="grid">
+
+<div class="card" style="border-top-color:#7c3aed">
+<div class="tbadge" style="background:#ede9fe;color:#5b21b6">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1 &mdash; Most Prestigious</div>
+<div class="cname">Cambridge Re:think Essay Competition</div>
+<div class="corg">Cambridge Centre for International Research (CCIR)</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 14&ndash;18</span><span class="tag">Worldwide</span><span class="tag">2,000 words</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">9 prompts from Harvard/Oxford/Cambridge/Stanford professors. 13,000+ submissions in 2025 from 50+ countries. Gold prize: $150 cash + $500 scholarship + Cambridge ceremony. Double-blind review by Harvard/MIT/Stanford/Cambridge/Oxford scholars. Topics: populism, AI, colonial artifacts, open borders, healing, and more.</div>
+<a class="clink" href="https://cambridge-research.org/essay-competition/" target="_blank">&#128279; cambridge-research.org &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#1e3a5f">
+<div class="tbadge" style="background:#dbeafe;color:#1e40af">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1 &mdash; Most Prestigious</div>
+<div class="cname">John Locke Institute Essay Competition</div>
+<div class="corg">John Locke Institute (Oxford-affiliated)</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 16&ndash;18</span><span class="tag">Worldwide</span><span class="tag">2,000 words</span><span class="tag">Deadline: Apr 2026</span></div>
+<div class="cdesc">One of the most prestigious essay competitions globally. 7 subjects: Philosophy, Politics, Economics, History, Psychology, Law, Theology. Winners receive Oxford summer school scholarship ($2,000 value) + cash prizes up to $2,000. Judged by Oxford and Cambridge academics. Extremely competitive &mdash; but a win is transformative for university applications.</div>
+<a class="clink" href="https://www.johnlockeinstitute.com/essay-competition" target="_blank">&#128279; johnlockeinstitute.com &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#2563eb">
+<div class="tbadge" style="background:#eff6ff;color:#1d4ed8">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">LSE Essay Competition</div>
+<div class="corg">London School of Economics</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 16&ndash;18</span><span class="tag">UK + International</span><span class="tag">1,500&ndash;2,000 words</span><span class="tag">Deadline: Mar 2026</span></div>
+<div class="cdesc">Annual essay competition run by LSE student societies. Topics in economics, politics, and social science. Winners invited to LSE for prize-giving ceremony. Strong signal for LSE, UCL, and Oxbridge applications. Check LSE student union website for current year's topic.</div>
+<a class="clink" href="https://www.lse.ac.uk/" target="_blank">&#128279; lse.ac.uk &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#10b981">
+<div class="tbadge" style="background:#f0fdf4;color:#166534">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">Warwick Economics Essay Competition</div>
+<div class="corg">University of Warwick &mdash; Economics Department</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 16&ndash;18</span><span class="tag">UK + International</span><span class="tag">1,500 words</span><span class="tag">Deadline: Mar 2026</span></div>
+<div class="cdesc">Run by the University of Warwick Economics Department. Cash prizes for top essays. Topics change annually &mdash; typically applied economics or policy questions. Strong signal for economics university applications at Warwick, LSE, UCL, and Oxbridge.</div>
+<a class="clink" href="https://warwick.ac.uk/fac/soc/economics/" target="_blank">&#128279; warwick.ac.uk &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#f59e0b">
+<div class="tbadge" style="background:#fef3c7;color:#92400e">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">UCL Global Citizenship Essay Competition</div>
+<div class="corg">University College London</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 16&ndash;18</span><span class="tag">Worldwide</span><span class="tag">1,500 words</span><span class="tag">Deadline: Apr 2026</span></div>
+<div class="cdesc">UCL's annual essay competition on global issues and citizenship. Winners invited to UCL for ceremony. Strong signal for UCL and Russell Group applications. Topics typically focus on global challenges, sustainability, and social justice.</div>
+<a class="clink" href="https://www.ucl.ac.uk/" target="_blank">&#128279; ucl.ac.uk &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#8b5cf6">
+<div class="tbadge" style="background:#ede9fe;color:#5b21b6">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">The Concord Review</div>
+<div class="corg">The Concord Review (Harvard-linked academic journal)</div>
+<div class="cmeta"><span class="tag paid">$60 submission fee</span><span class="tag">Ages 14&ndash;18</span><span class="tag">Worldwide</span><span class="tag">4,000&ndash;10,000 words</span><span class="tag">Rolling deadline</span></div>
+<div class="cdesc">The only academic journal in the world that publishes research essays by secondary school students. Published since 1987. A publication here is equivalent to a peer-reviewed academic publication for a high school student. Extremely prestigious for humanities applicants to top universities. Requires original historical research.</div>
+<a class="clink" href="https://www.tcr.org/" target="_blank">&#128279; tcr.org &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#ef4444">
+<div class="tbadge" style="background:#fef2f2;color:#991b1b">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">International Philosophy Olympiad (IPO)</div>
+<div class="corg">International Federation of Philosophical Societies</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 16&ndash;18</span><span class="tag">Worldwide</span><span class="tag">4 pages</span><span class="tag">Deadline: Feb 2026</span></div>
+<div class="cdesc">Annual international philosophy essay competition. Students write a 4-page philosophical essay in a foreign language (not their mother tongue). Gold, Silver, Bronze medals. You represent your country. Extremely prestigious for philosophy, PPE, and law applicants. Must qualify through national selection first.</div>
+<a class="clink" href="https://www.philosophy-olympiad.org/" target="_blank">&#128279; philosophy-olympiad.org &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#06b6d4">
+<div class="tbadge" style="background:#ecfeff;color:#0e7490">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">International Economics Olympiad (IEO)</div>
+<div class="corg">International Economics Olympiad Foundation</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 16&ndash;18</span><span class="tag">Worldwide</span><span class="tag">Essay + Case Study</span><span class="tag">Deadline: Mar 2026</span></div>
+<div class="cdesc">Annual international economics competition with three components: economics theory, case study, and financial literacy. Represents your country. Gold, Silver, Bronze medals. Strong signal for economics, finance, and business university applications. Must qualify through national selection.</div>
+<a class="clink" href="https://econ-olympiad.org/" target="_blank">&#128279; econ-olympiad.org &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#14b8a6">
+<div class="tbadge" style="background:#f0fdfa;color:#0f766e">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">Breakthrough Junior Challenge</div>
+<div class="corg">Breakthrough Prize Foundation / Khan Academy</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 13&ndash;18</span><span class="tag">Worldwide</span><span class="tag">3-minute video</span><span class="tag">Deadline: May 2026</span></div>
+<div class="cdesc">Create a short video (max 3 minutes) explaining a complex scientific concept in an engaging way. Winner receives $250,000 college scholarship + $50,000 for their teacher + $100,000 science lab for their school. Judged by leading scientists including Nobel laureates. Strong signal for STEM university applications.</div>
+<a class="clink" href="https://breakthroughjuniorchallenge.org/" target="_blank">&#128279; breakthroughjuniorchallenge.org &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#ec4899">
+<div class="tbadge" style="background:#fdf2f8;color:#9d174d">&#11088;&#11088;&#11088; Tier 3</div>
+<div class="cname">Scholastic Art &amp; Writing Awards</div>
+<div class="corg">Scholastic Inc. (US-based, international)</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 13&ndash;18</span><span class="tag">US + International</span><span class="tag">Various formats</span><span class="tag">Deadline: Dec 2025</span></div>
+<div class="cdesc">The largest, most prestigious recognition program for creative teens in the US. Categories include personal essay, short story, poetry, journalism, and more. Gold Medal winners receive national recognition. Strong signal for creative writing and humanities university applications. Alumni include Truman Capote, Sylvia Plath, and Andy Warhol.</div>
+<a class="clink" href="https://www.artandwriting.org/" target="_blank">&#128279; artandwriting.org &rarr;</a>
+</div>
+
+</div>
+</div>
+
+<!-- SUMMER PROGRAMS -->
+<div id="summer" class="sec">
+<div class="sh">&#9728;&#65039; Premium University Summer Programs 2026</div>
+<div class="warn">&#128683; Most summer programs charge fees ($3,000&ndash;$15,000). Many offer need-based financial aid &mdash; always apply for aid. Deadlines are typically January&ndash;March 2026. Apply early.</div>
+<div class="grid">
+
+<div class="card" style="border-top-color:#1e3a5f">
+<div class="tbadge" style="background:#dbeafe;color:#1e40af">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1</div>
+<div class="cname">Yale Young Global Scholars (YYGS)</div>
+<div class="corg">Yale University</div>
+<div class="cmeta"><span class="tag paid">$6,500 (aid available)</span><span class="tag">Ages 15&ndash;17</span><span class="tag">Worldwide</span><span class="tag">2 weeks</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">Two-week intensive academic program at Yale. Interdisciplinary seminars, lectures by Yale faculty, collaborative projects with students from 100+ countries. Highly selective (~10% acceptance rate). Strong signal for Yale and Ivy League applications. Need-based financial aid available including full scholarships.</div>
+<a class="clink" href="https://globalscholars.yale.edu/" target="_blank">&#128279; globalscholars.yale.edu &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#7c3aed">
+<div class="tbadge" style="background:#ede9fe;color:#5b21b6">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1</div>
+<div class="cname">Harvard Secondary School Program</div>
+<div class="corg">Harvard University</div>
+<div class="cmeta"><span class="tag paid">$5,000&ndash;$15,000 (aid available)</span><span class="tag">Ages 15&ndash;18</span><span class="tag">Worldwide</span><span class="tag">3&ndash;7 weeks</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">Take actual Harvard courses for university credit. Live on campus in Harvard dormitories. Courses in humanities, sciences, social sciences, pre-med, pre-law. Highly prestigious. Financial aid available. Strong signal for Harvard and Ivy League applications. Both residential and online options.</div>
+<a class="clink" href="https://www.summer.harvard.edu/high-school-programs" target="_blank">&#128279; summer.harvard.edu &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#2563eb">
+<div class="tbadge" style="background:#eff6ff;color:#1d4ed8">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1</div>
+<div class="cname">Stanford Pre-Collegiate Studies</div>
+<div class="corg">Stanford University</div>
+<div class="cmeta"><span class="tag paid">$4,000&ndash;$12,000</span><span class="tag">Ages 13&ndash;18</span><span class="tag">Worldwide</span><span class="tag">2&ndash;3 weeks</span><span class="tag">Deadline: Feb 2026</span></div>
+<div class="cdesc">Multiple programs: Summer Institutes (2 weeks, residential), Online High School (year-round), Institutes for Mathematics, Science, and Technology. Highly selective. Strong signal for Stanford and top US university applications. Courses taught by Stanford faculty and PhD students.</div>
+<a class="clink" href="https://summerinstitutes.spcs.stanford.edu/" target="_blank">&#128279; spcs.stanford.edu &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#10b981">
+<div class="tbadge" style="background:#f0fdf4;color:#166534">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1 &mdash; FREE</div>
+<div class="cname">MIT PRIMES</div>
+<div class="corg">Massachusetts Institute of Technology</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 15&ndash;18</span><span class="tag">US + International</span><span class="tag">Year-long</span><span class="tag">Deadline: Nov 2025</span></div>
+<div class="cdesc">Year-long research program where high school students work with MIT researchers on cutting-edge mathematics and computer science problems. Extremely selective. Completely FREE. One of the most prestigious high school research programs in the world. International students can participate in PRIMES-USA (remote).</div>
+<a class="clink" href="https://math.mit.edu/research/highschool/primes/" target="_blank">&#128279; math.mit.edu/primes &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#f59e0b">
+<div class="tbadge" style="background:#fef3c7;color:#92400e">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">Oxford Scholastica Academy</div>
+<div class="corg">University of Oxford</div>
+<div class="cmeta"><span class="tag paid">$3,500&ndash;$5,000 (aid available)</span><span class="tag">Ages 13&ndash;18</span><span class="tag">Worldwide</span><span class="tag">2 weeks</span><span class="tag">Deadline: Mar 2026</span></div>
+<div class="cdesc">Study at Oxford for 2 weeks. Courses in law, medicine, philosophy, politics, economics, sciences, engineering. Taught by Oxford tutors. Strong signal for Oxford applications. Financial aid available. Both residential and online options. Highly regarded by UK university admissions tutors.</div>
+<a class="clink" href="https://www.oxfordscholastica.com/" target="_blank">&#128279; oxfordscholastica.com &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#ef4444">
+<div class="tbadge" style="background:#fef2f2;color:#991b1b">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">Cambridge Immerse Education</div>
+<div class="corg">University of Cambridge</div>
+<div class="cmeta"><span class="tag paid">$3,500&ndash;$5,500 (aid available)</span><span class="tag">Ages 13&ndash;18</span><span class="tag">Worldwide</span><span class="tag">2 weeks</span><span class="tag">Deadline: Mar 2026</span></div>
+<div class="cdesc">2-week residential academic programs at Cambridge. Subjects include medicine, law, economics, engineering, humanities, sciences. Taught by Cambridge academics and PhD students. Strong signal for Cambridge applications. Financial aid available for students from lower-income backgrounds.</div>
+<a class="clink" href="https://www.immerse.education/" target="_blank">&#128279; immerse.education &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#8b5cf6">
+<div class="tbadge" style="background:#ede9fe;color:#5b21b6">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">LSE Summer School (High School)</div>
+<div class="corg">London School of Economics</div>
+<div class="cmeta"><span class="tag paid">$3,000&ndash;$5,000</span><span class="tag">Ages 16&ndash;18</span><span class="tag">Worldwide</span><span class="tag">3 weeks</span><span class="tag">Deadline: Feb 2026</span></div>
+<div class="cdesc">3-week intensive courses at LSE. Subjects: economics, finance, politics, law, sociology, data science. Earn university credit. Strong signal for LSE and Russell Group applications. Financial aid available. Both residential and online options.</div>
+<a class="clink" href="https://www.lse.ac.uk/study-at-lse/summer-schools" target="_blank">&#128279; lse.ac.uk/summer-schools &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#06b6d4">
+<div class="tbadge" style="background:#ecfeff;color:#0e7490">&#11088;&#11088;&#11088;&#11088; Tier 2 &mdash; FREE (UK only)</div>
+<div class="cname">Sutton Trust US Programme</div>
+<div class="corg">Sutton Trust</div>
+<div class="cmeta"><span class="tag free">FREE (UK state school students)</span><span class="tag">Ages 17&ndash;18</span><span class="tag">UK only</span><span class="tag">1 week</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">Fully funded trip to top US universities (Harvard, Yale, Princeton, MIT, Georgetown) for UK state school students from lower-income backgrounds. Includes flights, accommodation, and all costs. Extremely competitive. Strong signal for US university applications. One of the best opportunities for UK state school students.</div>
+<a class="clink" href="https://www.suttontrust.com/our-programmes/us-programme/" target="_blank">&#128279; suttontrust.com &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#14b8a6">
+<div class="tbadge" style="background:#f0fdfa;color:#0f766e">&#11088;&#11088;&#11088; Tier 3 &mdash; FREE (UK only)</div>
+<div class="cname">Nuffield Research Placements</div>
+<div class="corg">Nuffield Foundation (UK)</div>
+<div class="cmeta"><span class="tag free">FREE (UK students)</span><span class="tag">Ages 16&ndash;17</span><span class="tag">UK only</span><span class="tag">6 weeks</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">6-week research placement at a university, research institute, or company. Work on a real research project alongside professional researchers. FREE. Strong signal for UK university applications, especially STEM. Students present their research at a local science fair at the end.</div>
+<a class="clink" href="https://www.nuffieldresearchplacements.org/" target="_blank">&#128279; nuffieldresearchplacements.org &rarr;</a>
+</div>
+
+</div>
+</div>
+
+<!-- RESEARCH PROGRAMS -->
+<div id="research" class="sec">
+<div class="sh">&#128300; Research &amp; Academic Programs 2026</div>
+<div class="info">&#128161; Research programs are the highest-prestige activities for STEM university applications. A published paper or research award at 16&ndash;18 is extraordinary and extremely rare &mdash; it will be the centrepiece of any university application.</div>
+<div class="grid">
+
+<div class="card" style="border-top-color:#7c3aed">
+<div class="tbadge" style="background:#ede9fe;color:#5b21b6">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1 &mdash; US Only</div>
+<div class="cname">Regeneron Science Talent Search</div>
+<div class="corg">Society for Science</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 17&ndash;18</span><span class="tag">US students only</span><span class="tag">Original research paper</span><span class="tag">Deadline: Nov 2025</span></div>
+<div class="cdesc">The most prestigious pre-college science competition in the US. Submit an original research paper. Top 40 finalists invited to Washington DC. $250,000 top prize. Alumni include Nobel laureates and Fields Medal winners. Requires genuine original research conducted over months or years.</div>
+<a class="clink" href="https://www.societyforscience.org/regeneron-sts/" target="_blank">&#128279; societyforscience.org &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#1e3a5f">
+<div class="tbadge" style="background:#dbeafe;color:#1e40af">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1 &mdash; Worldwide</div>
+<div class="cname">Regeneron ISEF (International Science Fair)</div>
+<div class="corg">Society for Science (International)</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 14&ndash;18</span><span class="tag">Worldwide</span><span class="tag">Original research</span><span class="tag">Deadline: Varies by country</span></div>
+<div class="cdesc">The world's largest international pre-college science competition. Win at your regional/national science fair to qualify. Grand prize: $75,000. Represents your country. Judged by leading scientists. Strong signal for STEM university applications worldwide. Over 1,800 finalists from 70+ countries annually.</div>
+<a class="clink" href="https://www.societyforscience.org/isef/" target="_blank">&#128279; societyforscience.org/isef &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#2563eb">
+<div class="tbadge" style="background:#eff6ff;color:#1d4ed8">&#11088;&#11088;&#11088;&#11088;&#11088; Tier 1 &mdash; FREE</div>
+<div class="cname">MIT PRIMES</div>
+<div class="corg">Massachusetts Institute of Technology</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 15&ndash;18</span><span class="tag">US + International (remote)</span><span class="tag">Year-long</span><span class="tag">Deadline: Nov 2025</span></div>
+<div class="cdesc">Year-long research program working with MIT researchers on mathematics and computer science. PRIMES-USA for international students (remote). Extremely selective. Results often published in academic journals. One of the most prestigious high school research programs globally. FREE.</div>
+<a class="clink" href="https://math.mit.edu/research/highschool/primes/" target="_blank">&#128279; math.mit.edu/primes &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#10b981">
+<div class="tbadge" style="background:#f0fdf4;color:#166534">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">Research Science Institute (RSI)</div>
+<div class="corg">Center for Excellence in Education / MIT</div>
+<div class="cmeta"><span class="tag free">FREE (fully funded)</span><span class="tag">Ages 16&ndash;18</span><span class="tag">Worldwide</span><span class="tag">6 weeks at MIT</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">Fully funded 6-week summer research program at MIT. Students conduct original research under the mentorship of MIT faculty and researchers. Extremely selective (~2% acceptance). FREE including travel and accommodation. One of the most prestigious high school programs in the world. Alumni include Intel STS winners and Olympiad medalists.</div>
+<a class="clink" href="https://www.cee.org/research-science-institute" target="_blank">&#128279; cee.org/rsi &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#f59e0b">
+<div class="tbadge" style="background:#fef3c7;color:#92400e">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">Simons Summer Research Program</div>
+<div class="corg">Stony Brook University</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 17&ndash;18</span><span class="tag">US students only</span><span class="tag">7 weeks</span><span class="tag">Deadline: Jan 2026</span></div>
+<div class="cdesc">7-week summer research program at Stony Brook University. Students work with faculty mentors on original research in STEM fields. FREE. Strong signal for STEM university applications. Students present research at a symposium at the end of the program.</div>
+<a class="clink" href="https://www.stonybrook.edu/simons/" target="_blank">&#128279; stonybrook.edu/simons &rarr;</a>
+</div>
+
+<div class="card" style="border-top-color:#ec4899">
+<div class="tbadge" style="background:#fdf2f8;color:#9d174d">&#11088;&#11088;&#11088;&#11088; Tier 2</div>
+<div class="cname">International Mathematical Olympiad (IMO)</div>
+<div class="corg">International Mathematical Union</div>
+<div class="cmeta"><span class="tag free">FREE</span><span class="tag">Ages 14&ndash;18</span><span class="tag">Worldwide</span><span class="tag">6 problems over 2 days</span><span class="tag">Deadline: National selection</span></div>
+<div class="cdesc">The most prestigious mathematics competition in the world. Represent your country. Gold, Silver, Bronze medals. Must qualify through national mathematics olympiad. A gold medal at IMO is one of the most impressive achievements a high school student can have for university applications.</div>
+<a class="clink" href="https://www.imo-official.org/" target="_blank">&#128279; imo-official.org &rarr;</a>
+</div>
+
+</div>
+</div>
+
+<!-- STRATEGY -->
+<div id="strategy" class="sec">
+<div class="sh">&#127919; Application Strategy for 2026</div>
+<div class="tip">&#128161; The goal is not to win everything &mdash; it is to demonstrate <strong>genuine intellectual curiosity</strong> in a specific area. Pick 2&ndash;3 competitions that align with your intended university subject and go deep.</div>
+
+<div class="sh">&#128203; Recommended Portfolios by University Target</div>
+<div style="overflow-x:auto"><table>
+<tr><th>Target University</th><th>Subject</th><th>Priority Competitions</th><th>Summer Program</th></tr>
+<tr><td><strong>Oxford / Cambridge</strong></td><td>PPE / Philosophy / Law</td><td>John Locke (1st priority) + Cambridge Re:think + IPO</td><td>Oxford Scholastica or Cambridge Immerse</td></tr>
+<tr><td><strong>Oxford / Cambridge</strong></td><td>Economics</td><td>John Locke (Economics) + Cambridge Re:think + IEO + Warwick Essay</td><td>LSE Summer School</td></tr>
+<tr><td><strong>LSE / UCL</strong></td><td>Economics / Politics</td><td>Cambridge Re:think + LSE Essay + Warwick Essay + IEO</td><td>LSE Summer School</td></tr>
+<tr><td><strong>Harvard / Yale / Princeton</strong></td><td>Humanities / Social Science</td><td>Cambridge Re:think + John Locke + Concord Review</td><td>Yale YYGS or Harvard SSP</td></tr>
+<tr><td><strong>MIT / Stanford / Caltech</strong></td><td>STEM</td><td>Regeneron ISEF + Breakthrough Junior Challenge + IMO/IPhO</td><td>MIT PRIMES or RSI or Stanford SPCS</td></tr>
+<tr><td><strong>Any Top University</strong></td><td>Any</td><td>Cambridge Re:think (start here &mdash; free, worldwide, prestigious)</td><td>Any of the above based on budget</td></tr>
+</table>
+
+<div class="sh">&#128197; 2026 Deadline Calendar</div>
+<table>
+<tr><th>Month</th><th>Competition / Program</th><th>Action Required</th></tr>
+<tr><td><strong>Now (March 2026)</strong></td><td>Cambridge Re:think (deadline passed Jan 2026)</td><td>Prepare for next cycle; start John Locke research</td></tr>
+<tr><td><strong>April 2026</strong></td><td>John Locke Institute Essay Competition</td><td>Submit essay (Philosophy, Politics, Economics, History, Psychology, Law, Theology)</td></tr>
+<tr><td><strong>May 2026</strong></td><td>Breakthrough Junior Challenge</td><td>Submit 3-minute science video</td></tr>
+<tr><td><strong>June&ndash;July 2026</strong></td><td>Summer Programs (Yale YYGS, Harvard SSP, Stanford SPCS)</td><td>Attend if accepted; apply in Jan&ndash;Feb 2026</td></tr>
+<tr><td><strong>July 2026</strong></td><td>Cambridge Re:think Award Ceremony</td><td>King's College, Cambridge (if winner)</td></tr>
+<tr><td><strong>Sep&ndash;Nov 2026</strong></td><td>Regeneron STS, Concord Review, Scholastic Awards</td><td>Submit research papers and creative writing</td></tr>
+<tr><td><strong>Jan 2027</strong></td><td>Cambridge Re:think 2027, Yale YYGS 2027</td><td>Apply for next cycle</td></tr>
+</table>
+
+<div class="sh">&#128161; The Honest Truth About These Competitions</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-bottom:16px">
+<div style="background:#fff;border-radius:10px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,0.07);border-left:4px solid #10b981">
+<div style="font-weight:700;color:#1e293b;margin-bottom:8px">&#9989; What Actually Matters</div>
+<ul class="al">
+<li><span class="n">1</span>Genuine intellectual engagement with the topic</li>
+<li><span class="n">2</span>A clear, original, arguable thesis</li>
+<li><span class="n">3</span>Academic sources properly cited</li>
+<li><span class="n">4</span>Addressing the strongest counterargument</li>
+<li><span class="n">5</span>Writing that is precise, not just impressive-sounding</li>
+</ul>
+</div>
+<div style="background:#fff;border-radius:10px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,0.07);border-left:4px solid #ef4444">
+<div style="font-weight:700;color:#1e293b;margin-bottom:8px">&#10060; What Judges Penalise</div>
+<ul class="al">
+<li><span class="n" style="background:#ef4444">!</span>Summarising without taking a position</li>
+<li><span class="n" style="background:#ef4444">!</span>Vague thesis ("this is a complex issue")</li>
+<li><span class="n" style="background:#ef4444">!</span>Any use of AI writing assistance</li>
+<li><span class="n" style="background:#ef4444">!</span>Wikipedia or news articles as primary sources</li>
+<li><span class="n" style="background:#ef4444">!</span>Ignoring the counterargument</li>
+</ul>
+</div>
+<div style="background:#fff;border-radius:10px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,0.07);border-left:4px solid #7c3aed">
+<div style="font-weight:700;color:#1e293b;margin-bottom:8px">&#127891; University Application Value</div>
+<ul class="al">
+<li><span class="n">1</span><strong>Win</strong> at Cambridge Re:think or John Locke = transformative</li>
+<li><span class="n">2</span><strong>Shortlist / HM</strong> = strong differentiator</li>
+<li><span class="n">3</span><strong>Participation</strong> = shows intellectual initiative</li>
+<li><span class="n">4</span><strong>Multiple competitions</strong> = shows sustained commitment</li>
+<li><span class="n">5</span><strong>Research publication</strong> = extraordinary at any level</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer">&#127891; Premium University Competitions 2026 &mdash; Student Guide &bull; <a href="https://cambridge-research.org/essay-competition/" target="_blank">Cambridge Re:think</a> &bull; <a href="https://www.johnlockeinstitute.com/essay-competition" target="_blank">John Locke Institute</a></div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nt').forEach(t=>t.classList.remove('active'));
+  var el=document.getElementById(id);
+  if(el)el.classList.add('active');
+  var map={all:0,essay:1,summer:2,research:3,strategy:4};
+  var tabs=document.querySelectorAll('.nt');
+  if(map[id]!==undefined&&tabs[map[id]])tabs[map[id]].classList.add('active');
+}
+</script>
+</body>
+</html>

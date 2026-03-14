@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge Re:think Essay Competition 2026 &mdash; Student Visual Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#f0f4f8;color:#1e293b;line-height:1.6}
+.hero{background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 60%,#7c3aed 100%);color:#fff;padding:40px 24px 32px;text-align:center}
+.hero h1{font-size:clamp(22px,4vw,36px);font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.hero .sub{font-size:15px;opacity:0.88;margin-bottom:20px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:20px}
+.badge{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:5px 14px;font-size:13px;font-weight:600}
+.countdown-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cd-box{background:rgba(255,255,255,0.15);border-radius:10px;padding:12px 20px;text-align:center;min-width:80px}
+.cd-box .num{font-size:28px;font-weight:800;display:block}
+.cd-box .lbl{font-size:11px;opacity:0.8;text-transform:uppercase;letter-spacing:1px}
+nav{background:#1e293b;display:flex;flex-wrap:wrap;gap:2px;padding:8px 12px;position:sticky;top:0;z-index:100}
+.nav-tab{background:transparent;border:none;color:#94a3b8;padding:7px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;transition:all 0.2s}
+.nav-tab:hover,.nav-tab.active{background:#2563eb;color:#fff}
+.section{display:none;max-width:960px;margin:0 auto;padding:24px 16px}
+.section.active{display:block}
+.sh{font-size:18px;font-weight:700;color:#1e3a5f;border-left:4px solid #2563eb;padding-left:12px;margin:24px 0 14px}
+.card{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.07)}
+.ctitle{font-weight:700;font-size:15px;color:#1e3a5f;margin-bottom:8px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:14px}
+.stat-box{background:#fff;border-radius:10px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.07)}
+.stat-num{font-size:28px;font-weight:800;color:#2563eb;display:block}
+.stat-lbl{font-size:12px;color:#64748b;margin-top:4px}
+.prompt-card{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);border-left:4px solid #2563eb;cursor:pointer;transition:all 0.2s}
+.prompt-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(37,99,235,0.15)}
+.p1{border-left-color:#ef4444!important}.p2{border-left-color:#f97316!important}.p3{border-left-color:#8b5cf6!important}
+.p4{border-left-color:#10b981!important}.p5{border-left-color:#f59e0b!important}.p6{border-left-color:#06b6d4!important}
+.p7{border-left-color:#ec4899!important}.p8{border-left-color:#14b8a6!important}.p9{border-left-color:#6366f1!important}
+.prompt-num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:4px}
+.prompt-q{font-size:15px;font-weight:700;color:#1e293b;margin-bottom:8px}
+.prompt-meta{display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:#f1f5f9;border-radius:12px;padding:3px 10px;font-size:12px;color:#475569;font-weight:500}
+.tag.hot{background:#fef2f2;color:#dc2626}.tag.orig{background:#f0fdf4;color:#16a34a}.tag.hard{background:#faf5ff;color:#7c3aed}
+.detail-box{background:#f8fafc;border-radius:8px;padding:14px;margin-top:10px;display:none;font-size:14px}
+.detail-box.open{display:block}
+.al{list-style:none;padding:0}
+.al li{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:14px;align-items:flex-start}
+.al li:last-child{border-bottom:none}
+.al li span{background:#2563eb;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.prize-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+.prize-box{border-radius:10px;padding:14px;text-align:center}
+.prize-box.gold{background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid #f59e0b}
+.prize-box.silver{background:linear-gradient(135deg,#f1f5f9,#e2e8f0);border:2px solid #94a3b8}
+.prize-box.bronze{background:linear-gradient(135deg,#fef3c7,#fed7aa);border:2px solid #d97706}
+.prize-box.special{background:linear-gradient(135deg,#ede9fe,#ddd6fe);border:2px solid #7c3aed}
+.prize-box .pname{font-weight:700;font-size:14px;margin-bottom:4px}
+.prize-box .pamount{font-size:20px;font-weight:800;color:#1e293b}
+.prize-box .pdesc{font-size:11px;color:#64748b;margin-top:4px}
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:#e2e8f0}
+.tl-item{position:relative;margin-bottom:16px}
+.tl-item::before{content:"";position:absolute;left:-24px;top:4px;width:12px;height:12px;border-radius:50%;background:#2563eb;border:2px solid #fff;box-shadow:0 0 0 2px #2563eb}
+.tl-item.done::before{background:#10b981;box-shadow:0 0 0 2px #10b981}
+.tl-item.urgent::before{background:#ef4444;box-shadow:0 0 0 2px #ef4444}
+.tl-date{font-size:12px;font-weight:700;color:#2563eb;text-transform:uppercase;letter-spacing:0.5px}
+.tl-title{font-weight:600;font-size:14px;color:#1e293b}
+.tl-desc{font-size:13px;color:#64748b;margin-top:2px}
+.thesis-box{background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe;border-radius:10px;padding:16px;margin-bottom:12px}
+.thesis-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#2563eb;margin-bottom:6px}
+.thesis-text{font-size:14px;font-style:italic;color:#1e3a5f;line-height:1.6}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.book-card{background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,0.08);border-top:3px solid #2563eb}
+.book-title{font-weight:700;font-size:13px;color:#1e293b;margin-bottom:3px}
+.book-author{font-size:12px;color:#64748b;margin-bottom:4px}
+.book-why{font-size:12px;color:#475569;font-style:italic}
+.warn{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 14px;margin-bottom:10px;font-size:13px;color:#dc2626}
+.tip{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 14px;margin-bottom:10px;font-size:13px;color:#15803d}
+.footer{background:#1e293b;color:#94a3b8;text-align:center;padding:20px;font-size:13px;margin-top:24px}
+.footer a{color:#60a5fa;text-decoration:none}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1e293b;color:#fff;padding:10px;text-align:left}
+td{padding:9px 10px;border-bottom:1px solid #f1f5f9}
+tr:nth-child(even){background:#f8fafc}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>&#127891; Cambridge Re:think Essay Competition 2026</h1>
+<div class="sub">Senior Division (Ages 14&ndash;18) &bull; Visual Study Guide &bull; 9 Prompts from Harvard, Stanford, Oxford &amp; Cambridge Professors</div>
+<div class="badges">
+<span class="badge">&#127381; FREE Entry</span>
+<span class="badge">&#128196; Max 2,000 Words</span>
+<span class="badge">&#127942; $150 Gold + Cambridge Ceremony</span>
+<span class="badge">&#127758; Open Worldwide</span>
+<span class="badge">&#128683; No AI Assistance</span>
+</div>
+<div class="countdown-row">
+<div class="cd-box"><span class="num" id="d1">--</span><span class="lbl">Days to Deadline</span></div>
+<div class="cd-box"><span class="num" id="d2">--</span><span class="lbl">Days to Results</span></div>
+<div class="cd-box"><span class="num" id="d3">--</span><span class="lbl">Days to Cambridge</span></div>
+</div>
+</div>
+<nav>
+<button class="nav-tab active" onclick="show('overview')">&#127968; Overview</button>
+<button class="nav-tab" onclick="show('prompts')">&#10067; All 9 Prompts</button>
+<button class="nav-tab" onclick="show('strategy')">&#127919; Strategy</button>
+<button class="nav-tab" onclick="show('structure')">&#128196; Essay Structure</button>
+<button class="nav-tab" onclick="show('reading')">&#128218; Reading Lists</button>
+<button class="nav-tab" onclick="show('timeline')">&#128197; Timeline</button>
+<button class="nav-tab" onclick="show('checklist')">&#9989; Checklist</button>
+</nav>
+<div id="overview" class="section active">
+<div class="sh">&#127881; Competition at a Glance</div>
+<div class="grid3">
+<div class="stat-box"><span class="stat-num">9</span><div class="stat-lbl">Essay Prompts to Choose From</div></div>
+<div class="stat-box"><span class="stat-num">2,000</span><div class="stat-lbl">Max Word Count</div></div>
+<div class="stat-box"><span class="stat-num">13,000+</span><div class="stat-lbl">Submissions in 2025</div></div>
+<div class="stat-box"><span class="stat-num">50+</span><div class="stat-lbl">Countries Represented</div></div>
+<div class="stat-box"><span class="stat-num">FREE</span><div class="stat-lbl">Entry Fee</div></div>
+<div class="stat-box"><span class="stat-num">Top 10%</span><div class="stat-lbl">Receive Honourable Mention</div></div>
+</div>
+<div class="sh">&#127942; Prizes &mdash; Senior Division</div>
+<div class="prize-row">
+<div class="prize-box gold"><div class="pname">&#129351; Gold</div><div class="pamount">$150</div><div class="pdesc">10 recipients &bull; $500 scholarship &bull; Cambridge ceremony</div></div>
+<div class="prize-box silver"><div class="pname">&#129352; Silver</div><div class="pamount">$100</div><div class="pdesc">10 recipients &bull; $300 scholarship &bull; Cambridge ceremony</div></div>
+<div class="prize-box bronze"><div class="pname">&#129353; Bronze</div><div class="pamount">$50</div><div class="pdesc">10 recipients &bull; $200 scholarship &bull; Cambridge ceremony</div></div>
+<div class="prize-box special"><div class="pname">&#128221; Logos Prize</div><div class="pamount">$150</div><div class="pdesc">Best Argument &bull; 1 global recipient</div></div>
+<div class="prize-box special"><div class="pname">&#9997;&#65039; Pathos Prize</div><div class="pamount">$150</div><div class="pdesc">Best Writing &bull; 1 global recipient</div></div>
+<div class="prize-box special"><div class="pname">&#128270; Ethos Prize</div><div class="pamount">$150</div><div class="pdesc">Best Research &bull; 1 global recipient</div></div>
+</div>
+<div class="tip">&#127891; All prize winners are invited to the Award Ceremony &amp; Dinner at <strong>King's College, Cambridge</strong> on 31 July 2026 &mdash; free of charge for Gold/Silver/Bronze/Special prize recipients.</div>
+<div class="sh">&#128203; Key Rules</div>
+<div class="grid2">
+<div class="card"><div class="ctitle">&#128196; Submission Requirements</div>
+<ul class="al">
+<li><span>1</span>Max 2,000 words (footnotes &amp; bibliography excluded)</li>
+<li><span>2</span>PDF format only</li>
+<li><span>3</span>MLA 8 citation format</li>
+<li><span>4</span>Remove your name from the PDF (blind review)</li>
+<li><span>5</span>Submit via CCIR portal</li>
+<li><span>6</span>Provide referee email (teacher/counsellor)</li>
+</ul></div>
+<div class="card"><div class="ctitle">&#128683; Disqualification Triggers</div>
+<ul class="al">
+<li><span style="background:#ef4444">!</span>Any use of AI writing assistance</li>
+<li><span style="background:#ef4444">!</span>Plagiarism in any form</li>
+<li><span style="background:#ef4444">!</span>Co-authorship (must be sole author)</li>
+<li><span style="background:#ef4444">!</span>Submitting more than one essay</li>
+<li><span style="background:#ef4444">!</span>Addressing more than one prompt</li>
+<li><span style="background:#ef4444">!</span>Name/school left in PDF document</li>
+</ul></div>
+</div>
+<div class="sh">&#127775; What Judges Look For</div>
+<div class="card">
+<table>
+<tr><th>Criterion</th><th>What It Means</th><th>How to Excel</th></tr>
+<tr><td><strong>Original Ideas</strong></td><td>Genuine intellectual contribution</td><td>Don't just summarise — take a clear, arguable position</td></tr>
+<tr><td><strong>Quality of Argument</strong></td><td>Clear structure, evidence-backed claims</td><td>Every claim needs a source; address counterarguments</td></tr>
+<tr><td><strong>Quality of Writing</strong></td><td>Language, flow, engagement</td><td>Vary sentence length; use precise vocabulary</td></tr>
+<tr><td><strong>Research Depth</strong></td><td>Academic sources, proper citations</td><td>Use books from the professor reading lists; cite correctly in MLA 8</td></tr>
+</table>
+</div>
+</div>
+<div id="prompts" class="section">
+<div class="sh">&#10067; All 9 Prompts &mdash; Senior Division 2026</div>
+<div class="tip">&#128161; Click any prompt card to see thesis ideas and key arguments. Choose <strong>ONE</strong> prompt only.</div>
+<div class="prompt-card p1" onclick="toggle('d1')">
+<div class="prompt-num">Prompt 1 &bull; Politics / Democracy &bull; Contributed by Harvard Professor</div>
+<div class="prompt-q">Is populism inevitably a destructive force in democracy, or can it be reimagined as a positive force for change?</div>
+<div class="prompt-meta"><span class="tag hot">High Competition</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d1">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The core tension: populism exposes real elite corruption but often slides into authoritarianism. Your angle: distinguish between <em>form</em> (people vs. elites narrative) and <em>content</em> (exclusionary vs. inclusive). Argue that populism is a symptom, not a cause.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">M&uuml;ller: <em>What Is Populism?</em> (2016) &bull; Levitsky &amp; Ziblatt: <em>How Democracies Die</em> (2018) &bull; Mudde &amp; Kaltwasser: <em>Populism: A Very Short Introduction</em> (2017)</p>
+</div>
+</div>
+<div class="prompt-card p2" onclick="toggle('d2')">
+<div class="prompt-num">Prompt 2 &bull; IR / Political Theory &bull; Contributed by Stanford Professor</div>
+<div class="prompt-q">Can the nation-state survive the pressures of globalisation, climate change, and forced migration?</div>
+<div class="prompt-meta"><span class="tag ">Broad Scope</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d2">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">Three pressures identified by the professor: (1) digital flows states can't control, (2) climate costs, (3) forced migration. The rightward tilt is a reaction that may <em>accelerate</em> state decline. Your angle: distinguish between state <em>form</em> and state <em>function</em> &mdash; functions may survive even if forms change.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Anderson: <em>Imagined Communities</em> (1983) &bull; Appadurai: <em>Modernity at Large</em> (1996) &bull; Hobsbawm: <em>Nations and Nationalism Since 1780</em> (1990)</p>
+</div>
+</div>
+<div class="prompt-card p3" onclick="toggle('d3')">
+<div class="prompt-num">Prompt 3 &bull; AI / Law / Ethics &bull; Contributed by Berkeley Professor</div>
+<div class="prompt-q">Should AI systems have legal personhood?</div>
+<div class="prompt-meta"><span class="tag orig">Highly Topical</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d3">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The professor's framing: legal personhood requires answering whether AI can be sued, can live independently, and can exist outside ownership. Current answer: no. Your angle: argue that the real question is not personhood but <em>accountability</em> &mdash; enhanced corporate liability is more effective than personhood.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Mitchell: <em>AI: A Guide for Thinking Humans</em> (2019) &bull; Gunkel: <em>The Machine Question</em> (2012) &bull; Zuboff: <em>The Age of Surveillance Capitalism</em> (2019)</p>
+</div>
+</div>
+<div class="prompt-card p4" onclick="toggle('d4')">
+<div class="prompt-num">Prompt 4 &bull; History / Ethics &bull; Contributed by Cornell Professor</div>
+<div class="prompt-q">Should colonial-era artifacts in Western museums be repatriated to their countries of origin, or preserved where they are as part of global heritage?</div>
+<div class="prompt-meta"><span class="tag orig">Rich Literature</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d4">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">Two sides: universal museum argument (artifacts belong to all humanity; Western museums have preservation capacity) vs. repatriation argument (colonial acquisition was non-consensual; modern technology solves preservation concerns). Your angle: the <em>consent</em> question is decisive &mdash; acquisition without consent cannot be legitimised by subsequent stewardship.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Hicks: <em>The Brutish Museums</em> (2020) &bull; Cuno: <em>Who Owns Antiquity?</em> (2008) &bull; Said: <em>Culture and Imperialism</em> (1993)</p>
+</div>
+</div>
+<div class="prompt-card p5" onclick="toggle('d5')">
+<div class="prompt-num">Prompt 5 &bull; Sociology / Economics &bull; Contributed by UPenn Professor</div>
+<div class="prompt-q">Can meritocracy and structural inequality coexist, or does one inevitably undermine the other?</div>
+<div class="prompt-meta"><span class="tag hard">Nuanced</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d5">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The professor's framing: definitions matter &mdash; what kind of meritocracy? What kind of structural inequality? Your angle: formal meritocracy (equal rules) can coexist with structural inequality, but <em>substantive</em> meritocracy (equal outcomes of effort) cannot &mdash; because structural inequality determines who can compete.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Sandel: <em>The Tyranny of Merit</em> (2020) &bull; Young: <em>The Rise of the Meritocracy</em> (1958) &bull; Rawls: <em>A Theory of Justice</em> (1971)</p>
+</div>
+</div>
+<div class="prompt-card p6" onclick="toggle('d6')">
+<div class="prompt-num">Prompt 6 &bull; Ethics / Migration &bull; Contributed by Princeton Professor</div>
+<div class="prompt-q">Are open borders morally justified?</div>
+<div class="prompt-meta"><span class="tag orig">Clear Framework</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d6">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The professor's framing: borders are moral boundaries that determine who gets safety and opportunity. Evidence shows immigrants strengthen economies. Your angle: open borders are morally justified as an extension of freedom of movement, but the argument must address the <em>social trust</em> objection (Miller) directly.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Carens: <em>The Ethics of Immigration</em> (2013) &bull; Miller: <em>Strangers in Our Midst</em> (2016) &bull; Arendt: <em>The Origins of Totalitarianism</em> (1951)</p>
+</div>
+</div>
+<div class="prompt-card p7" onclick="toggle('d7')">
+<div class="prompt-num">Prompt 7 &bull; Philosophy of Science &bull; Contributed by Oxford Professor</div>
+<div class="prompt-q">Should the pursuit of scientific knowledge be constrained by ethical considerations?</div>
+<div class="prompt-meta"><span class="tag ">Classic Debate</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d7">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The tension: scientific freedom vs. ethical responsibility. Your angle: the question is not <em>whether</em> but <em>how</em> &mdash; distinguish between restricting <em>research</em> (problematic) and restricting <em>application</em> (necessary). Use genome editing as the case study.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Jasanoff: <em>The Ethics of Invention</em> (2016) &bull; Mazzucato: <em>The Entrepreneurial State</em> (2013) &bull; Feynman: <em>The Pleasure of Finding Things Out</em> (1999)</p>
+</div>
+</div>
+<div class="prompt-card p8" onclick="toggle('d8')">
+<div class="prompt-num">Prompt 8 &bull; Bioethics / Technology &bull; Contributed by Columbia Professor</div>
+<div class="prompt-q">Should some technologies be restricted even if they could eliminate disease or extend human life?</div>
+<div class="prompt-meta"><span class="tag hard">High Stakes</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d8">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The professor's example: genome editing in human embryos &mdash; could eliminate Huntington's disease but risks are irreversible. Your angle: the <em>irreversibility</em> criterion is key &mdash; technologies that permanently alter the human gene pool or social fabric require a higher burden of proof before deployment.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Bostrom: <em>Superintelligence</em> (2014) &bull; Harari: <em>Homo Deus</em> (2016) &bull; Shelley: <em>Frankenstein</em> (1818)</p>
+</div>
+</div>
+<div class="prompt-card p9" onclick="toggle('d9')">
+<div class="prompt-num">Prompt 9 &bull; Philosophy / Medicine / Culture &bull; Contributed by Cambridge Professor</div>
+<div class="prompt-q">What does it mean to heal?</div>
+<div class="prompt-meta"><span class="tag orig">Most Original</span><span class="tag">Click to expand</span></div>
+<div class="detail-box" id="d9">
+<div class="ctitle">&#128161; Strategic Analysis</div><p style="margin-bottom:10px;color:#475569">The professor's framing: healing comes from Old English <em>h&aelig;lan</em> &mdash; to make whole. Modern tension: quick-fix wellness culture vs. deep understanding of trauma and rehabilitation. Your angle: healing is not restoration of a prior state but <em>integration of loss</em> &mdash; a social and cultural process, not merely a medical one.</p>
+<div class="ctitle">&#128218; Key Books</div><p style="color:#475569;font-size:13px">Frankl: <em>Man's Search for Meaning</em> (1946) &bull; van der Kolk: <em>The Body Keeps the Score</em> (2014) &bull; Sontag: <em>Illness as Metaphor</em> (1978)</p>
+</div>
+</div>
+</div>
+<div id="strategy" class="section">
+<div class="sh">&#127919; Prompt Selection Strategy</div>
+<div class="card">
+<div class="ctitle">How to Choose Your Prompt</div>
+<ul class="al">
+<li><span>1</span><strong>Genuine interest</strong> &mdash; You will spend weeks on this. Pick something you actually want to think about.</li>
+<li><span>2</span><strong>Original angle</strong> &mdash; Can you say something the obvious essay won't say? If not, pick a different prompt.</li>
+<li><span>3</span><strong>Research access</strong> &mdash; Can you access 3&ndash;5 academic books or articles? Check your school library first.</li>
+<li><span>4</span><strong>Avoid the crowd</strong> &mdash; Prompts 1 (Populism) and 2 (Nation-states) will attract the most submissions. Harder to stand out.</li>
+</ul>
+</div>
+<div class="sh">&#128202; Prompt Comparison Matrix</div>
+<div style="overflow-x:auto"><table>
+<tr><th>#</th><th>Prompt</th><th>Competition Level</th><th>Originality Ceiling</th><th>Research Difficulty</th><th>Recommended For</th></tr>
+<tr><td><strong>1</strong></td><td>Populism</td><td>&#128308; Very High</td><td>Medium</td><td>Medium</td><td>Students with politics/history background</td></tr>
+<tr><td><strong>2</strong></td><td>Nation-states</td><td>&#128308; High</td><td>Medium</td><td>Medium-High</td><td>IR / geography students</td></tr>
+<tr><td><strong>3</strong></td><td>AI Legal Personhood</td><td>&#128992; Medium-High</td><td>High</td><td>Medium</td><td>Tech-interested students</td></tr>
+<tr><td><strong>4</strong></td><td>Colonial Artifacts</td><td>&#128992; Medium</td><td>High</td><td>Medium</td><td>History / ethics students</td></tr>
+<tr><td><strong>5</strong></td><td>Meritocracy</td><td>&#128992; Medium</td><td>High</td><td>Medium</td><td>Sociology / economics students</td></tr>
+<tr><td><strong>6</strong></td><td>Open Borders</td><td>&#128992; Medium</td><td>High</td><td>Medium</td><td>Philosophy / ethics students</td></tr>
+<tr><td><strong>7</strong></td><td>Scientific Constraints</td><td>&#128309; Medium-Low</td><td>Medium</td><td>Medium</td><td>Science students</td></tr>
+<tr><td><strong>8</strong></td><td>Technology Restrictions</td><td>&#128309; Medium-Low</td><td>High</td><td>Medium-High</td><td>Biology / philosophy students</td></tr>
+<tr><td><strong>9</strong></td><td>What Does It Mean to Heal?</td><td>&#128309; Low</td><td>Very High</td><td>Low-Medium</td><td>Creative / interdisciplinary students</td></tr>
+</table></div>
+<div class="sh">&#128161; What Makes a Winning Essay</div>
+<div class="grid2">
+<div class="card"><div class="ctitle">&#9989; Winning Essays Do This</div>
+<ul class="al">
+<li><span>&#10003;</span>Take a clear, specific, arguable thesis in the introduction</li>
+<li><span>&#10003;</span>Use academic sources from the professor reading lists</li>
+<li><span>&#10003;</span>Dedicate a full paragraph to the strongest counterargument</li>
+<li><span>&#10003;</span>Distinguish between types or cases (not all X is the same)</li>
+<li><span>&#10003;</span>End with a broader implication, not just a summary</li>
+<li><span>&#10003;</span>Cite every claim in MLA 8 format</li>
+</ul></div>
+<div class="card"><div class="ctitle">&#10060; Losing Essays Do This</div>
+<ul class="al">
+<li><span style="background:#ef4444">&#10007;</span>Summarise what others think without taking a position</li>
+<li><span style="background:#ef4444">&#10007;</span>Use Wikipedia or news articles as primary sources</li>
+<li><span style="background:#ef4444">&#10007;</span>Ignore the counterargument entirely</li>
+<li><span style="background:#ef4444">&#10007;</span>Write a vague thesis like "this is a complex issue"</li>
+<li><span style="background:#ef4444">&#10007;</span>Exceed 2,000 words</li>
+<li><span style="background:#ef4444">&#10007;</span>Use AI to write any part of the essay</li>
+</ul></div>
+</div>
+<div class="sh">&#128221; Sample Thesis Statements</div>
+<div class="thesis-box">
+<div class="thesis-label">Prompt 3 &mdash; AI Legal Personhood</div>
+<div class="thesis-text">"Although AI systems increasingly exhibit human-like reasoning, granting them legal personhood would create accountability gaps that undermine rather than strengthen human oversight &mdash; a more effective approach is enhanced corporate liability for AI developers."</div>
+</div>
+<div class="thesis-box">
+<div class="thesis-label">Prompt 4 &mdash; Colonial Artifacts</div>
+<div class="thesis-text">"While universal museum arguments have merit, the case for repatriation is stronger: colonial acquisition was rarely consensual, and modern preservation technology eliminates the practical objections to return."</div>
+</div>
+<div class="thesis-box">
+<div class="thesis-label">Prompt 6 &mdash; Open Borders</div>
+<div class="thesis-text">"Open borders are morally justified as an extension of the basic human right to freedom of movement, but their implementation requires phased institutional reform &mdash; the moral case is clear even if the political path is not."</div>
+</div>
+<div class="thesis-box">
+<div class="thesis-label">Prompt 9 &mdash; What Does It Mean to Heal?</div>
+<div class="thesis-text">"Healing is not the restoration of a prior state but the creation of a new relationship with loss &mdash; a process that is irreducibly social and cultural, not merely medical, and that requires community as much as treatment."</div>
+</div>
+</div>
+<div id="structure" class="section">
+<div class="sh">&#128196; Essay Structure (2,000 Words)</div>
+<div class="tip">&#128161; This structure works for all 9 prompts. Adapt the word counts slightly based on your argument complexity.</div>
+<div class="card">
+<div class="ctitle">&#128196; Recommended Word Budget</div>
+<table>
+<tr><th>Section</th><th>Words</th><th>Purpose</th><th>Key Elements</th></tr>
+<tr><td><strong>Introduction</strong></td><td>150&ndash;200</td><td>Hook, context, thesis, roadmap</td><td>Start with a striking fact or paradox; state thesis clearly in last sentence</td></tr>
+<tr><td><strong>Body 1 &mdash; Strongest Argument</strong></td><td>350&ndash;400</td><td>Your best evidence for the thesis</td><td>Topic sentence + academic source + data + analysis + link to thesis</td></tr>
+<tr><td><strong>Body 2 &mdash; Second Argument</strong></td><td>350&ndash;400</td><td>Different type of evidence</td><td>Use a different evidence type (e.g., historical example if BP1 used data)</td></tr>
+<tr><td><strong>Body 3 &mdash; Counterargument</strong></td><td>350&ndash;400</td><td>Address the strongest objection</td><td>State it fairly &rarr; concede what is valid &rarr; rebut why thesis still holds</td></tr>
+<tr><td><strong>Conclusion</strong></td><td>150&ndash;200</td><td>Synthesis + broader implication</td><td>Restate thesis (different words) + summarise + end with a memorable sentence</td></tr>
+</table>
+</div>
+<div class="sh">&#128270; Introduction Formula</div>
+<div class="card">
+<div class="ctitle">The 4-Sentence Introduction</div>
+<ul class="al">
+<li><span>1</span><strong>Hook</strong> &mdash; A striking statistic, paradox, or concrete example that makes the reader want to continue</li>
+<li><span>2</span><strong>Context</strong> &mdash; Why does this question matter right now? What is at stake?</li>
+<li><span>3</span><strong>Tension</strong> &mdash; Briefly acknowledge the complexity (the two sides of the debate)</li>
+<li><span>4</span><strong>Thesis</strong> &mdash; Your clear, arguable position. This is the most important sentence in the essay.</li>
+</ul>
+</div>
+<div class="sh">&#128161; Sample Hooks by Prompt</div>
+<div class="card" style="margin-bottom:10px">
+<div class="ctitle">Prompt 1 &mdash; Populism</div>
+<p style="font-style:italic;color:#475569;font-size:14px">"In 2024, for the first time in American history, a convicted felon won the presidency with 77 million votes. Whether this represents democracy working or democracy failing depends entirely on how one defines populism."</p>
+</div>
+<div class="card" style="margin-bottom:10px">
+<div class="ctitle">Prompt 3 &mdash; AI Legal Personhood</div>
+<p style="font-style:italic;color:#475569;font-size:14px">"In 2023, a Colombian judge cited ChatGPT in a legal ruling. In 2024, an AI system was listed as a co-inventor on a patent application. The question of whether AI should have legal personhood is no longer theoretical."</p>
+</div>
+<div class="card" style="margin-bottom:10px">
+<div class="ctitle">Prompt 4 &mdash; Colonial Artifacts</div>
+<p style="font-style:italic;color:#475569;font-size:14px">"The Benin Bronzes were looted from Nigeria in 1897 by British soldiers who described the raid as a 'punitive expedition.' Today, 900 of them sit in the British Museum. The question of who owns them is also a question of who owns history."</p>
+</div>
+<div class="card" style="margin-bottom:10px">
+<div class="ctitle">Prompt 6 &mdash; Open Borders</div>
+<p style="font-style:italic;color:#475569;font-size:14px">"Every year, thousands of people die attempting to cross borders that their grandparents crossed freely. The question of whether borders are morally justified is also a question of whether birthplace should determine destiny."</p>
+</div>
+<div class="card" style="margin-bottom:10px">
+<div class="ctitle">Prompt 9 &mdash; What Does It Mean to Heal?</div>
+<p style="font-style:italic;color:#475569;font-size:14px">"The English word 'heal' comes from the Old English h&aelig;lan &mdash; to make whole. But what does wholeness mean after loss? This question, which medicine has largely abandoned to philosophy, may be the most important question of our time."</p>
+</div>
+<div class="sh">&#128221; MLA 8 Citation Quick Reference</div>
+<div class="card">
+<table>
+<tr><th>Source Type</th><th>Format</th><th>Example</th></tr>
+<tr><td>Book</td><td>Last, First. <em>Title</em>. Publisher, Year.</td><td>M&uuml;ller, Jan-Werner. <em>What Is Populism?</em> U of Pennsylvania P, 2016.</td></tr>
+<tr><td>Journal Article</td><td>Last, First. "Title." <em>Journal</em>, vol. #, no. #, Year, pp. #&ndash;#.</td><td>Carens, Joseph. "Aliens and Citizens." <em>Review of Politics</em>, vol. 49, no. 2, 1987, pp. 251&ndash;73.</td></tr>
+<tr><td>In-text</td><td>(Author Page)</td><td>(M&uuml;ller 45) or (Carens 252)</td></tr>
+</table>
+</div>
+</div>
+<div id="reading" class="section">
+<div class="sh">&#128218; Professor-Recommended Reading Lists</div>
+<div class="tip">&#128161; These books are directly recommended by the professors who wrote the prompts. Using them signals to judges that you engaged with the intended academic conversation.</div>
+<div class="card" style="border-top:3px solid #ef4444;margin-bottom:16px">
+<div class="ctitle">Prompt 1 &mdash; Populism</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#ef4444">
+<div class="book-title">What Is Populism?</div>
+<div class="book-author">Jan-Werner M&uuml;ller (2016)</div>
+<div class="book-why">Precise definition of populism; cuts through loose public usage. START HERE.</div>
+</div>
+<div class="book-card" style="border-top-color:#ef4444">
+<div class="book-title">How Democracies Die</div>
+<div class="book-author">Levitsky &amp; Ziblatt (2018)</div>
+<div class="book-why">Concrete historical examples of democratic backsliding; connects theory to reality.</div>
+</div>
+<div class="book-card" style="border-top-color:#ef4444">
+<div class="book-title">Populism: A Very Short Introduction</div>
+<div class="book-author">Mudde &amp; Kaltwasser (2017)</div>
+<div class="book-why">Clear mapping of the political landscape without oversimplification.</div>
+</div>
+<div class="book-card" style="border-top-color:#ef4444">
+<div class="book-title">On Populist Reason</div>
+<div class="book-author">Ernesto Laclau (2005)</div>
+<div class="book-why">Demanding but forces you to consider populism as democratic possibility, not just pathology.</div>
+</div>
+<div class="book-card" style="border-top-color:#ef4444">
+<div class="book-title">The Origins of Totalitarianism</div>
+<div class="book-author">Hannah Arendt (1951)</div>
+<div class="book-why">Shows how mass resentment evolves into something far more dangerous.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #f97316;margin-bottom:16px">
+<div class="ctitle">Prompt 2 &mdash; Nation-States</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#f97316">
+<div class="book-title">Imagined Communities</div>
+<div class="book-author">Benedict Anderson (1983)</div>
+<div class="book-why">Seminal argument that nations are socially constructed through shared stories.</div>
+</div>
+<div class="book-card" style="border-top-color:#f97316">
+<div class="book-title">Modernity at Large</div>
+<div class="book-author">Arjun Appadurai (1996)</div>
+<div class="book-why">Global cultural flows that destabilize borders and state authority.</div>
+</div>
+<div class="book-card" style="border-top-color:#f97316">
+<div class="book-title">Nations and Nationalism Since 1780</div>
+<div class="book-author">Eric Hobsbawm (1990)</div>
+<div class="book-why">Historical account of how nation-states emerged and how fragile they may be.</div>
+</div>
+<div class="book-card" style="border-top-color:#f97316">
+<div class="book-title">Globalization and Its Discontents</div>
+<div class="book-author">Joseph Stiglitz (2002)</div>
+<div class="book-why">Critique of global economic institutions and their impact on sovereignty.</div>
+</div>
+<div class="book-card" style="border-top-color:#f97316">
+<div class="book-title">Cosmopolitanism</div>
+<div class="book-author">Kwame Anthony Appiah (2006)</div>
+<div class="book-why">Moral argument for global citizenship grounded in shared human obligations.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #8b5cf6;margin-bottom:16px">
+<div class="ctitle">Prompt 3 &mdash; AI Legal Personhood</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#8b5cf6">
+<div class="book-title">AI: A Guide for Thinking Humans</div>
+<div class="book-author">Melanie Mitchell (2019)</div>
+<div class="book-why">What AI actually does and where its limits lie. Grounds responsibility in human design.</div>
+</div>
+<div class="book-card" style="border-top-color:#8b5cf6">
+<div class="book-title">The Machine Question</div>
+<div class="book-author">David J. Gunkel (2012)</div>
+<div class="book-why">Core question: to what extent should intelligent machines have moral/legal significance?</div>
+</div>
+<div class="book-card" style="border-top-color:#8b5cf6">
+<div class="book-title">The Age of Surveillance Capitalism</div>
+<div class="book-author">Shoshana Zuboff (2019)</div>
+<div class="book-why">How AI systems reshape power, accountability, and privacy.</div>
+</div>
+<div class="book-card" style="border-top-color:#8b5cf6">
+<div class="book-title">Weapons of Math Destruction</div>
+<div class="book-author">Cathy O'Neil (2016)</div>
+<div class="book-why">Human consequences of algorithmic decisions; makes ethics impossible to ignore.</div>
+</div>
+<div class="book-card" style="border-top-color:#8b5cf6">
+<div class="book-title">Superintelligence</div>
+<div class="book-author">Nick Bostrom (2014)</div>
+<div class="book-why">Speculative but influential on risks of advanced AI autonomy.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #10b981;margin-bottom:16px">
+<div class="ctitle">Prompt 4 &mdash; Colonial Artifacts</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#10b981">
+<div class="book-title">The Brutish Museums</div>
+<div class="book-author">Dan Hicks (2020)</div>
+<div class="book-why">Powerful critique of museum collections rooted in colonial violence.</div>
+</div>
+<div class="book-card" style="border-top-color:#10b981">
+<div class="book-title">Who Owns Antiquity?</div>
+<div class="book-author">James Cuno (2008)</div>
+<div class="book-why">Defense of universal museums and shared global heritage.</div>
+</div>
+<div class="book-card" style="border-top-color:#10b981">
+<div class="book-title">Culture and Imperialism</div>
+<div class="book-author">Edward Said (1993)</div>
+<div class="book-why">Foundational text on how culture sustains imperial power.</div>
+</div>
+<div class="book-card" style="border-top-color:#10b981">
+<div class="book-title">Africa's Struggle for Its Art</div>
+<div class="book-author">B&eacute;n&eacute;dicte Savoy (2022)</div>
+<div class="book-why">Insider account of restitution debates in European museums.</div>
+</div>
+<div class="book-card" style="border-top-color:#10b981">
+<div class="book-title">Empireland</div>
+<div class="book-author">Sathnam Sanghera (2021)</div>
+<div class="book-why">Contemporary reckoning with how empire continues to shape public institutions.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #f59e0b;margin-bottom:16px">
+<div class="ctitle">Prompt 5 &mdash; Meritocracy</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#f59e0b">
+<div class="book-title">The Tyranny of Merit</div>
+<div class="book-author">Michael Sandel (2020)</div>
+<div class="book-why">Critique of meritocracy as a moral framework; argues it breeds hubris and resentment.</div>
+</div>
+<div class="book-card" style="border-top-color:#f59e0b">
+<div class="book-title">The Rise of the Meritocracy</div>
+<div class="book-author">Michael Young (1958)</div>
+<div class="book-why">The original coining of the term &mdash; written as a dystopian warning, not a blueprint.</div>
+</div>
+<div class="book-card" style="border-top-color:#f59e0b">
+<div class="book-title">A Theory of Justice</div>
+<div class="book-author">John Rawls (1971)</div>
+<div class="book-why">The philosophical framework for thinking about fair distribution of opportunities.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #06b6d4;margin-bottom:16px">
+<div class="ctitle">Prompt 6 &mdash; Open Borders</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#06b6d4">
+<div class="book-title">The Ethics of Immigration</div>
+<div class="book-author">Joseph Carens (2013)</div>
+<div class="book-why">Most rigorous philosophical case for open borders as a basic moral right.</div>
+</div>
+<div class="book-card" style="border-top-color:#06b6d4">
+<div class="book-title">Strangers in Our Midst</div>
+<div class="book-author">David Miller (2016)</div>
+<div class="book-why">Principled defense of border controls grounded in democratic responsibility.</div>
+</div>
+<div class="book-card" style="border-top-color:#06b6d4">
+<div class="book-title">Exodus: How Migration Is Changing Our World</div>
+<div class="book-author">Paul Collier (2013)</div>
+<div class="book-why">Examines how large-scale migration affects both sending and receiving countries.</div>
+</div>
+<div class="book-card" style="border-top-color:#06b6d4">
+<div class="book-title">The Origins of Totalitarianism</div>
+<div class="book-author">Hannah Arendt (1951)</div>
+<div class="book-why">Discussion of statelessness; foundational for understanding lack of political membership.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #ec4899;margin-bottom:16px">
+<div class="ctitle">Prompt 7 &mdash; Scientific Constraints</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#ec4899">
+<div class="book-title">The Ethics of Invention</div>
+<div class="book-author">Sheila Jasanoff (2016)</div>
+<div class="book-why">Political and moral responsibility involved in choosing which futures to pursue.</div>
+</div>
+<div class="book-card" style="border-top-color:#ec4899">
+<div class="book-title">The Entrepreneurial State</div>
+<div class="book-author">Mariana Mazzucato (2013)</div>
+<div class="book-why">How transformative technologies emerged from high-risk public investment.</div>
+</div>
+<div class="book-card" style="border-top-color:#ec4899">
+<div class="book-title">The Pleasure of Finding Things Out</div>
+<div class="book-author">Richard Feynman (1999)</div>
+<div class="book-why">Intellectual value of curiosity-driven research; the scientist's perspective.</div>
+</div>
+<div class="book-card" style="border-top-color:#ec4899">
+<div class="book-title">Frontiers of Illusion</div>
+<div class="book-author">Daniel Sarewitz (1996)</div>
+<div class="book-why">Critique of the assumption that ambitious science automatically produces social benefit.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #14b8a6;margin-bottom:16px">
+<div class="ctitle">Prompt 8 &mdash; Technology Restrictions</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#14b8a6">
+<div class="book-title">Superintelligence</div>
+<div class="book-author">Nick Bostrom (2014)</div>
+<div class="book-why">Forces students to take existential risk seriously rather than dismissing it.</div>
+</div>
+<div class="book-card" style="border-top-color:#14b8a6">
+<div class="book-title">Homo Deus</div>
+<div class="book-author">Yuval Noah Harari (2016)</div>
+<div class="book-why">How narratives of progress can obscure ethical limits.</div>
+</div>
+<div class="book-card" style="border-top-color:#14b8a6">
+<div class="book-title">Frankenstein</div>
+<div class="book-author">Mary Shelley (1818)</div>
+<div class="book-why">Still unmatched as a literary exploration of scientific ambition without responsibility.</div>
+</div>
+<div class="book-card" style="border-top-color:#14b8a6">
+<div class="book-title">The Ethics of Invention</div>
+<div class="book-author">Sheila Jasanoff (2016)</div>
+<div class="book-why">Crucial text for examining governance failures in emerging science.</div>
+</div>
+<div class="book-card" style="border-top-color:#14b8a6">
+<div class="book-title">Laws of Fear</div>
+<div class="book-author">Cass Sunstein (2005)</div>
+<div class="book-why">Framework for thinking rationally about low-probability but high-impact risks.</div>
+</div>
+</div>
+</div>
+<div class="card" style="border-top:3px solid #6366f1;margin-bottom:16px">
+<div class="ctitle">Prompt 9 &mdash; What Does It Mean to Heal?</div>
+<div class="book-grid">
+<div class="book-card" style="border-top-color:#6366f1">
+<div class="book-title">Man's Search for Meaning</div>
+<div class="book-author">Viktor Frankl (1946)</div>
+<div class="book-why">Essential meditation on suffering, meaning, and survival.</div>
+</div>
+<div class="book-card" style="border-top-color:#6366f1">
+<div class="book-title">The Body Keeps the Score</div>
+<div class="book-author">Bessel van der Kolk (2014)</div>
+<div class="book-why">Analysis of trauma and embodied memory; healing as a physical and social process.</div>
+</div>
+<div class="book-card" style="border-top-color:#6366f1">
+<div class="book-title">Illness as Metaphor</div>
+<div class="book-author">Susan Sontag (1978)</div>
+<div class="book-why">Critique of how illness shapes identity and moral judgment.</div>
+</div>
+<div class="book-card" style="border-top-color:#6366f1">
+<div class="book-title">Being Mortal</div>
+<div class="book-author">Atul Gawande (2014)</div>
+<div class="book-why">Reflection on medicine, aging, and the limits of cure.</div>
+</div>
+<div class="book-card" style="border-top-color:#6366f1">
+<div class="book-title">Trauma and Recovery</div>
+<div class="book-author">Judith Herman (1992)</div>
+<div class="book-why">Foundational work on psychological effects of trauma; healing as a social process.</div>
+</div>
+</div>
+</div>
+<div class="sh">&#127760; Free Academic Sources</div>
+<div class="grid2">
+<div class="card"><div class="ctitle">&#128269; Where to Find Sources</div>
+<ul class="al">
+<li><span>1</span><strong>Google Scholar</strong> (scholar.google.com) &mdash; search for author + title</li>
+<li><span>2</span><strong>JSTOR</strong> (jstor.org) &mdash; free access to many humanities journals</li>
+<li><span>3</span><strong>PhilPapers</strong> (philpapers.org) &mdash; philosophy papers, many free</li>
+<li><span>4</span><strong>SSRN</strong> (ssrn.com) &mdash; social science working papers</li>
+<li><span>5</span><strong>Project MUSE</strong> &mdash; humanities and social science journals</li>
+<li><span>6</span><strong>Your school library</strong> &mdash; ask for database access (EBSCO, ProQuest)</li>
+</ul></div>
+<div class="card"><div class="ctitle">&#128218; Reading Strategy</div>
+<ul class="al">
+<li><span>1</span>Read the <strong>introduction and conclusion</strong> of each book first &mdash; get the argument</li>
+<li><span>2</span>Find the <strong>chapter most relevant</strong> to your thesis and read it fully</li>
+<li><span>3</span>Note <strong>key quotes with page numbers</strong> as you read</li>
+<li><span>4</span>Look at the <strong>bibliography</strong> of each book for more sources</li>
+<li><span>5</span>Aim for <strong>5&ndash;8 sources</strong> minimum; quality over quantity</li>
+</ul></div>
+</div>
+</div>
+<div id="timeline" class="section">
+<div class="sh">&#128197; 8-Week Writing Timeline</div>
+<div class="card">
+<div class="timeline">
+<div class="tl-item done">
+<div class="tl-date">Now &mdash; Week 1</div>
+<div class="tl-title">Choose Your Prompt</div>
+<div class="tl-desc">Score each prompt on interest, knowledge, and originality potential. Commit to one.</div>
+</div>
+<div class="tl-item done">
+<div class="tl-date">Week 1&ndash;2</div>
+<div class="tl-title">Deep Research</div>
+<div class="tl-desc">Read 3&ndash;5 books from the professor reading list. Take notes with page numbers. Find 2&ndash;3 key data points.</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">Week 2</div>
+<div class="tl-title">Develop Your Thesis</div>
+<div class="tl-desc">Write 5 possible thesis statements. Choose the most specific and arguable one.</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">Week 3</div>
+<div class="tl-title">Write First Draft</div>
+<div class="tl-desc">Aim for 1,800 words. Don't edit as you write &mdash; just get the argument down.</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">Week 4</div>
+<div class="tl-title">Peer Review</div>
+<div class="tl-desc">Share with a teacher or trusted peer. Ask: Is the thesis clear? Is the counterargument addressed?</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">Week 5</div>
+<div class="tl-title">Revise Argument</div>
+<div class="tl-desc">Strengthen weak paragraphs. Add missing evidence. Cut anything that doesn't support the thesis.</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">Week 6</div>
+<div class="tl-title">Polish Writing</div>
+<div class="tl-desc">Read aloud to catch awkward sentences. Vary sentence length. Check vocabulary precision.</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">Week 7</div>
+<div class="tl-title">Citations &amp; Format</div>
+<div class="tl-desc">Check every citation is in MLA 8. Format PDF. Remove your name and school from the document.</div>
+</div>
+<div class="tl-item urgent">
+<div class="tl-date">Submission</div>
+<div class="tl-title">Submit via CCIR Portal</div>
+<div class="tl-desc">Double-check word count, PDF format, blind review compliance, and referee email.</div>
+</div>
+<div class="tl-item ">
+<div class="tl-date">31 July 2026</div>
+<div class="tl-title">Award Ceremony</div>
+<div class="tl-desc">King's College, Cambridge &mdash; if you win, you'll be invited here.</div>
+</div>
+</div>
+</div>
+<div class="sh">&#128203; Prompt Decision Matrix</div>
+<div class="card">
+<div class="ctitle">Score each prompt (1&ndash;5) to find your best match</div>
+<table>
+<tr><th>Prompt</th><th>My Interest (1&ndash;5)</th><th>My Knowledge (1&ndash;5)</th><th>Originality Potential (1&ndash;5)</th><th>Total</th></tr>
+<tr><td><strong>1. Populism</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>2. Nation-States</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>3. AI Legal Personhood</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>4. Colonial Artifacts</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>5. Meritocracy</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>6. Open Borders</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>7. Scientific Constraints</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>8. Technology Restrictions</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><strong>9. What Does It Mean to Heal?</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+</div>
+</div>
+<div id="checklist" class="section">
+<div class="sh">&#9989; Final Submission Checklist</div>
+<div class="warn">&#128683; The competition uses both a plagiarism checker AND an AI checker. Any AI-assisted writing will be detected and disqualified.</div>
+<div class="grid2">
+<div class="card"><div class="ctitle">&#128196; Before You Write</div>
+<ul class="al">
+<li><span>&#9744;</span>Chosen ONE prompt only</li>
+<li><span>&#9744;</span>Read at least 3 books from the professor reading list</li>
+<li><span>&#9744;</span>Written a clear, arguable thesis statement</li>
+<li><span>&#9744;</span>Outlined your 3 body paragraphs</li>
+<li><span>&#9744;</span>Identified the strongest counterargument to address</li>
+</ul></div>
+<div class="card"><div class="ctitle">&#9997;&#65039; While Writing</div>
+<ul class="al">
+<li><span>&#9744;</span>Every claim is supported by an academic source</li>
+<li><span>&#9744;</span>Counterargument is addressed fairly and rebutted</li>
+<li><span>&#9744;</span>Introduction has a hook, context, and clear thesis</li>
+<li><span>&#9744;</span>Conclusion goes beyond summary to broader implication</li>
+<li><span>&#9744;</span>Writing is entirely your own (no AI assistance)</li>
+</ul></div>
+<div class="card"><div class="ctitle">&#128196; Before Submission</div>
+<ul class="al">
+<li><span>&#9744;</span>Word count is 2,000 or fewer (excluding footnotes &amp; bibliography)</li>
+<li><span>&#9744;</span>All citations are in MLA 8 format</li>
+<li><span>&#9744;</span>Essay is in PDF format</li>
+<li><span>&#9744;</span><strong>Name, school, and personal info REMOVED from PDF</strong></li>
+<li><span>&#9744;</span>Referee email address ready (teacher or counsellor)</li>
+<li><span>&#9744;</span>Submitted via CCIR portal before deadline</li>
+</ul></div>
+<div class="card"><div class="ctitle">&#128683; Never Do This</div>
+<ul class="al">
+<li><span style="background:#ef4444">!</span>Use AI to write, paraphrase, or edit any part of the essay</li>
+<li><span style="background:#ef4444">!</span>Copy text from any source without citation</li>
+<li><span style="background:#ef4444">!</span>Ask someone else to write or co-write the essay</li>
+<li><span style="background:#ef4444">!</span>Submit more than one essay</li>
+<li><span style="background:#ef4444">!</span>Leave your name in the PDF document</li>
+</ul></div>
+</div>
+<div class="sh">&#127942; Competition at King's College, Cambridge</div>
+<div class="card">
+<p style="color:#475569;font-size:14px;margin-bottom:12px">Award winners are invited to the <strong>Award Ceremony &amp; Dinner at King's College, Cambridge</strong> on <strong>31 July 2026</strong>. The dinner is held in the Hall designed by William Wilkins in the 1820s &mdash; one of the most magnificent halls of its era. Attendees also receive complimentary access to King's College Chapel, construction of which began in 1446 under Henry VI.</p>
+<p style="color:#475569;font-size:14px">The 2026 ceremony will feature a keynote by <strong>Dr Barry C. Barish</strong>, Nobel Prize Laureate in Physics 2017, for his contributions to the LIGO detector and the observation of gravitational waves.</p>
+</div>
+</div>
+<div class="footer">&#127891; Cambridge Re:think Essay Competition 2026 &mdash; Senior Division Visual Guide &bull; <a href="https://cambridge-research.org/essay-competition/" target="_blank">cambridge-research.org</a></div>
+<script>
+function show(id){
+  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+  document.querySelectorAll(".nav-tab").forEach(t=>t.classList.remove("active"));
+  var el=document.getElementById(id);
+  if(el)el.classList.add("active");
+  var map={overview:0,prompts:1,strategy:2,structure:3,reading:4,timeline:5,checklist:6};
+  var tabs=document.querySelectorAll(".nav-tab");
+  if(map[id]!==undefined&&tabs[map[id]])tabs[map[id]].classList.add("active");
+}
+function toggle(id){
+  var el=document.getElementById(id);
+  if(el)el.classList.toggle("open");
+}
+(function(){
+  var dates=[new Date("2026-05-10"),new Date("2026-05-26"),new Date("2026-07-31")];
+  var ids=["d1","d2","d3"];
+  var now=new Date();
+  dates.forEach(function(d,i){
+    var diff=Math.ceil((d-now)/86400000);
+    var el=document.getElementById(ids[i]);
+    if(el)el.textContent=diff>0?diff:"PASSED";
+  });
+})();
+</script>
+</body>
+</html>
