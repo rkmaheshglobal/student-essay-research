@@ -30,9 +30,9 @@ main{margin-left:var(--sw);flex:1}
 .cd{font-size:38px;font-weight:700;color:var(--a);line-height:1}
 .cl{font-size:11px;color:rgba(255,255,255,.65);margin-top:5px;font-family:sans-serif}
 .cdt{font-size:12px;color:rgba(255,255,255,.85);margin-top:3px;font-family:sans-serif}
-.tabs{display:flex;gap:3px;border-bottom:2px solid var(--b);margin-bottom:16px}
+.tabs{display:flex;gap:3px;border-bottom:2px solid #e2e8f0;margin-bottom:16px;flex-wrap:wrap}
 .tab{padding:7px 14px;font-size:12px;cursor:pointer;border-radius:5px 5px 0 0;font-family:sans-serif;border:none;background:none;color:var(--m)}
-.tab.on{background:var(--p);color:#fff}
+.tab.on{background:#ff6f00;color:#fff}
 .tc{display:none}.tc.on{display:block}
 .thesis{background:var(--al);border-left:4px solid var(--a);border-radius:0 8px 8px 0;padding:14px;margin-bottom:10px}
 .tl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--w);font-family:sans-serif;font-weight:700;margin-bottom:5px}
@@ -292,11 +292,14 @@ function go(id){
 }
 function tab(el,id){
   var pg=el.closest('.pg');
+  if(!pg)return;
   pg.querySelectorAll('.tc').forEach(function(t){t.classList.remove('on')});
   pg.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});
-  document.getElementById(id).classList.add('on');
+  var target=document.getElementById(id);
+  if(target)target.classList.add('on');
   el.classList.add('on');
 }
+function stab(el,id){tab(el,id);}
 (function(){
   var dates=[new Date('2026-04-01'),new Date('2026-05-10'),new Date('2026-05-31')];
   var ids=['dq','ds','dd'];
