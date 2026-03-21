@@ -170,6 +170,80 @@ python ce_part10.py # finalises the file
 ```
 Each `ce_partN.py` script appends a section of HTML to the output file.
 
+## Modular Python Generator Pattern (NEW)
+For large HTML files that risk truncation, use modular Python scripts with function imports:
+
+### Directory Structure
+```
+john-locke-essay/scripts/
+├── generate_jl_visual_guide_with_politics.py  ← Main generator
+└── parts/
+    ├── jl_politics_part1.py  ← get_politics_overview()
+    ├── jl_politics_part2.py  ← get_politics_q1()
+    ├── jl_politics_part3.py  ← get_politics_q2()
+    ├── jl_politics_part4.py  ← get_politics_q3()
+    ├── jl_politics_part5.py  ← get_politics_deep_dive()
+    └── jl_politics_part6.py  ← get_politics_past_questions()
+```
+
+### Part File Pattern
+```python
+"""Politics Part 1: Politics Overview Section"""
+
+def get_politics_overview():
+    return '''
+<!-- POLITICS OVERVIEW -->
+<div id="politics-overview" class="section">
+...
+</div>
+'''
+
+if __name__ == "__main__":
+    print(get_politics_overview())
+    print("Part 1 ready")
+```
+
+### Main Generator Pattern
+```python
+import os
+import sys
+
+# Add parts directory to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'parts'))
+
+# Import all part functions
+from jl_politics_part1 import get_politics_overview
+from jl_politics_part2 import get_politics_q1
+# ... etc
+
+def main():
+    # Build HTML by concatenating parts
+    html_parts = [
+        get_html_head(),
+        get_nav_tabs(),
+        get_economics_overview(),
+        get_politics_overview(),  # From imported module
+        get_politics_q1(),        # From imported module
+        # ... etc
+        get_footer(),
+        '</body></html>'
+    ]
+    
+    html_content = ''.join(html_parts)
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+
+if __name__ == "__main__":
+    main()
+```
+
+### Benefits
+- **No truncation** — Each part file is small enough to edit without truncation
+- **Modular** — Easy to update individual sections
+- **Testable** — Each part can be run standalone to verify output
+- **Maintainable** — Clear separation of concerns
+
 ## Known Pitfalls
 1. **`onclick` escaped quotes** — Python regex replacements using raw strings can insert literal `\"` into HTML attributes. Always verify `onclick="go('id',this)"` not `onclick=\"go('id',this)\"`.
 2. **`var btn` shadowing** — Never name the `go()` parameter `btn` if the function body also declares `var btn = ...` (mobile close code). Use `clickedBtn` instead.

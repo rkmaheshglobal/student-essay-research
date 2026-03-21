@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>John Locke Institute 2026 - Economics Visual Guide</title>
+<title>John Locke Institute 2026 - Economics & Politics Visual Guide</title>
 <style>
 :root{--navy:#1a237e;--accent:#ff6f00;--gold:#ffa000;--green:#10b981;--red:#ef4444;--purple:#7c3aed;--light:#f8fafc;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--q1:#0891b2;--q2:#7c3aed;--q3:#059669}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -22,6 +22,8 @@ body{font-family:'Poppins','Segoe UI',sans-serif;background:#f5f7ff;color:#2d374
 .nav-tab{padding:14px 20px;color:rgba(255,255,255,.6);cursor:pointer;white-space:nowrap;font-size:11px;font-family:Arial,sans-serif;font-weight:600;letter-spacing:.5px;border-bottom:3px solid transparent;transition:all .2s;text-transform:uppercase}
 .nav-tab:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-tab.active{color:#ff6f00;border-bottom-color:#ff6f00}
+.nav-tab.pol{color:rgba(255,255,255,.6)}
+.nav-tab.pol.active{color:#10b981;border-bottom-color:#10b981}
 .section{display:none;padding:32px;max-width:1200px;margin:0 auto}
 .section.active{display:block}
 .stitle{font-size:24px;font-weight:700;color:#1a237e;margin-bottom:5px}
@@ -134,6 +136,7 @@ body{font-family:'Poppins','Segoe UI',sans-serif;background:#f5f7ff;color:#2d374
 .alert.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#065f46}
 .footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:22px;font-family:Arial,sans-serif;font-size:11px;margin-top:36px}
 .footer a{color:#fbbf24;text-decoration:none}
+.cat-divider{background:linear-gradient(90deg,#1a237e,#10b981);color:#fff;padding:12px 20px;margin:0;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -142,78 +145,94 @@ body{font-family:'Poppins','Segoe UI',sans-serif;background:#f5f7ff;color:#2d374
 
 <div class="hero">
   <div class="hbadge">&#127891; Student Visual Guide</div>
-  <h1>John Locke Institute<br><span>Economics Essay 2026</span></h1>
-  <p>Your complete visual companion &mdash; questions, arguments, essay structure, and winning strategy.</p>
+  <h1>John Locke Institute<br><span>Essay Competition 2026</span></h1>
+  <p>Your complete visual companion &mdash; Economics &amp; Politics questions, arguments, essay structure, and winning strategy.</p>
   <div class="cg">
-    <div class="ci"><span class="num" id="d1">18</span><span class="lbl">Days to Questions</span></div>
-    <div class="ci"><span class="num" id="d2">57</span><span class="lbl">Days to Secondary</span></div>
-    <div class="ci"><span class="num" id="d3">78</span><span class="lbl">Days to Deadline</span></div>
+    <div class="ci"><span class="num" id="d1">12</span><span class="lbl">Days to Questions</span></div>
+    <div class="ci"><span class="num" id="d2">51</span><span class="lbl">Days to Secondary</span></div>
+    <div class="ci"><span class="num" id="d3">72</span><span class="lbl">Days to Deadline</span></div>
     <div class="ci"><span class="num">~2,000</span><span class="lbl">Word Limit</span></div>
   </div>
 </div>
+
 <div class="nav-tabs">
   <div class="nav-tab active" onclick="show('overview')">&#127919; Overview</div>
-  <div class="nav-tab" onclick="show('q1')">&#128178; Q1: Cashless</div>
-  <div class="nav-tab" onclick="show('q2')">&#128200; Q2: Pricing</div>
-  <div class="nav-tab" onclick="show('q3')">&#128188; Q3: Bezos</div>
-  <div class="nav-tab" onclick="show('timeline')">&#128197; Timeline</div>
-  <div class="nav-tab" onclick="show('scoring')">&#127942; Scoring</div>
-  <div class="nav-tab" onclick="show('resources')">&#128218; Resources</div>
-  <div class="nav-tab" onclick="show('mentorship')">&#127891; Mentorship</div>
-  <div class="nav-tab" onclick="show('pastq')">&#128203; Past Questions</div>
-  <div class="nav-tab" onclick="show('deepdive')">&#128300; Deep Dive</div>
-  <div class="nav-tab" onclick="show('econres')">&#128202; Econ Research</div>
+  <div class="nav-tab" onclick="show('q1')">&#128178; Econ Q1</div>
+  <div class="nav-tab" onclick="show('q2')">&#128200; Econ Q2</div>
+  <div class="nav-tab" onclick="show('q3')">&#128188; Econ Q3</div>
+  <div class="nav-tab pol" onclick="show('politics-overview')">&#127891; Politics</div>
+  <div class="nav-tab pol" onclick="show('pol-q1')">&#127758; Pol Q1</div>
+  <div class="nav-tab pol" onclick="show('pol-q2')">&#128679; Pol Q2</div>
+  <div class="nav-tab pol" onclick="show('pol-q3')">&#127988; Pol Q3</div>
+  <div class="nav-tab pol" onclick="show('pol-deepdive')">&#128300; Pol Deep</div>
+  <div class="nav-tab pol" onclick="show('pol-pastq')">&#128203; Pol Past</div>
 </div>
+
+<!-- ECONOMICS OVERVIEW -->
 <div id="overview" class="section active">
 <div class="stitle">&#127919; Competition Overview</div>
-<div class="ssub">John Locke Institute Essay Competition 2026 &mdash; Economics Category</div>
+<div class="ssub">John Locke Institute Essay Competition 2026 &mdash; Economics &amp; Politics Categories</div>
+
+<div class="alert info"><span>&#128161;</span><div><strong>Two Categories Available:</strong> This guide covers both <strong>Economics</strong> and <strong>Politics</strong> categories. Use the tabs above to navigate between them. Each category has 3 questions to choose from.</div></div>
+
 <div class="sg">
 <div class="sc"><div class="si">&#127942;</div><div class="sv">JLI 2026</div><div class="sl">Competition</div></div>
 <div class="sc"><div class="si">&#128197;</div><div class="sv">Apr 1</div><div class="sl">Questions Released</div></div>
 <div class="sc"><div class="si">&#128203;</div><div class="sv">May 10</div><div class="sl">Secondary Deadline</div></div>
 <div class="sc"><div class="si">&#127937;</div><div class="sv">May 31</div><div class="sl">Final Deadline</div></div>
 <div class="sc"><div class="si">&#128221;</div><div class="sv">~2,000</div><div class="sl">Word Limit</div></div>
-<div class="sc"><div class="si">&#128218;</div><div class="sv">3</div><div class="sl">Questions to Choose</div></div>
+<div class="sc"><div class="si">&#128218;</div><div class="sv">3+3</div><div class="sl">Questions per Category</div></div>
 </div>
-<div class="sh">&#127775; The 3 Official 2026 Questions</div>
+
+<div class="sh">&#128178; Economics Questions 2026</div>
 <div class="qs">
 <div class="qc q1" onclick="show('q1')">
-<div class="qn">Question 1 &bull; Evaluation</div>
+<div class="qn">Economics Q1 &bull; Evaluation</div>
 <div class="qtag">&#128178; Monetary Economics</div>
 <h3>Should we fear a cashless society?</h3>
 <div class="qmeta">Privacy &bull; Financial Inclusion &bull; Monetary Freedom &bull; Surveillance</div>
 </div>
 <div class="qc q2" onclick="show('q2')">
-<div class="qn">Question 2 &bull; Effects Analysis</div>
+<div class="qn">Economics Q2 &bull; Effects Analysis</div>
 <div class="qtag">&#128200; Behavioural Economics</div>
 <h3>Technology now allows personalised pricing. If this came to be widely used, what effects should we expect?</h3>
 <div class="qmeta">Price Discrimination &bull; Efficiency &bull; Fairness &bull; Market Power</div>
 </div>
 <div class="qc q3" onclick="show('q3')">
-<div class="qn">Question 3 &bull; Distributional Analysis</div>
+<div class="qn">Economics Q3 &bull; Distributional Analysis</div>
 <div class="qtag">&#128188; Labour Economics</div>
 <h3>Did Jeff Bezos get rich at the expense of his customers, his employees, neither or both?</h3>
 <div class="qmeta">Wealth Creation &bull; Labour &bull; Consumer Surplus &bull; Inequality</div>
 </div>
 </div>
-<div class="sh">&#9878; Cross-Cutting Themes</div>
-<div class="themegrid">
-<div class="thm"><div class="thmi">&#9889;</div><div class="thmt">Technology &amp; Power</div><div class="thmd">All three questions involve technology shifting power between groups</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
-<div class="thm"><div class="thmi">&#9878;</div><div class="thmt">Efficiency vs. Fairness</div><div class="thmd">The classic economic trade-off appears in each question</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
-<div class="thm"><div class="thmi">&#128100;</div><div class="thmt">Who Bears the Costs?</div><div class="thmd">Distributional analysis is central to all three questions</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
-<div class="thm"><div class="thmi">&#127963;</div><div class="thmt">Role of Institutions</div><div class="thmd">Regulation, law, and policy shape outcomes in each case</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
-<div class="thm"><div class="thmi">&#128065;</div><div class="thmt">Visibility of Harm</div><div class="thmd">Some costs are visible, others hidden (privacy loss, wage suppression)</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
+
+<div class="sh">&#127891; Politics Questions 2026</div>
+<div class="qs">
+<div class="qc q1" onclick="show('pol-q1')">
+<div class="qn">Politics Q1 &bull; Normative/Limits</div>
+<div class="qtag">&#127758; Self-Determination</div>
+<h3>Is the right to self-determination absolute?</h3>
+<div class="qmeta">Sovereignty &bull; Secession &bull; Territorial Integrity &bull; International Law</div>
 </div>
-<div class="sh">&#128202; Which Question to Choose?</div>
-<div class="card"><div class="ctitle">Quick Decision Guide</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:var(--q1)">Q1</div><div><div class="tipt">Cashless Society</div><div class="tipd">Best if you are interested in monetary policy, privacy rights, or financial inclusion. Strong data available. Normative question allows clear thesis.</div></div></div>
-<div class="tip"><div class="tipn" style="background:var(--q2)">Q2</div><div><div class="tipt">Personalised Pricing</div><div class="tipd">Best if you enjoy microeconomics and welfare analysis. Requires nuanced multi-stakeholder analysis. Cutting-edge topic with limited settled literature.</div></div></div>
-<div class="tip"><div class="tipn" style="background:var(--q3)">Q3</div><div><div class="tipt">Bezos / Amazon</div><div class="tipd">Best if you like case studies and labour economics. Concrete data on Amazon. Risk of being descriptive rather than analytical &mdash; requires discipline.</div></div></div>
-</div></div>
+<div class="qc q2" onclick="show('pol-q2')">
+<div class="qn">Politics Q2 &bull; Rights/Sovereignty</div>
+<div class="qtag">&#128679; Border Control</div>
+<h3>Should states have the right to control their borders?</h3>
+<div class="qmeta">Migration &bull; Sovereignty &bull; Human Rights &bull; Global Justice</div>
 </div>
+<div class="qc q3" onclick="show('pol-q3')">
+<div class="qn">Politics Q3 &bull; Conceptual Compatibility</div>
+<div class="qtag">&#127988; Nationalism &amp; Liberalism</div>
+<h3>Is nationalism compatible with liberalism?</h3>
+<div class="qmeta">Identity &bull; Individual Rights &bull; Civic vs. Ethnic &bull; Solidarity</div>
+</div>
+</div>
+
+</div>
+
+<!-- ECONOMICS Q1 -->
 <div id="q1" class="section">
-<div class="stitle" style="color:var(--q1)">&#128178; Q1: Should we fear a cashless society?</div>
+<div class="stitle" style="color:var(--q1)">&#128178; Econ Q1: Should we fear a cashless society?</div>
 <div class="ssub">Monetary Economics &bull; Privacy &bull; Financial Inclusion</div>
 <div style="background:linear-gradient(135deg,#0369a1,#0891b2);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff">
 <h2 style="font-size:20px;margin-bottom:10px">Should we fear a cashless society?</h2>
@@ -223,15 +242,13 @@ body{font-family:'Poppins','Segoe UI',sans-serif;background:#f5f7ff;color:#2d374
 <div class="dg">
 <div class="ds rs"><div class="dh r">&#128308; YES &mdash; We Should Fear It</div>
 <div class="dp"><div><strong>&#128065; Surveillance capitalism</strong><em>Every transaction tracked; governments gain total financial visibility</em></div></div>
-<div class="dp"><div><strong>&#128683; Financial exclusion</strong><em>1.4B unbanked globally (World Bank 2021); elderly, rural, low-income excluded</em></div></div>
+<div class="dp"><div><strong>&#128683; Financial exclusion</strong><em>1.4B unbanked globally; elderly, rural, low-income excluded</em></div></div>
 <div class="dp"><div><strong>&#9889; System fragility</strong><em>Power outages, cyberattacks leave people unable to transact</em></div></div>
-<div class="dp"><div><strong>&#128274; Loss of monetary freedom</strong><em>Negative rates, spending controls, account freezes become trivially easy</em></div></div>
 </div>
 <div class="ds gs"><div class="dh g">&#128994; NO &mdash; Benefits Outweigh Fears</div>
 <div class="dp"><div><strong>&#128176; Efficiency gains</strong><em>Eliminates cash handling costs (~0.5% GDP); faster settlement</em></div></div>
 <div class="dp"><div><strong>&#128373; Reduces crime</strong><em>Tax evasion, money laundering rely on cash anonymity</em></div></div>
 <div class="dp"><div><strong>&#128200; Financial inclusion</strong><em>M-Pesa brought banking to 96% of Kenyan households</em></div></div>
-<div class="dp"><div><strong>&#128202; Transparency</strong><em>Reduces corruption; audit trails improve public accountability</em></div></div>
 </div>
 </div>
 <div class="sh">&#128203; Key Data</div>
@@ -239,448 +256,666 @@ body{font-family:'Poppins','Segoe UI',sans-serif;background:#f5f7ff;color:#2d374
 <div class="dc"><div class="dstat">98%</div><div class="ddesc">Sweden transactions are digital (2023)</div><div class="dsrc">Riksbank</div></div>
 <div class="dc"><div class="dstat">1.4B</div><div class="ddesc">Adults globally without bank accounts</div><div class="dsrc">World Bank 2021</div></div>
 <div class="dc"><div class="dstat">130+</div><div class="ddesc">Countries exploring CBDCs</div><div class="dsrc">Atlantic Council 2024</div></div>
-<div class="dc"><div class="dstat">0.5%</div><div class="ddesc">GDP cost of cash handling in advanced economies</div><div class="dsrc">ECB</div></div>
-</div>
-<div class="sh">&#128221; Sample Thesis Statements</div>
-<div class="tg">
-<div class="tc"><div class="tl">Strong YES Thesis</div><div class="tt">A cashless society should be feared not because digital payments are inherently dangerous, but because the infrastructure required creates unprecedented tools for financial surveillance and exclusion that no democratic safeguard has yet proven adequate to constrain.</div></div>
-<div class="tc"><div class="tl">Strong NO Thesis</div><div class="tt">The fears surrounding a cashless society, while not unfounded, are outweighed by the concrete benefits of financial inclusion, reduced crime, and monetary policy effectiveness &mdash; provided robust regulatory frameworks accompany the transition.</div></div>
-<div class="tc"><div class="tl">Nuanced Thesis</div><div class="tt">Whether we should fear a cashless society depends entirely on the institutional context: in liberal democracies with strong data protection, the benefits dominate; in authoritarian states, the same technology becomes an instrument of control.</div></div>
-</div>
-<div class="sh">&#128196; Essay Structure (5 paragraphs)</div>
-<div class="sf">
-<div class="ss"><div class="sn" style="background:#2563eb;color:#fff">1</div><div class="sb"><div class="stit">Introduction <span class="spct" style="background:#dbeafe;color:#1d4ed8">~200 words</span></div><div class="spts">Define cashless society. Acknowledge the trend (Sweden, China). State your thesis clearly. Preview your argument structure.</div></div></div>
-<div class="ss"><div class="sn" style="background:#0891b2;color:#fff">2</div><div class="sb"><div class="stit">The Case FOR Fear <span class="spct" style="background:#e0f2fe;color:#0369a1">~400 words</span></div><div class="spts">Privacy/surveillance (strongest argument). Financial exclusion of vulnerable groups. System fragility and geopolitical risk.</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">3</div><div class="sb"><div class="stit">The Case AGAINST Fear <span class="spct" style="background:#d1fae5;color:#065f46">~400 words</span></div><div class="spts">Efficiency and inclusion benefits. Crime reduction. Monetary policy tools. Counter the exclusion argument with M-Pesa evidence.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">4</div><div class="sb"><div class="stit">Critical Analysis <span class="spct" style="background:#ede9fe;color:#5b21b6">~400 words</span></div><div class="spts">The institutional context matters most. Distinguish between cashless by choice vs. by mandate. Role of regulation and GDPR-style protections.</div></div></div>
-<div class="ss"><div class="sn" style="background:#f59e0b;color:#fff">5</div><div class="sb"><div class="stit">Conclusion <span class="spct" style="background:#fef3c7;color:#92400e">~200 words</span></div><div class="spts">Restate thesis with nuance. Acknowledge strongest counterargument. End with a forward-looking insight about institutional design.</div></div></div>
 </div>
 </div>
+
+<!-- ECONOMICS Q2 -->
 <div id="q2" class="section">
-<div class="stitle" style="color:var(--q2)">&#128200; Q2: Personalised Pricing Effects</div>
+<div class="stitle" style="color:var(--q2)">&#128200; Econ Q2: Personalised Pricing Effects</div>
 <div class="ssub">Behavioural Economics &bull; Price Discrimination &bull; Welfare Analysis</div>
 <div style="background:linear-gradient(135deg,#5b21b6,#7c3aed);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff">
 <h2 style="font-size:20px;margin-bottom:10px">Technology now allows personalised pricing. If this came to be widely used, what effects should we expect?</h2>
-<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">personalised pricing</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">welfare effects</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">market power</span></div>
+<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">personalised pricing</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">welfare effects</span></div>
 </div>
 <div class="sh">&#128202; Effects Framework</div>
 <div class="dg">
 <div class="ds rs"><div class="dh r">&#128308; Negative Effects</div>
-<div class="dp"><div><strong>&#128100; Consumer surplus extraction</strong><em>Firms capture ALL consumer surplus; buyers pay their exact willingness-to-pay</em></div></div>
-<div class="dp"><div><strong>&#128065; Privacy erosion</strong><em>Requires mass data collection; normalises surveillance of purchasing behaviour</em></div></div>
-<div class="dp"><div><strong>&#9878; Fairness concerns</strong><em>Poor pay more relative to income; discrimination by race/gender possible</em></div></div>
-<div class="dp"><div><strong>&#127963; Market power entrenchment</strong><em>Data-rich incumbents gain permanent advantage; barriers to entry rise</em></div></div>
+<div class="dp"><div><strong>&#128100; Consumer surplus extraction</strong><em>Firms capture ALL consumer surplus</em></div></div>
+<div class="dp"><div><strong>&#128065; Privacy erosion</strong><em>Requires mass data collection</em></div></div>
+<div class="dp"><div><strong>&#9878; Fairness concerns</strong><em>Poor pay more relative to income</em></div></div>
 </div>
 <div class="ds gs"><div class="dh g">&#128994; Positive Effects</div>
-<div class="dp"><div><strong>&#128200; Allocative efficiency</strong><em>Perfect price discrimination = perfectly competitive output; no deadweight loss</em></div></div>
-<div class="dp"><div><strong>&#128176; Access expansion</strong><em>Low-income consumers can access goods at lower prices (airlines, software)</em></div></div>
-<div class="dp"><div><strong>&#127775; Innovation incentives</strong><em>Higher profits fund R&amp;D; pharmaceutical pricing enables drug development</em></div></div>
-<div class="dp"><div><strong>&#128203; Better matching</strong><em>Prices signal true valuations; resources allocated to highest-value uses</em></div></div>
+<div class="dp"><div><strong>&#128200; Allocative efficiency</strong><em>No deadweight loss with perfect price discrimination</em></div></div>
+<div class="dp"><div><strong>&#128176; Access expansion</strong><em>Low-income consumers can access goods at lower prices</em></div></div>
+<div class="dp"><div><strong>&#127775; Innovation incentives</strong><em>Higher profits fund R&amp;D</em></div></div>
 </div>
 </div>
-<div class="sh">&#128221; Sample Thesis Statements</div>
-<div class="tg">
-<div class="tc"><div class="tl">Efficiency Focus</div><div class="tt">Widespread personalised pricing would improve allocative efficiency and expand access to goods for low-income consumers, but only if accompanied by strong anti-discrimination regulation to prevent the technology from entrenching existing inequalities.</div></div>
-<div class="tc"><div class="tl">Fairness Focus</div><div class="tt">The widespread adoption of personalised pricing would represent a fundamental shift in market power from consumers to firms, extracting consumer surplus at scale while creating new forms of discrimination that existing competition law is ill-equipped to address.</div></div>
 </div>
-<div class="sh">&#128196; Essay Structure</div>
-<div class="sf">
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">1</div><div class="sb"><div class="stit">Introduction</div><div class="spts">Define personalised pricing (3rd degree price discrimination at scale). Give examples: Uber surge, Amazon dynamic pricing, airline tickets.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">2</div><div class="sb"><div class="stit">Efficiency Effects</div><div class="spts">Welfare analysis: deadweight loss elimination vs. consumer surplus transfer. Use supply/demand diagram logic. Distinguish 1st, 2nd, 3rd degree discrimination.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">3</div><div class="sb"><div class="stit">Distributional Effects</div><div class="spts">Who wins and who loses? Firms gain, consumers lose surplus. But low-WTP consumers may gain access. Equity implications.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">4</div><div class="sb"><div class="stit">Market Structure Effects</div><div class="spts">Data as competitive moat. Network effects. Regulatory response needed. GDPR, algorithmic transparency.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">5</div><div class="sb"><div class="stit">Conclusion</div><div class="spts">Net assessment: efficiency gains real but distributional concerns dominate without regulation. Policy recommendations.</div></div></div>
-</div>
-</div>
+
+<!-- ECONOMICS Q3 -->
 <div id="q3" class="section">
-<div class="stitle" style="color:var(--q3)">&#128188; Q3: Did Bezos Get Rich at Others' Expense?</div>
+<div class="stitle" style="color:var(--q3)">&#128188; Econ Q3: Did Bezos Get Rich at Others' Expense?</div>
 <div class="ssub">Labour Economics &bull; Wealth Creation &bull; Consumer Surplus &bull; Inequality</div>
 <div style="background:linear-gradient(135deg,#065f46,#059669);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff">
 <h2 style="font-size:20px;margin-bottom:10px">Did Jeff Bezos get rich at the expense of his customers, his employees, neither or both?</h2>
-<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">at the expense of</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">customers</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">employees</span></div>
+<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">at the expense of</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">zero-sum vs positive-sum</span></div>
 </div>
-<div class="alert info"><span>&#128161;</span><div><strong>Key analytical move:</strong> "At the expense of" means zero-sum &mdash; one party gains ONLY because another loses. You must test whether each relationship is zero-sum or positive-sum.</div></div>
-<div class="sh">&#128100; The Four Possible Answers</div>
-<div class="sg" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
-<div class="sc" style="border-top:4px solid var(--red)"><div class="si">&#128308;</div><div class="sv" style="color:var(--red)">Both</div><div class="sl">Customers AND employees exploited</div></div>
-<div class="sc" style="border-top:4px solid var(--q1)"><div class="si">&#128309;</div><div class="sv" style="color:var(--q1)">Customers Only</div><div class="sl">Monopoly pricing, but workers fine</div></div>
-<div class="sc" style="border-top:4px solid var(--gold)"><div class="si">&#128992;</div><div class="sv" style="color:var(--gold)">Employees Only</div><div class="sl">Customers benefit, workers exploited</div></div>
-<div class="sc" style="border-top:4px solid var(--green)"><div class="si">&#128994;</div><div class="sv" style="color:var(--green)">Neither</div><div class="sl">Positive-sum wealth creation</div></div>
-</div>
+<div class="alert info"><span>&#128161;</span><div><strong>Key analytical move:</strong> "At the expense of" means zero-sum. Test whether each relationship is zero-sum or positive-sum.</div></div>
 <div class="sh">&#128202; The Evidence</div>
 <div class="dg">
 <div class="ds gs"><div class="dh g">&#128994; NOT at Customers' Expense</div>
-<div class="dp"><div><strong>&#128200; Consumer surplus massive</strong><em>Amazon Prime saves avg. household $1,000+/yr; prices consistently below rivals</em></div></div>
-<div class="dp"><div><strong>&#128176; Competitive pricing</strong><em>Amazon built market share through LOW prices, not monopoly extraction</em></div></div>
-<div class="dp"><div><strong>&#127775; Innovation value</strong><em>AWS, Prime Video, Alexa &mdash; new products customers value highly</em></div></div>
+<div class="dp"><div><strong>&#128200; Consumer surplus massive</strong><em>Amazon Prime saves avg. household $1,000+/yr</em></div></div>
+<div class="dp"><div><strong>&#128176; Competitive pricing</strong><em>Amazon built market share through LOW prices</em></div></div>
 </div>
 <div class="ds rs"><div class="dh r">&#128308; YES at Employees' Expense</div>
-<div class="dp"><div><strong>&#128683; Warehouse conditions</strong><em>Injury rates 2x industry average (Strategic Organising Centre 2021)</em></div></div>
-<div class="dp"><div><strong>&#128100; Monopsony power</strong><em>Amazon = 45% of US e-commerce; dominant employer in many regions</em></div></div>
-<div class="dp"><div><strong>&#128274; Anti-union practices</strong><em>Documented union-busting; workers lack bargaining power to capture value created</em></div></div>
-<div class="dp"><div><strong>&#128202; Wage suppression</strong><em>Median Amazon wage below living wage in many markets until $15 minimum (2018)</em></div></div>
+<div class="dp"><div><strong>&#128683; Warehouse conditions</strong><em>Injury rates 2x industry average</em></div></div>
+<div class="dp"><div><strong>&#128100; Monopsony power</strong><em>Amazon = 45% of US e-commerce</em></div></div>
 </div>
 </div>
-<div class="sh">&#128203; Key Data</div>
-<div class="datagrid">
-<div class="dc"><div class="dstat">$177B</div><div class="ddesc">Bezos peak net worth (2021)</div><div class="dsrc">Forbes</div></div>
-<div class="dc"><div class="dstat">1.5M</div><div class="ddesc">Amazon employees globally (2023)</div><div class="dsrc">Amazon</div></div>
-<div class="dc"><div class="dstat">2x</div><div class="ddesc">Amazon warehouse injury rate vs. industry average</div><div class="dsrc">SOC 2021</div></div>
-<div class="dc"><div class="dstat">$1,000+</div><div class="ddesc">Annual consumer surplus per Prime household</div><div class="dsrc">Estimates</div></div>
 </div>
+
+<!-- POLITICS OVERVIEW -->
+<div id="politics-overview" class="section">
+<div class="stitle">&#127891; Politics Category Overview</div>
+<div class="ssub">John Locke Institute Essay Competition 2026 &mdash; Politics Category</div>
+
+<div class="sg">
+<div class="sc"><div class="si">&#127942;</div><div class="sv">JLI 2026</div><div class="sl">Competition</div></div>
+<div class="sc"><div class="si">&#128197;</div><div class="sv">Apr 1</div><div class="sl">Questions Released</div></div>
+<div class="sc"><div class="si">&#128203;</div><div class="sv">May 10</div><div class="sl">Secondary Deadline</div></div>
+<div class="sc"><div class="si">&#127937;</div><div class="sv">May 31</div><div class="sl">Final Deadline</div></div>
+<div class="sc"><div class="si">&#128221;</div><div class="sv">~2,000</div><div class="sl">Word Limit</div></div>
+<div class="sc"><div class="si">&#128218;</div><div class="sv">3</div><div class="sl">Questions to Choose</div></div>
+</div>
+
+<div class="sh">&#127775; The 3 Official 2026 Politics Questions</div>
+<div class="qs">
+<div class="qc q1" onclick="show('pol-q1')">
+<div class="qn">Question 1 &bull; Normative/Limits Analysis</div>
+<div class="qtag">&#127758; Self-Determination</div>
+<h3>Is the right to self-determination absolute?</h3>
+<div class="qmeta">Sovereignty &bull; Secession &bull; Territorial Integrity &bull; International Law</div>
+</div>
+<div class="qc q2" onclick="show('pol-q2')">
+<div class="qn">Question 2 &bull; Rights/Sovereignty Analysis</div>
+<div class="qtag">&#128679; Border Control</div>
+<h3>Should states have the right to control their borders?</h3>
+<div class="qmeta">Migration &bull; Sovereignty &bull; Human Rights &bull; Global Justice</div>
+</div>
+<div class="qc q3" onclick="show('pol-q3')">
+<div class="qn">Question 3 &bull; Conceptual Compatibility</div>
+<div class="qtag">&#127988; Nationalism &amp; Liberalism</div>
+<h3>Is nationalism compatible with liberalism?</h3>
+<div class="qmeta">Identity &bull; Individual Rights &bull; Civic vs. Ethnic &bull; Solidarity</div>
+</div>
+</div>
+
+<div class="sh">&#9878; Cross-Cutting Themes (appear in ALL questions)</div>
+<div class="themegrid">
+<div class="thm"><div class="thmi">&#127758;</div><div class="thmt">Sovereignty &amp; Self-Governance</div><div class="thmd">All three questions involve the tension between collective self-governance and external constraints</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
+<div class="thm"><div class="thmi">&#9878;</div><div class="thmt">Individual vs. Collective Rights</div><div class="thmd">The tension between individual human rights and collective self-determination</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
+<div class="thm"><div class="thmi">&#128100;</div><div class="thmt">Who Belongs?</div><div class="thmd">Questions of membership, identity, and who counts as "the people"</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
+<div class="thm"><div class="thmi">&#127963;</div><div class="thmt">International Order</div><div class="thmd">How principles interact with the existing system of nation-states</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
+<div class="thm"><div class="thmi">&#128065;</div><div class="thmt">Universal vs. Particular</div><div class="thmd">Tension between universal principles and particular communities</div><div class="thmq"><span class="thmqb q1">1</span><span class="thmqb q2">2</span><span class="thmqb q3">3</span></div></div>
+</div>
+
+<div class="sh">&#128202; Question Selection Guide</div>
+<div class="card"><div class="ctitle">Which Question Should You Choose?</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:var(--q1)">Q1</div><div><div class="tipt">Self-Determination</div><div class="tipd">Best if you&apos;re interested in international law and political philosophy. Strong case studies available (Kosovo, Catalonia, Taiwan). Requires nuanced, conditional arguments.</div></div></div>
+<div class="tip"><div class="tipn" style="background:var(--q2)">Q2</div><div><div class="tipt">Border Control</div><div class="tipd">Best if you&apos;re interested in migration and global justice. Clear contemporary relevance. Requires engaging with both sovereignty and human rights arguments.</div></div></div>
+<div class="tip"><div class="tipn" style="background:var(--q3)">Q3</div><div><div class="tipt">Nationalism &amp; Liberalism</div><div class="tipd">Best if you enjoy political theory and intellectual history. Requires distinguishing between types of nationalism. Abstract conceptual analysis needed.</div></div></div>
+</div></div>
+
+<div class="sh">&#128203; Question Comparison Matrix</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Factor</th><th style="padding:10px">Q1: Self-Determination</th><th style="padding:10px">Q2: Border Control</th><th style="padding:10px">Q3: Nationalism</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Originality Potential</td><td style="padding:9px;text-align:center">High</td><td style="padding:9px;text-align:center">Medium</td><td style="padding:9px;text-align:center">Medium</td></tr>
+<tr><td style="padding:9px;font-weight:600">Data Availability</td><td style="padding:9px;text-align:center">High (many cases)</td><td style="padding:9px;text-align:center">High</td><td style="padding:9px;text-align:center">Medium</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Counterargument Richness</td><td style="padding:9px;text-align:center">Very High</td><td style="padding:9px;text-align:center">Very High</td><td style="padding:9px;text-align:center">High</td></tr>
+<tr><td style="padding:9px;font-weight:600">Risk of Clich&eacute;</td><td style="padding:9px;text-align:center">Medium</td><td style="padding:9px;text-align:center">High</td><td style="padding:9px;text-align:center">Medium</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Philosophical Depth</td><td style="padding:9px;text-align:center">Very High</td><td style="padding:9px;text-align:center">High</td><td style="padding:9px;text-align:center">Very High</td></tr>
+</table></div>
+
+<div class="sh">&#128161; Key Thinkers to Reference</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Thinker</th><th style="padding:10px;text-align:left">Area</th><th style="padding:10px;text-align:left">Key Idea</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">John Locke</td><td style="padding:9px">Consent theory</td><td style="padding:9px">Government requires consent of the governed</td></tr>
+<tr><td style="padding:9px;font-weight:600">John Rawls</td><td style="padding:9px">Justice</td><td style="padding:9px">Veil of ignorance, justice as fairness</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Allen Buchanan</td><td style="padding:9px">Secession</td><td style="padding:9px">Remedial right only theory</td></tr>
+<tr><td style="padding:9px;font-weight:600">Margaret Moore</td><td style="padding:9px">Territory</td><td style="padding:9px">Primary right to territory</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Joseph Carens</td><td style="padding:9px">Migration</td><td style="padding:9px">Open borders argument</td></tr>
+<tr><td style="padding:9px;font-weight:600">David Miller</td><td style="padding:9px">Nationalism</td><td style="padding:9px">Liberal nationalism, territorial rights</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Yael Tamir</td><td style="padding:9px">Nationalism</td><td style="padding:9px">Liberal nationalism thesis</td></tr>
+<tr><td style="padding:9px;font-weight:600">Michael Walzer</td><td style="padding:9px">Communitarianism</td><td style="padding:9px">Spheres of justice, just war</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Will Kymlicka</td><td style="padding:9px">Minorities</td><td style="padding:9px">Multicultural citizenship</td></tr>
+</table></div>
+
+</div>
+
+<!-- POLITICS Q1: SELF-DETERMINATION -->
+<div id="pol-q1" class="section">
+<div class="stitle" style="color:var(--q1)">&#127758; Q1: Is the Right to Self-Determination Absolute?</div>
+<div class="ssub">International Law &bull; Political Philosophy &bull; Sovereignty &bull; Secession</div>
+
+<div style="background:linear-gradient(135deg,#0369a1,#0891b2);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff">
+<h2 style="font-size:20px;margin-bottom:10px">Is the right to self-determination absolute?</h2>
+<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">self-determination</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">absolute</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">peoples</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">secession</span></div>
+</div>
+
+<div class="alert info"><span>&#128161;</span><div><strong>Question Analysis:</strong> This is a normative/limits question. "Absolute" means without exception or limitation. You must test whether self-determination should ever be denied, and if so, under what conditions.</div></div>
+
+<div class="sh">&#9876; The Core Debate</div>
+<div class="dg">
+<div class="ds gs"><div class="dh g">&#128994; YES &mdash; Self-Determination IS Absolute</div>
+<div class="dp"><div><strong>&#128499; Democratic legitimacy</strong><em>Government requires consent of the governed; no legitimate rule without consent</em></div></div>
+<div class="dp"><div><strong>&#9878; Historical justice</strong><em>Colonialism was wrong because it denied self-determination; decolonization recognized this</em></div></div>
+<div class="dp"><div><strong>&#128330; Peace through accommodation</strong><em>Suppressing self-determination causes conflict (Yugoslavia, Sudan, Myanmar)</em></div></div>
+<div class="dp"><div><strong>&#128100; Moral autonomy</strong><em>Peoples, like individuals, have inherent right to self-governance</em></div></div>
+</div>
+<div class="ds rs"><div class="dh r">&#128308; NO &mdash; Self-Determination Has Limits</div>
+<div class="dp"><div><strong>&#127758; Territorial integrity</strong><em>States have right to maintain borders; unlimited secession leads to fragmentation</em></div></div>
+<div class="dp"><div><strong>&#128101; Minority rights within</strong><em>Seceding majorities may oppress their own minorities; recursive problem</em></div></div>
+<div class="dp"><div><strong>&#128679; Viability concerns</strong><em>Some territories cannot function as states; may create failed states</em></div></div>
+<div class="dp"><div><strong>&#128274; Process legitimacy</strong><em>Referendums can be manipulated (Crimea 2014); external actors can manufacture separatism</em></div></div>
+</div>
+</div>
+
+<div class="sh">&#128203; Key Case Studies</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Case</th><th style="padding:10px">Year</th><th style="padding:10px;text-align:left">Outcome</th><th style="padding:10px;text-align:left">Lesson</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Kosovo</td><td style="padding:9px;text-align:center">2008</td><td style="padding:9px">Unilateral declaration, partial recognition</td><td style="padding:9px">Remedial secession after oppression, but contested</td></tr>
+<tr><td style="padding:9px;font-weight:600">Catalonia</td><td style="padding:9px;text-align:center">2017</td><td style="padding:9px">Referendum illegal, leaders imprisoned</td><td style="padding:9px">Democratic states can deny secession</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Scotland</td><td style="padding:9px;text-align:center">2014</td><td style="padding:9px">Referendum allowed, "No" won 55-45%</td><td style="padding:9px">Negotiated process within democracy works</td></tr>
+<tr><td style="padding:9px;font-weight:600">Crimea</td><td style="padding:9px;text-align:center">2014</td><td style="padding:9px">Annexed by Russia, not recognized</td><td style="padding:9px">External manipulation delegitimizes</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">South Sudan</td><td style="padding:9px;text-align:center">2011</td><td style="padding:9px">Independence, then civil war</td><td style="padding:9px">Self-determination doesn&apos;t guarantee peace</td></tr>
+<tr><td style="padding:9px;font-weight:600">Czechoslovakia</td><td style="padding:9px;text-align:center">1993</td><td style="padding:9px">Peaceful "Velvet Divorce"</td><td style="padding:9px">Negotiated separation can work</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Taiwan</td><td style="padding:9px;text-align:center">Ongoing</td><td style="padding:9px">De facto independent, claimed by China</td><td style="padding:9px">Self-determination vs. great power politics</td></tr>
+</table></div>
+
 <div class="sh">&#128221; Sample Thesis Statements</div>
 <div class="tg">
-<div class="tc"><div class="tl">Employees Yes, Customers No</div><div class="tt">Bezos did not get rich at the expense of his customers &mdash; Amazon created enormous consumer surplus through competitive pricing and innovation. However, the evidence strongly suggests that Amazon's warehouse workers bore disproportionate costs through suppressed wages, unsafe conditions, and systematic denial of bargaining power.</div></div>
-<div class="tc"><div class="tl">Neither (Positive-Sum)</div><div class="tt">Bezos's wealth reflects genuine value creation: Amazon transformed retail efficiency, created millions of jobs, and delivered unprecedented consumer value. The question's zero-sum framing misunderstands how entrepreneurial wealth is generated in competitive markets.</div></div>
+<div class="tc"><div class="tl">Qualified Right (Recommended)</div><div class="tt">Self-determination is a fundamental right, but not an absolute one. It must be balanced against territorial integrity, minority rights, and procedural legitimacy. The right is strongest when exercised by historically oppressed peoples through democratic processes, and weakest when manufactured by external powers or used to fragment functioning democracies.</div></div>
+<div class="tc"><div class="tl">Conditional Absolutism</div><div class="tt">Self-determination is absolute in principle but conditional in application. Every people has the right to determine their political future, but the exercise of that right must meet procedural requirements&mdash;genuine democratic consent, protection of minorities, and good-faith negotiation&mdash;that distinguish legitimate self-determination from manufactured separatism.</div></div>
+<div class="tc"><div class="tl">Remedial Right Only</div><div class="tt">Self-determination as a right to secession is not absolute but remedial. It exists as a last resort for peoples suffering systematic oppression, genocide, or denial of internal self-governance. For peoples already enjoying democratic participation within a larger state, self-determination means autonomy and representation, not unilateral secession.</div></div>
 </div>
-<div class="sh">&#128196; Essay Structure</div>
+
+<div class="sh">&#128196; Recommended Essay Structure</div>
 <div class="sf">
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">1</div><div class="sb"><div class="stit">Introduction</div><div class="spts">Define "at the expense of" as zero-sum. Introduce Amazon's scale. State your answer clearly upfront.</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">2</div><div class="sb"><div class="stit">Customers: Positive-Sum</div><div class="spts">Consumer surplus evidence. Competitive pricing strategy. Network effects and innovation. Verdict: NOT at customers' expense.</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">3</div><div class="sb"><div class="stit">Employees: Mixed Evidence</div><div class="spts">Wage data and injury rates. Monopsony power analysis. $15 minimum wage counterargument. Verdict: Partially at employees' expense.</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">4</div><div class="sb"><div class="stit">Structural Analysis</div><div class="spts">Is this about Bezos specifically or capitalism generally? Role of regulation. Could workers have captured more value?</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">5</div><div class="sb"><div class="stit">Conclusion</div><div class="spts">Bezos got rich primarily through value creation (not extraction from customers), but workers did bear real costs. The answer is: employees yes, customers no.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q1);color:#fff">1</div><div class="sb"><div class="stit">Introduction <span class="spct" style="background:#e0f2fe;color:#0369a1">~200 words</span></div><div class="spts">Hook: Kosovo and Catalonia&mdash;same principle, different outcomes. Define self-determination (internal vs. external) and "absolute." State thesis clearly.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q1);color:#fff">2</div><div class="sb"><div class="stit">The Case for Self-Determination <span class="spct" style="background:#e0f2fe;color:#0369a1">~350 words</span></div><div class="spts">Democratic legitimacy requires consent. Historical justice (decolonization). Peace through accommodation. Examples: Baltic states, East Timor, South Sudan.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q1);color:#fff">3</div><div class="sb"><div class="stit">The Limits of Self-Determination <span class="spct" style="background:#e0f2fe;color:#0369a1">~400 words</span></div><div class="spts">Territorial integrity as competing principle. Minority rights within seceding territories. The boundary problem (who are "the people"?). The recursive problem. Process legitimacy.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q1);color:#fff">4</div><div class="sb"><div class="stit">When Self-Determination Should Prevail <span class="spct" style="background:#e0f2fe;color:#0369a1">~400 words</span></div><div class="spts">Remedial secession: response to oppression (Kosovo). Democratic process: genuine referendums (Scotland). Minority protection: guarantees for those who remain. Negotiated outcomes (Czechoslovakia).</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q1);color:#fff">5</div><div class="sb"><div class="stit">When It Should Not Prevail <span class="spct" style="background:#e0f2fe;color:#0369a1">~250 words</span></div><div class="spts">Manufactured separatism (Crimea, Donbas). Fragmentation of functioning democracies. Creation of unviable or oppressive states. Unilateral action without negotiation.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q1);color:#fff">6</div><div class="sb"><div class="stit">Conclusion <span class="spct" style="background:#e0f2fe;color:#0369a1">~200 words</span></div><div class="spts">Self-determination is a right, not a trump card. Context and process matter as much as principle. The question is not "if" but "how" and "when." Rights exist in relationship to other rights.</div></div></div>
+</div>
+
+<div class="sh">&#128300; Theoretical Frameworks</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:#dc2626">1</div><div><div class="tipt">Remedial Right Only (Buchanan)</div><div class="tipd">Self-determination as secession exists only as remedy for serious injustice: genocide, ethnic cleansing, systematic human rights violations, persistent denial of internal self-governance.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#059669">2</div><div><div class="tipt">Primary Right (Moore)</div><div class="tipd">Peoples have a primary right to self-determination based on territorial rights (historical connection to land), political identity (shared sense of peoplehood), and capacity for self-governance.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#7c3aed">3</div><div><div class="tipt">Democratic Proceduralism</div><div class="tipd">Self-determination is legitimate when: expressed through genuine democratic process, conducted without external manipulation, protects rights of minorities, and negotiated in good faith.</div></div></div>
+</div>
+
+<div class="sh">&#128161; Original Angles to Explore</div>
+<div class="al">
+<li><span>&#127919;</span><strong>The Taiwan Test:</strong> Apply your framework to the hardest case. Taiwan meets almost every criterion for legitimate self-determination, yet is denied recognition due to geopolitical consequences.</li>
+<li><span>&#128260;</span><strong>The Recursive Problem:</strong> If Catalonia can secede from Spain, can Barcelona secede from Catalonia? Where does it end?</li>
+<li><span>&#128499;</span><strong>The Democratic Paradox:</strong> A majority voting to secede may override the rights of a minority who wish to remain&mdash;is this democratic?</li>
+<li><span>&#127758;</span><strong>Indigenous Self-Determination:</strong> Different framework than national secession&mdash;sovereignty without statehood may be more widely applicable.</li>
+<li><span>&#9878;</span><strong>Great Power Hypocrisy:</strong> Same states that supported Kosovo oppose Crimea. Principles or interests?</li>
+</div>
+
+<div class="sh">&#128218; Key Quotes for Your Essay</div>
+<div class="sp">"On the surface, [self-determination] seemed reasonable: let the people decide. It was in fact ridiculous because the people cannot decide until someone decides who are the people." &mdash; Ivor Jennings (1956)</div>
+<div class="sp">"The right to secede is a remedial right only&mdash;a right that exists only where the group in question has suffered certain injustices." &mdash; Allen Buchanan (2004)</div>
+<div class="sp">"Self-determination is not a mere phrase. It is an imperative principle of action which statesmen will henceforth ignore at their peril." &mdash; Woodrow Wilson (1918)</div>
+
+<div class="sh">&#128683; Counterarguments to Address</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"If self-determination isn&apos;t absolute, states can always find excuses to deny it."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>True, which is why we need clear criteria.</strong><em>The remedial framework provides such criteria: self-determination as secession is strongest when responding to serious injustice. For peoples not suffering injustice, internal self-determination (autonomy) may suffice.</em></div></div>
 </div>
 </div>
-<div id="timeline" class="section">
-<div class="stitle">&#128197; Preparation Timeline</div>
-<div class="ssub">From now to submission &mdash; a week-by-week action plan</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"Territorial integrity is just a tool for powerful states to maintain control."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>Territorial integrity can be abused, but it also serves legitimate purposes:</strong><em>preventing endless fragmentation, protecting minorities, maintaining international order. The question is how to balance it with self-determination, not whether to abandon it.</em></div></div>
+</div>
+</div>
+
+<div class="sh">&#128218; Essential Reading</div>
+<div class="readgrid">
+<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">Justice, Legitimacy, and Self-Determination</div><div class="bka">Allen Buchanan (2004) &mdash; Remedial right theory</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Essential</span></div></div>
+<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">A Political Theory of Territory</div><div class="bka">Margaret Moore (2015) &mdash; Primary right theory</div><span class="bktag" style="background:#d1fae5;color:#065f46">Essential</span></div></div>
+<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">Self-Determination of Peoples</div><div class="bka">Antonio Cassese (1995) &mdash; International law</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Recommended</span></div></div>
+<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">On Nationality</div><div class="bka">David Miller (1995) &mdash; National self-determination</div><span class="bktag" style="background:#fef3c7;color:#92400e">Recommended</span></div></div>
+</div>
+
+</div>
+
+<!-- POLITICS Q2: BORDER CONTROL -->
+<div id="pol-q2" class="section">
+<div class="stitle" style="color:var(--q2)">&#128679; Q2: Should States Have the Right to Control Their Borders?</div>
+<div class="ssub">Migration &bull; Sovereignty &bull; Human Rights &bull; Global Justice</div>
+
+<div style="background:linear-gradient(135deg,#5b21b6,#7c3aed);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff">
+<h2 style="font-size:20px;margin-bottom:10px">Should states have the right to control their borders?</h2>
+<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">states</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">right</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">control</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">borders</span></div>
+</div>
+
+<div class="alert info"><span>&#128161;</span><div><strong>Question Analysis:</strong> This is a rights/sovereignty question. You must distinguish between moral right vs. legal authority, and between "control" (regulate) vs. "close" (exclude entirely). Consider both state sovereignty and individual human rights.</div></div>
+
+<div class="sh">&#9876; The Core Debate</div>
+<div class="dg">
+<div class="ds gs"><div class="dh g">&#128994; YES &mdash; States SHOULD Have This Right</div>
+<div class="dp"><div><strong>&#127758; Sovereignty &amp; self-determination</strong><em>States are political expression of peoples; self-determination includes determining membership</em></div></div>
+<div class="dp"><div><strong>&#128176; Social contract &amp; welfare</strong><em>Citizens have obligations to each other; welfare states require bounded membership</em></div></div>
+<div class="dp"><div><strong>&#127963; Cultural preservation</strong><em>Nations have distinct cultures worth preserving; existing residents have stake in continuity</em></div></div>
+<div class="dp"><div><strong>&#128274; Security</strong><em>States must protect citizens from threats; border control prevents terrorism, crime, trafficking</em></div></div>
+</div>
+<div class="ds rs"><div class="dh r">&#128308; NO &mdash; States Should NOT Have This Right</div>
+<div class="dp"><div><strong>&#128694; Freedom of movement</strong><em>Movement is a basic human freedom; restricting it requires justification</em></div></div>
+<div class="dp"><div><strong>&#9878; Global justice</strong><em>Borders entrench global inequality; birthplace is morally arbitrary</em></div></div>
+<div class="dp"><div><strong>&#128200; Economic arguments</strong><em>Open borders could double world GDP; labor should flow like capital</em></div></div>
+<div class="dp"><div><strong>&#128101; Refugee rights</strong><em>Asylum seekers have right to protection; border control often violates refugee conventions</em></div></div>
+</div>
+</div>
+
+<div class="sh">&#128203; Key Data Points</div>
+<div class="datagrid">
+<div class="dc"><div class="dstat">281M</div><div class="ddesc">International migrants globally (2020)</div><div class="dsrc">UN Migration</div></div>
+<div class="dc"><div class="dstat">100M+</div><div class="ddesc">Forcibly displaced people (2022)</div><div class="dsrc">UNHCR</div></div>
+<div class="dc"><div class="dstat">2x GDP</div><div class="ddesc">Potential world GDP increase with open borders</div><div class="dsrc">Clemens (2011)</div></div>
+<div class="dc"><div class="dstat">6,000+</div><div class="ddesc">Mediterranean deaths annually</div><div class="dsrc">IOM 2023</div></div>
+</div>
+
+<div class="sh">&#128221; Sample Thesis Statements</div>
+<div class="tg">
+<div class="tc"><div class="tl">Qualified Right (Recommended)</div><div class="tt">States have a presumptive right to control their borders, but this right is not unlimited. It must be exercised consistently with international obligations to refugees, respect for family unity, and the demands of global justice. Border control is legitimate; border closure is not.</div></div>
+<div class="tc"><div class="tl">Conditional Right</div><div class="tt">The right to control borders depends on what states do with that control. A state that uses border control to maintain a just society, protect refugees, and contribute to global development exercises a legitimate right. A state that uses it to hoard resources, exclude the desperate, and perpetuate global inequality does not.</div></div>
+<div class="tc"><div class="tl">Cosmopolitan View</div><div class="tt">States do not have a moral right to control their borders, only a legal one. The international system of bordered states is a historical contingency, not a moral necessity. In a just world, freedom of movement would be the default, with restrictions requiring justification rather than the reverse.</div></div>
+</div>
+
+<div class="sh">&#128196; Recommended Essay Structure</div>
+<div class="sf">
+<div class="ss"><div class="sn" style="background:var(--q2);color:#fff">1</div><div class="sb"><div class="stit">Introduction <span class="spct" style="background:#ede9fe;color:#5b21b6">~200 words</span></div><div class="spts">Hook: Mediterranean drownings&mdash;the human cost of borders. Define key terms: "right" (moral vs. legal), "control" (regulate vs. close). State thesis clearly.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q2);color:#fff">2</div><div class="sb"><div class="stit">The Case FOR Border Control <span class="spct" style="background:#ede9fe;color:#5b21b6">~400 words</span></div><div class="spts">Sovereignty and self-determination. Welfare state requires bounded membership. Security concerns. Cultural preservation (acknowledge but critique).</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q2);color:#fff">3</div><div class="sb"><div class="stit">The Case AGAINST Border Control <span class="spct" style="background:#ede9fe;color:#5b21b6">~400 words</span></div><div class="spts">Freedom of movement as basic right. Global justice: birthplace is morally arbitrary. Economic benefits of migration. Refugee obligations under international law.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q2);color:#fff">4</div><div class="sb"><div class="stit">A Middle Path <span class="spct" style="background:#ede9fe;color:#5b21b6">~400 words</span></div><div class="spts">Qualified right with obligations. Refugee exception: non-refoulement as absolute. Family unity. Climate migration: new category needed. How we control matters as much as whether we control.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q2);color:#fff">5</div><div class="sb"><div class="stit">Conclusion <span class="spct" style="background:#ede9fe;color:#5b21b6">~200 words</span></div><div class="spts">Border control is legitimate but not unlimited. The right exists but must be exercised justly. Distinguish between control and closure. Forward-looking: climate migration will test these principles.</div></div></div>
+</div>
+
+<div class="sh">&#128300; Theoretical Frameworks</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:#059669">1</div><div><div class="tipt">Communitarianism (Walzer, Miller)</div><div class="tipd">Communities have the right to determine their own membership. States are the political expression of peoples. Welfare states require bounded solidarity. Cultural preservation is legitimate.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#2563eb">2</div><div><div class="tipt">Cosmopolitanism (Carens)</div><div class="tipd">Freedom of movement is a basic human right. Birthplace is morally arbitrary. Borders entrench global inequality. Open borders would benefit everyone, especially the global poor.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#7c3aed">3</div><div><div class="tipt">Middle Ground (Miller&apos;s later work)</div><div class="tipd">States have a qualified right to control borders, but must: protect refugees, allow family reunification, contribute to global development, and not discriminate on racial/ethnic grounds.</div></div></div>
+</div>
+
+<div class="sh">&#128161; Original Angles to Explore</div>
+<div class="al">
+<li><span>&#127777;</span><strong>Climate Migration:</strong> Climate change will displace hundreds of millions. Current refugee framework doesn&apos;t cover climate migrants. Rich countries caused climate change; they have obligations. Argue for a new category of protected movement.</li>
+<li><span>&#128176;</span><strong>The Economic Argument:</strong> Open borders could double world GDP (Clemens 2011). Why do we allow free movement of capital but not labor? Is this consistent?</li>
+<li><span>&#9878;</span><strong>The Rawlsian Test:</strong> Behind the veil of ignorance, not knowing where you&apos;d be born, would you choose a world with or without border controls?</li>
+<li><span>&#128101;</span><strong>The Refugee Exception:</strong> Even if states have a general right to control borders, refugees are different. Non-refoulement is absolute. How does this affect the general argument?</li>
+<li><span>&#127758;</span><strong>Historical Contingency:</strong> The current system of bordered nation-states is only ~200 years old. Is it the only possible system? Is it just?</li>
+</div>
+
+<div class="sh">&#128218; Key Quotes for Your Essay</div>
+<div class="sp">"Borders have guards and the guards have guns. This is an obvious fact of political life but one that is easily hidden from view&mdash;at least from the view of those of us who are already inside." &mdash; Joseph Carens</div>
+<div class="sp">"The right to exclude is not unlimited. It must be exercised in ways that are consistent with the demands of global justice." &mdash; David Miller</div>
+<div class="sp">"Citizenship in Western liberal democracies is the modern equivalent of feudal privilege&mdash;an inherited status that greatly enhances one&apos;s life chances." &mdash; Joseph Carens</div>
+
+<div class="sh">&#128683; Counterarguments to Address</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"Open borders would overwhelm welfare states."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>This assumes immediate, complete opening.</strong><em>Gradual liberalization, not immediate opening, is the realistic proposal. Also, immigrants contribute to welfare states through taxes and labor. The "welfare magnet" hypothesis has limited empirical support.</em></div></div>
+</div>
+</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"States have no obligation to non-citizens."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>This is too strong.</strong><em>Refugee conventions create legal obligations. Global justice creates moral claims. Rich countries benefit from global economic system that creates migration pressures. Obligations exist even if they&apos;re not as strong as to citizens.</em></div></div>
+</div>
+</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"Cultural preservation justifies exclusion."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>Cultures change constantly; exclusion based on culture is discrimination.</strong><em>Which culture are we preserving? Cultures have always evolved through contact. The "cultural preservation" argument has historically been used to justify racial exclusion.</em></div></div>
+</div>
+</div>
+
+<div class="sh">&#128218; Essential Reading</div>
+<div class="readgrid">
+<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">The Ethics of Immigration</div><div class="bka">Joseph Carens (2013) &mdash; Open borders argument</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Essential</span></div></div>
+<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">Strangers in Our Midst</div><div class="bka">David Miller (2016) &mdash; Qualified right to exclude</div><span class="bktag" style="background:#d1fae5;color:#065f46">Essential</span></div></div>
+<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">Spheres of Justice</div><div class="bka">Michael Walzer (1983) &mdash; Communities and membership</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Recommended</span></div></div>
+<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">Economics and Emigration</div><div class="bka">Michael Clemens (2011) &mdash; Economic case for open borders</div><span class="bktag" style="background:#fef3c7;color:#92400e">Recommended</span></div></div>
+</div>
+
+</div>
+
+<!-- POLITICS Q3: NATIONALISM & LIBERALISM -->
+<div id="pol-q3" class="section">
+<div class="stitle" style="color:var(--q3)">&#127988; Q3: Is Nationalism Compatible with Liberalism?</div>
+<div class="ssub">Political Theory &bull; Identity &bull; Individual Rights &bull; Collective Identity</div>
+
+<div style="background:linear-gradient(135deg,#065f46,#059669);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff">
+<h2 style="font-size:20px;margin-bottom:10px">Is nationalism compatible with liberalism?</h2>
+<div style="font-size:12px;opacity:.85;font-family:Arial,sans-serif">Key terms: <span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">nationalism</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">liberalism</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px;margin-right:5px">civic vs. ethnic</span><span style="background:rgba(255,255,255,.2);padding:2px 7px;border-radius:10px">compatibility</span></div>
+</div>
+
+<div class="alert info"><span>&#128161;</span><div><strong>Question Analysis:</strong> This is a conceptual compatibility question. You must define both terms precisely, distinguish between different types of nationalism, and argue whether they can coexist. The key move is distinguishing civic from ethnic nationalism.</div></div>
+
+<div class="sh">&#9876; The Core Debate</div>
+<div class="dg">
+<div class="ds gs"><div class="dh g">&#128994; YES &mdash; They ARE Compatible</div>
+<div class="dp"><div><strong>&#128101; Liberal nationalism (Tamir, Miller)</strong><em>Nations provide solidarity needed for liberal institutions; welfare states require national identity</em></div></div>
+<div class="dp"><div><strong>&#128499; Democracy needs a demos</strong><em>Democratic self-governance requires a bounded community with shared identity</em></div></div>
+<div class="dp"><div><strong>&#127963; Historical evidence</strong><em>Liberal democracies are nation-states; national liberation movements were often liberal</em></div></div>
+<div class="dp"><div><strong>&#128100; Meaning and belonging</strong><em>National identity provides meaning; cosmopolitanism is an elite luxury</em></div></div>
+</div>
+<div class="ds rs"><div class="dh r">&#128308; NO &mdash; They Are INCOMPATIBLE</div>
+<div class="dp"><div><strong>&#127758; Fundamental tension</strong><em>Liberalism is universal; nationalism is particular. Individual rights vs. collective identity.</em></div></div>
+<div class="dp"><div><strong>&#128683; Historical evidence</strong><em>Nationalism has led to war, genocide, exclusion. Even civic nationalism can become exclusionary.</em></div></div>
+<div class="dp"><div><strong>&#9878; Privileges insiders</strong><em>Nationalism inherently privileges co-nationals over outsiders; this violates liberal equality.</em></div></div>
+<div class="dp"><div><strong>&#127760; Cosmopolitan alternative</strong><em>True liberalism requires global human rights; national borders are morally arbitrary.</em></div></div>
+</div>
+</div>
+
+<div class="sh">&#128203; Key Distinctions</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Type</th><th style="padding:10px;text-align:left">Definition</th><th style="padding:10px;text-align:left">Compatible with Liberalism?</th><th style="padding:10px;text-align:left">Examples</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Civic Nationalism</td><td style="padding:9px">Based on shared political values, institutions, citizenship</td><td style="padding:9px"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">Potentially Yes</span></td><td style="padding:9px">American civic nationalism, French republicanism</td></tr>
+<tr><td style="padding:9px;font-weight:600">Ethnic Nationalism</td><td style="padding:9px">Based on shared ethnicity, ancestry, blood</td><td style="padding:9px"><span style="background:#fee2e2;color:#991b1b;padding:2px 8px;border-radius:10px">No</span></td><td style="padding:9px">German nationalism pre-1945, Hungarian nationalism under Orb&aacute;n</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Cultural Nationalism</td><td style="padding:9px">Based on shared language, culture, traditions</td><td style="padding:9px"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px">Contested</span></td><td style="padding:9px">Scottish nationalism, Catalan nationalism</td></tr>
+<tr><td style="padding:9px;font-weight:600">Liberal Nationalism</td><td style="padding:9px">Nationalism constrained by liberal principles</td><td style="padding:9px"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">By Definition</span></td><td style="padding:9px">Tamir&apos;s theory, Miller&apos;s theory</td></tr>
+</table></div>
+
+<div class="sh">&#128221; Sample Thesis Statements</div>
+<div class="tg">
+<div class="tc"><div class="tl">Conditional Compatibility (Recommended)</div><div class="tt">Nationalism and liberalism are compatible only if nationalism is civic rather than ethnic, inclusive rather than exclusive, and constrained by liberal principles of individual rights and equal treatment. Liberal nationalism is possible; illiberal nationalism is not nationalism that liberals can endorse.</div></div>
+<div class="tc"><div class="tl">Necessary Tension</div><div class="tt">Nationalism and liberalism exist in productive tension. Liberalism needs nationalism to provide the solidarity that makes redistribution and democracy possible. Nationalism needs liberalism to prevent it from becoming exclusionary and oppressive. Neither is complete without the other.</div></div>
+<div class="tc"><div class="tl">Incompatibility</div><div class="tt">Nationalism and liberalism are fundamentally incompatible. Liberalism&apos;s commitment to universal human rights and individual equality cannot be reconciled with nationalism&apos;s privileging of co-nationals over outsiders. What is called "liberal nationalism" is either not truly liberal or not truly nationalist.</div></div>
+</div>
+
+<div class="sh">&#128196; Recommended Essay Structure</div>
+<div class="sf">
+<div class="ss"><div class="sn" style="background:var(--q3);color:#fff">1</div><div class="sb"><div class="stit">Introduction <span class="spct" style="background:#d1fae5;color:#065f46">~200 words</span></div><div class="spts">Hook: The return of nationalism in liberal democracies (Brexit, Trump, Orb&aacute;n). Define nationalism (civic vs. ethnic) and liberalism (individual rights, limited government, rule of law). State thesis.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q3);color:#fff">2</div><div class="sb"><div class="stit">The Case for Compatibility <span class="spct" style="background:#d1fae5;color:#065f46">~400 words</span></div><div class="spts">Liberal nationalism thesis (Tamir, Miller). Solidarity for welfare states. Democracy needs a demos. Historical examples: liberal national movements.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q3);color:#fff">3</div><div class="sb"><div class="stit">The Case Against Compatibility <span class="spct" style="background:#d1fae5;color:#065f46">~400 words</span></div><div class="spts">Fundamental tension: universal vs. particular. Historical evidence: nationalism&apos;s dark side. Slippery slope from civic to ethnic. Cosmopolitan critique.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q3);color:#fff">4</div><div class="sb"><div class="stit">The Conditions for Compatibility <span class="spct" style="background:#d1fae5;color:#065f46">~400 words</span></div><div class="spts">Civic not ethnic. Inclusive not exclusive. Constrained by liberal principles. Open to immigration and diversity. Examples: Scottish nationalism vs. Hungarian nationalism.</div></div></div>
+<div class="ss"><div class="sn" style="background:var(--q3);color:#fff">5</div><div class="sb"><div class="stit">Conclusion <span class="spct" style="background:#d1fae5;color:#065f46">~200 words</span></div><div class="spts">Conditional compatibility. The question is not "nationalism or liberalism" but "what kind of nationalism." Nationalism constrained by liberalism, not the reverse.</div></div></div>
+</div>
+
+<div class="sh">&#128300; Theoretical Frameworks</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:#059669">1</div><div><div class="tipt">Liberal Nationalism (Tamir, Miller)</div><div class="tipd">National identity is valuable and compatible with liberalism. Nations provide solidarity for liberal institutions. Civic nationalism based on shared values, not ethnicity, can be inclusive.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#2563eb">2</div><div><div class="tipt">Cosmopolitan Liberalism</div><div class="tipd">Liberalism is inherently universal. National borders are morally arbitrary. True liberalism requires global justice and open borders. Nationalism is a tribal atavism incompatible with liberal values.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#dc2626">3</div><div><div class="tipt">Communitarian Critique</div><div class="tipd">Liberalism is too thin; it needs thicker communal bonds. National identity provides meaning and belonging. But communitarianism can slide into illiberal nationalism.</div></div></div>
+</div>
+
+<div class="sh">&#128203; Historical Examples</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Example</th><th style="padding:10px;text-align:left">Type</th><th style="padding:10px;text-align:left">Outcome</th><th style="padding:10px;text-align:left">Lesson</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">American civic nationalism</td><td style="padding:9px">Civic</td><td style="padding:9px">Compatible with diversity (in theory)</td><td style="padding:9px">Civic nationalism can be inclusive</td></tr>
+<tr><td style="padding:9px;font-weight:600">French la&iuml;cit&eacute;</td><td style="padding:9px">Civic but exclusionary</td><td style="padding:9px">Tensions with religious minorities</td><td style="padding:9px">Even civic nationalism can exclude</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">German ethnic nationalism (pre-1945)</td><td style="padding:9px">Ethnic</td><td style="padding:9px">Catastrophic</td><td style="padding:9px">Ethnic nationalism is incompatible</td></tr>
+<tr><td style="padding:9px;font-weight:600">Scottish nationalism</td><td style="padding:9px">Civic, inclusive</td><td style="padding:9px">Compatible with liberal values</td><td style="padding:9px">Civic nationalism can be progressive</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Hungarian nationalism (Orb&aacute;n)</td><td style="padding:9px">Ethnic, illiberal</td><td style="padding:9px">Incompatible with liberalism</td><td style="padding:9px">Ethnic nationalism leads to illiberalism</td></tr>
+</table></div>
+
+<div class="sh">&#128161; Original Angles to Explore</div>
+<div class="al">
+<li><span>&#128176;</span><strong>The Solidarity Problem:</strong> Welfare states require redistribution. Redistribution requires solidarity ("why should I pay for them?"). National identity provides solidarity. Argue that liberalism needs nationalism to sustain itself, but must constrain it.</li>
+<li><span>&#128260;</span><strong>The Stability of Civic Nationalism:</strong> Is the distinction between civic and ethnic nationalism stable? Can civic nationalism resist sliding into ethnic nationalism under pressure?</li>
+<li><span>&#127758;</span><strong>The Immigration Test:</strong> How a nationalism treats immigrants reveals whether it&apos;s truly civic. Civic nationalism should welcome immigrants who adopt shared values; ethnic nationalism cannot.</li>
+<li><span>&#9878;</span><strong>The Minority Question:</strong> How does nationalism treat internal minorities? Liberal nationalism must protect minority rights; ethnic nationalism cannot.</li>
+<li><span>&#128499;</span><strong>The Democratic Argument:</strong> Democracy requires a "demos"&mdash;a bounded community that governs itself. Does this require national identity, or can democracy work without it?</li>
+</div>
+
+<div class="sh">&#128218; Key Quotes for Your Essay</div>
+<div class="sp">"In 1989, liberal democracy seemed triumphant. The Berlin Wall fell, the Soviet Union collapsed, and Francis Fukuyama declared the end of history. Three decades later, nationalism is resurgent across the liberal world." &mdash; Opening hook</div>
+<div class="sp">"Liberal nationalism is not an oxymoron. It is the recognition that national identity can be a source of solidarity that makes liberal institutions possible." &mdash; Yael Tamir</div>
+<div class="sp">"The question is not whether nationalism is compatible with liberalism, but what kind of nationalism is compatible with liberalism." &mdash; David Miller</div>
+
+<div class="sh">&#128683; Counterarguments to Address</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"All nationalism leads to exclusion."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>Civic nationalism based on shared values, not ethnicity, can be inclusive.</strong><em>Scottish nationalism welcomes immigrants who share civic values. The key is whether membership is based on choice (civic) or birth (ethnic).</em></div></div>
+</div>
+</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"Liberalism doesn&apos;t need nationalism."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>Liberal institutions need solidarity; nationalism provides it.</strong><em>Welfare states require citizens to pay taxes for strangers. National identity creates the "we" that makes this possible. Cosmopolitan solidarity is too thin.</em></div></div>
+</div>
+</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">Counterargument</div>
+<div class="dp"><div><strong>"The distinction between civic and ethnic nationalism is unstable."</strong></div></div>
+</div>
+<div class="ds gs"><div class="dh g">Your Response</div>
+<div class="dp"><div><strong>True, which is why liberal constraints are essential.</strong><em>Civic nationalism can slide into ethnic nationalism under pressure. This is why nationalism must be constrained by liberal principles&mdash;individual rights, equal treatment, rule of law.</em></div></div>
+</div>
+</div>
+
+<div class="sh">&#128218; Essential Reading</div>
+<div class="readgrid">
+<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">Liberal Nationalism</div><div class="bka">Yael Tamir (1993) &mdash; Compatibility thesis</div><span class="bktag" style="background:#d1fae5;color:#065f46">Essential</span></div></div>
+<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">On Nationality</div><div class="bka">David Miller (1995) &mdash; National identity is valuable</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Essential</span></div></div>
+<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">Nations and Nationalism</div><div class="bka">Ernest Gellner (1983) &mdash; Nationalism as modern construction</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Recommended</span></div></div>
+<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">Imagined Communities</div><div class="bka">Benedict Anderson (1983) &mdash; Nations as imagined</div><span class="bktag" style="background:#fef3c7;color:#92400e">Recommended</span></div></div>
+</div>
+
+</div>
+
+<!-- POLITICS DEEP DIVE TOPICS -->
+<div id="pol-deepdive" class="section">
+<div class="stitle">&#128300; Politics Deep Dive: Winning Essay Topics</div>
+<div class="ssub">Strategic frameworks, additional topics, and advanced analysis for all three questions</div>
+
+<div class="sh">&#128202; Strategic Topic Selection Framework</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Criteria</th><th style="padding:10px">Weight</th><th style="padding:10px;text-align:left">Description</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Originality Potential</td><td style="padding:9px;text-align:center">30%</td><td style="padding:9px">Can you offer a unique perspective most students won&apos;t have?</td></tr>
+<tr><td style="padding:9px;font-weight:600">Evidence Availability</td><td style="padding:9px;text-align:center">25%</td><td style="padding:9px">Are there strong cases and research to support arguments?</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Counterargument Richness</td><td style="padding:9px;text-align:center">20%</td><td style="padding:9px">Are there substantive opposing views to engage with?</td></tr>
+<tr><td style="padding:9px;font-weight:600">Personal Connection</td><td style="padding:9px;text-align:center">15%</td><td style="padding:9px">Do you have genuine interest or relevant experience?</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Timeliness</td><td style="padding:9px;text-align:center">10%</td><td style="padding:9px">Is this topic currently in public discourse?</td></tr>
+</table></div>
+
+<div class="sh">&#128161; Additional Topic: Political Violence and Resistance</div>
+<div class="card">
+<div class="ctitle">When is political violence justified?</div>
+<div class="dg">
+<div class="ds rs"><div class="dh r">&#128308; Pacifist View</div>
+<div class="dp"><div><strong>Violence is always wrong</strong><em>Nonviolent resistance is more effective; violence corrupts the cause it serves</em></div></div>
+</div>
+<div class="ds gs"><div class="dh g">&#128994; Just Resistance View</div>
+<div class="dp"><div><strong>Violence can be justified as last resort</strong><em>Self-defense is a basic right; oppression may require violent response</em></div></div>
+</div>
+</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:#dc2626">Key</div><div><div class="tipt">Winning Thesis</div><div class="tipd">Political violence is justified only as a last resort against severe injustice, when nonviolent alternatives have been exhausted, when there is reasonable prospect of success, and when the violence is proportionate to the injustice it addresses.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#059669">Data</div><div><div class="tipt">Effectiveness Question</div><div class="tipd">Chenoweth &amp; Stephan: nonviolent campaigns succeed twice as often as violent ones. But some cases (Nazi Germany) seem to require violence. Effectiveness is a moral consideration, not just strategic.</div></div></div>
+</div>
+</div>
+
+<div class="sh">&#128161; Additional Topic: Democratic Legitimacy and Consent</div>
+<div class="card">
+<div class="ctitle">Does legitimate government require consent?</div>
+<div class="dg">
+<div class="ds gs"><div class="dh g">&#128994; Consent Theorists</div>
+<div class="dp"><div><strong>Legitimate government requires consent of the governed</strong><em>No one can be bound by a social contract they didn&apos;t sign; democracy is mechanism for ongoing consent</em></div></div>
+</div>
+<div class="ds rs"><div class="dh r">&#128308; Realists</div>
+<div class="dp"><div><strong>Actual consent is impossible</strong><em>We&apos;re born into states; hypothetical consent is a fiction; legitimacy comes from justice, not consent</em></div></div>
+</div>
+</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:#7c3aed">Key</div><div><div class="tipt">Winning Thesis</div><div class="tipd">Democratic legitimacy requires not actual consent (which is impossible) but the ongoing opportunity to participate in and contest political decisions. A state is legitimate when it provides voice, not when it secures agreement.</div></div></div>
+<div class="tip"><div class="tipn" style="background:#2563eb">Angle</div><div><div class="tipt">The Generational Problem</div><div class="tipd">Future generations can&apos;t consent to our decisions. Climate change, debt, constitutional design affect them. Argue for institutions that represent future interests.</div></div></div>
+</div>
+</div>
+
+<div class="sh">&#128221; Essay Execution Checklist</div>
+<div class="card">
+<div class="ctitle">Before Writing</div>
+<div class="al">
+<li><span>&#9744;</span><strong>Identify the specific question being asked</strong></li>
+<li><span>&#9744;</span><strong>Map your thesis to the question directly</strong></li>
+<li><span>&#9744;</span><strong>Gather 5-7 key cases or examples</strong></li>
+<li><span>&#9744;</span><strong>Identify 3 strongest counterarguments</strong></li>
+<li><span>&#9744;</span><strong>Find your "original angle"</strong></li>
+</div>
+</div>
+<div class="card">
+<div class="ctitle">While Writing</div>
+<div class="al">
+<li><span>&#9744;</span><strong>Hook the reader in first paragraph</strong></li>
+<li><span>&#9744;</span><strong>State thesis clearly by end of introduction</strong></li>
+<li><span>&#9744;</span><strong>Each paragraph has one main idea</strong></li>
+<li><span>&#9744;</span><strong>Use cases to support every claim</strong></li>
+<li><span>&#9744;</span><strong>Engage counterarguments fairly</strong></li>
+<li><span>&#9744;</span><strong>Avoid jargon; explain technical terms</strong></li>
+</div>
+</div>
+<div class="card">
+<div class="ctitle">After Writing</div>
+<div class="al">
+<li><span>&#9744;</span><strong>Does every paragraph advance the argument?</strong></li>
+<li><span>&#9744;</span><strong>Have you addressed the strongest objections?</strong></li>
+<li><span>&#9744;</span><strong>Is your conclusion more than a summary?</strong></li>
+<li><span>&#9744;</span><strong>Is the essay within word limit (~2,000)?</strong></li>
+<li><span>&#9744;</span><strong>Have you cited sources appropriately?</strong></li>
+</div>
+</div>
+
+<div class="sh">&#128218; Sample Opening Paragraphs</div>
+<div class="sp">"In 2017, 92% of Catalans who voted chose independence from Spain. The Spanish government declared the referendum illegal, imprisoned its organizers, and imposed direct rule. In 2014, 97% of Crimeans who voted chose to join Russia. The international community declared the referendum illegitimate, imposed sanctions, and refused recognition. Both cases invoked the right to self-determination; both were denied. The difference in response reveals that self-determination is not a right that can be exercised at will, but a principle whose application depends on context, process, and power."</div>
+<div class="sp">"Every year, thousands of people drown in the Mediterranean attempting to reach Europe. They flee war, persecution, and poverty, seeking safety and opportunity. European states respond with walls, patrols, and deportations, invoking their sovereign right to control their borders. This collision between human desperation and state sovereignty raises a fundamental question: do states have a moral right to exclude, or is border control merely the exercise of power dressed up as principle?"</div>
+<div class="sp">"In 1989, liberal democracy seemed triumphant. The Berlin Wall fell, the Soviet Union collapsed, and Francis Fukuyama declared the end of history. Three decades later, nationalism is resurgent across the liberal world&mdash;from Brexit to Trump to Orb&aacute;n. This revival forces a question that liberals had hoped to avoid: is nationalism the enemy of liberalism, or its necessary foundation?"</div>
+
+<div class="sh">&#128218; Comprehensive Reading List</div>
+<div class="readgrid">
+<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">Justice, Legitimacy, and Self-Determination</div><div class="bka">Allen Buchanan &mdash; Remedial right theory</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Q1</span></div></div>
+<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">A Political Theory of Territory</div><div class="bka">Margaret Moore &mdash; Primary right theory</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Q1</span></div></div>
+<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">The Ethics of Immigration</div><div class="bka">Joseph Carens &mdash; Open borders</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Q2</span></div></div>
+<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">Strangers in Our Midst</div><div class="bka">David Miller &mdash; Qualified right to exclude</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Q2</span></div></div>
+<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">Liberal Nationalism</div><div class="bka">Yael Tamir &mdash; Compatibility thesis</div><span class="bktag" style="background:#d1fae5;color:#065f46">Q3</span></div></div>
+<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">On Nationality</div><div class="bka">David Miller &mdash; National identity</div><span class="bktag" style="background:#d1fae5;color:#065f46">Q3</span></div></div>
+<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">A Theory of Justice</div><div class="bka">John Rawls &mdash; Justice as fairness</div><span class="bktag" style="background:#fef3c7;color:#92400e">All</span></div></div>
+<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">Spheres of Justice</div><div class="bka">Michael Walzer &mdash; Communitarianism</div><span class="bktag" style="background:#fef3c7;color:#92400e">All</span></div></div>
+</div>
+
+<div class="sh">&#127942; What Judges Look For</div>
+<div class="rg">
+<div class="ri"><div class="rpct">30%</div><div class="rname">Philosophical Sophistication</div><div class="rdesc">Engage with major thinkers; understand the philosophical stakes</div><div class="rbar"><div class="rfill"></div></div></div>
+<div class="ri"><div class="rpct">25%</div><div class="rname">Argumentative Clarity</div><div class="rdesc">Clear thesis stated early; logical structure; each paragraph advances argument</div><div class="rbar"><div class="rfill"></div></div></div>
+<div class="ri"><div class="rpct">20%</div><div class="rname">Counterargument Engagement</div><div class="rdesc">Address strongest objections; don&apos;t strawman opposing views</div><div class="rbar"><div class="rfill"></div></div></div>
+<div class="ri"><div class="rpct">15%</div><div class="rname">Use of Evidence</div><div class="rdesc">Historical examples; contemporary cases; data where relevant</div><div class="rbar"><div class="rfill"></div></div></div>
+<div class="ri"><div class="rpct">10%</div><div class="rname">Originality</div><div class="rdesc">Fresh perspective; not just repeating standard arguments; personal voice</div><div class="rbar"><div class="rfill"></div></div></div>
+</div>
+
+</div>
+
+<!-- POLITICS PAST QUESTIONS ANALYSIS -->
+<div id="pol-pastq" class="section">
+<div class="stitle">&#128203; Politics Past Questions Analysis (2019&ndash;2025)</div>
+<div class="ssub">Pattern recognition &mdash; what JLI asks, what they reward, and how 2026 fits the mould</div>
+
+<div class="sh">&#128197; Historical Questions by Year</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:18px">
+<div class="card"><div class="ctitle">2025</div><div class="al"><li>Should there be a global government?</li><li>Is civil disobedience ever justified?</li><li>Can a state be neutral between conceptions of the good life?</li></div></div>
+<div class="card"><div class="ctitle">2024</div><div class="al"><li>Is democracy the best form of government?</li><li>Should voting be compulsory?</li><li>Do states have a right to exist?</li></div></div>
+<div class="card"><div class="ctitle">2023</div><div class="al"><li>Is political violence ever justified?</li><li>Should we abolish prisons?</li><li>Is patriotism a virtue?</li></div></div>
+<div class="card"><div class="ctitle">2022</div><div class="al"><li>Should judges be elected?</li><li>Is there a right to revolution?</li><li>Can liberalism survive without nationalism?</li></div></div>
+<div class="card"><div class="ctitle">2021</div><div class="al"><li>Should we have open borders?</li><li>Is secession ever legitimate?</li><li>Do future generations have rights?</li></div></div>
+<div class="card"><div class="ctitle">2020</div><div class="al"><li>Is the state necessary?</li><li>Should hate speech be protected?</li><li>Can there be just wars?</li></div></div>
+</div>
+
+<div class="sh">&#128202; Question Type Breakdown</div>
+<div class="sg" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+<div class="sc" style="border-top:4px solid var(--q1)"><div class="si">&#128308;</div><div class="sv" style="color:var(--q1)">40%</div><div class="sl">Normative "Should we..." / "Is X justified?"</div></div>
+<div class="sc" style="border-top:4px solid var(--q2)"><div class="si">&#128309;</div><div class="sv" style="color:var(--q2)">25%</div><div class="sl">Conceptual "Is X compatible with Y?"</div></div>
+<div class="sc" style="border-top:4px solid var(--q3)"><div class="si">&#128992;</div><div class="sv" style="color:var(--q3)">20%</div><div class="sl">Rights/Limits "Is there a right to X?"</div></div>
+<div class="sc" style="border-top:4px solid var(--gold)"><div class="si">&#128993;</div><div class="sv" style="color:var(--gold)">15%</div><div class="sl">Institutional "Should judges be elected?"</div></div>
+</div>
+
+<div class="sh">&#128200; Recurring Themes &amp; 2026 Relevance</div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;font-family:Arial,sans-serif">
+<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Theme</th><th style="padding:10px">Years Appeared</th><th style="padding:10px">2026 Relevance</th><th style="padding:10px;text-align:left">Linked Question</th></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Legitimacy of the State</td><td style="padding:9px;text-align:center">2020, 2021, 2024</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Q1 (self-determination), Q2 (borders)</td></tr>
+<tr><td style="padding:9px;font-weight:600">Individual vs. Collective Rights</td><td style="padding:9px;text-align:center">2021, 2023, 2025</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Q1 (peoples vs. minorities)</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Democracy and Its Limits</td><td style="padding:9px;text-align:center">2022, 2024</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Q1 (democratic secession)</td></tr>
+<tr><td style="padding:9px;font-weight:600">Nationalism and Identity</td><td style="padding:9px;text-align:center">2022, 2023</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Q3 (nationalism &amp; liberalism)</td></tr>
+<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Global vs. National</td><td style="padding:9px;text-align:center">2021, 2025</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Q2 (borders), Q3 (cosmopolitanism)</td></tr>
+<tr><td style="padding:9px;font-weight:600">Violence and Coercion</td><td style="padding:9px;text-align:center">2020, 2022, 2023</td><td style="padding:9px;text-align:center"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px">MEDIUM</span></td><td style="padding:9px">Not directly in 2026</td></tr>
+</table></div>
+
+<div class="sh">&#127775; 2026 Questions vs. Historical Patterns</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn" style="background:var(--q1)">Q1</div><div><div class="tipt">Self-Determination &mdash; Historical Parallel: 2021 Q2 "Is secession ever legitimate?"</div><div class="tipd">Type: Normative/Limits (most common). Advantage: clear normative framing. Key difference: 2026 asks about "absolute" which requires testing limits. Use 2021 secession research as foundation.</div></div></div>
+<div class="tip"><div class="tipn" style="background:var(--q2)">Q2</div><div><div class="tipt">Border Control &mdash; Historical Parallel: 2021 Q1 "Should we have open borders?"</div><div class="tipd">Type: Rights/Sovereignty. Challenge: highly politically charged. Risk of clich&eacute;. Advantage: clear contemporary relevance. Use 2021 open borders research as foundation.</div></div></div>
+<div class="tip"><div class="tipn" style="background:var(--q3)">Q3</div><div><div class="tipt">Nationalism &amp; Liberalism &mdash; Historical Parallel: 2022 Q3 "Can liberalism survive without nationalism?"</div><div class="tipd">Type: Conceptual compatibility. Challenge: abstract conceptual analysis. Advantage: 2022 asked the inverse question&mdash;use that research. Key: distinguish civic from ethnic nationalism.</div></div></div>
+</div>
+
+<div class="sh">&#128683; Common Mistakes to Avoid</div>
+<div class="al">
+<li><span>&#10060;</span><strong>Definitional Evasion:</strong> "It depends on how you define self-determination." &mdash; Define terms clearly and argue from there.</li>
+<li><span>&#10060;</span><strong>False Balance:</strong> "There are good arguments on both sides, so it&apos;s complicated." &mdash; This is not a thesis, it&apos;s an observation.</li>
+<li><span>&#10060;</span><strong>Ignoring Counterarguments:</strong> Only presenting one side makes the essay look like advocacy, not analysis.</li>
+<li><span>&#10060;</span><strong>Excessive Abstraction:</strong> Discussing self-determination without any concrete examples (Kosovo, Catalonia, etc.).</li>
+<li><span>&#10060;</span><strong>Moralizing Without Argument:</strong> "Self-determination is obviously a fundamental human right." &mdash; Explain WHY.</li>
+</ul>
+</div>
+
+<div class="sh">&#128221; Winning Thesis Formulas</div>
+<div class="card">
+<div class="ctitle">For "Is X absolute?" questions (Q1)</div>
+<div class="sp">"X is a fundamental [right/principle/value], but not an absolute one. It must be balanced against [competing consideration 1], [competing consideration 2], and [competing consideration 3]. The right is strongest when [condition], and weakest when [condition]."</div>
+</div>
+<div class="card">
+<div class="ctitle">For "Should states have the right to X?" questions (Q2)</div>
+<div class="sp">"States have a presumptive right to X, but this right is not unlimited. It must be exercised consistently with [obligation 1], [obligation 2], and [obligation 3]. The right is legitimate when [condition]; it is not when [condition]."</div>
+</div>
+<div class="card">
+<div class="ctitle">For "Is X compatible with Y?" questions (Q3)</div>
+<div class="sp">"X and Y are compatible only if [condition]. [Type 1 of X] can coexist with Y, but [Type 2 of X] cannot. The key distinction is [criterion]. The question is not whether X is compatible with Y, but what kind of X is compatible with Y."</div>
+</div>
+
+<div class="sh">&#127942; Key Takeaways</div>
+<div class="tipgrid">
+<div class="tip"><div class="tipn">1</div><div><div class="tipt">Questions repeat themes</div><div class="tipd">Legitimacy, self-determination, nationalism, and borders appear almost every year. Master these themes and you can handle any question.</div></div></div>
+<div class="tip"><div class="tipn">2</div><div><div class="tipt">Question types are predictable</div><div class="tipd">Master the four types (normative, conceptual, rights/limits, institutional) and you have a framework for any question JLI throws at you.</div></div></div>
+<div class="tip"><div class="tipn">3</div><div><div class="tipt">Nuance wins every time</div><div class="tipd">Simple yes/no answers never win. Conditional answers with specific evidence always outperform confident but simplistic positions.</div></div></div>
+<div class="tip"><div class="tipn">4</div><div><div class="tipt">Original angles differentiate</div><div class="tipd">Find the perspective others won&apos;t have. Reject the binary. Reframe the question. This is what separates winners from runners-up.</div></div></div>
+</div>
+
+<div class="sh">&#128197; Preparation Timeline</div>
 <div class="timeline">
-<div class="ti"><div class="td2 p1"></div><div class="badge bb">NOW &mdash; Mar 14</div><div class="ttitle">Foundation Phase</div><div class="ttasks">Read all 3 question analyses in this guide. Choose your question. Read 2 core economics texts. Build your argument skeleton.</div></div>
-<div class="ti"><div class="td2 p1"></div><div class="badge bb">Mar 15&ndash;31</div><div class="ttitle">Deep Research Phase</div><div class="ttasks">Gather 8&ndash;10 academic sources. Find 5&ndash;6 compelling data points. Read opposing viewpoints. Draft your thesis statement.</div></div>
-<div class="ti"><div class="td2 ms"></div><div class="badge bg2">Apr 1</div><div class="ttitle">&#127937; Questions Released</div><div class="ttasks">Confirm your question choice. Adjust research if needed. Begin outline.</div></div>
-<div class="ti"><div class="td2 p2"></div><div class="badge bp">Apr 1&ndash;20</div><div class="ttitle">First Draft Phase</div><div class="ttasks">Write introduction and thesis. Draft body paragraphs. Don't self-edit yet &mdash; get ideas on paper. Aim for 2,500 words (will cut later).</div></div>
+<div class="ti"><div class="td2 p1"></div><div class="badge bb">NOW &mdash; Mar 31</div><div class="ttitle">Foundation Phase</div><div class="ttasks">Read all 3 question analyses. Choose your question. Read 2 core political philosophy texts. Build your argument skeleton.</div></div>
+<div class="ti"><div class="td2 ms"></div><div class="badge bg2">Apr 1</div><div class="ttitle">&#127937; Questions Released</div><div class="ttasks">Confirm your question choice. Adjust research if needed. Begin detailed outline.</div></div>
+<div class="ti"><div class="td2 p2"></div><div class="badge bp">Apr 1&ndash;20</div><div class="ttitle">First Draft Phase</div><div class="ttasks">Write introduction and thesis. Draft body paragraphs. Don&apos;t self-edit yet&mdash;get ideas on paper. Aim for 2,500 words (will cut later).</div></div>
 <div class="ti"><div class="td2 p2"></div><div class="badge bp">Apr 21&ndash;30</div><div class="ttitle">Revision Phase</div><div class="ttasks">Cut to ~2,000 words. Strengthen thesis. Add specific evidence. Improve transitions. Get feedback from teacher/mentor.</div></div>
 <div class="ti"><div class="td2 p3"></div><div class="badge bgr">May 1&ndash;9</div><div class="ttitle">Polish Phase</div><div class="ttasks">Final argument check. Proofread for grammar. Verify all citations. Format bibliography. Read aloud for flow.</div></div>
 <div class="ti"><div class="td2 ms"></div><div class="badge bg2">May 10</div><div class="ttitle">&#128203; Secondary School Deadline</div><div class="ttasks">Submit if you are in secondary school category.</div></div>
-<div class="ti"><div class="td2 dl"></div><div class="badge br">May 31</div><div class="ttitle">&#128680; Final Deadline</div><div class="ttasks">All submissions due. Do not leave to last minute &mdash; submit by May 28 to allow for technical issues.</div></div>
+<div class="ti"><div class="td2 dl"></div><div class="badge br">May 31</div><div class="ttitle">&#128680; Final Deadline</div><div class="ttasks">All submissions due. Submit by May 28 to allow for technical issues.</div></div>
 </div>
-<div class="sh">&#9989; Weekly Checklist</div>
-<div class="card"><div class="ctitle">Pre-Questions (Now &mdash; Apr 1)</div>
-<div class="al">
-<li><span>&#9744;</span><strong>Choose your question</strong> based on your strengths and interests</li>
-<li><span>&#9744;</span><strong>Read 2 economics books</strong> relevant to your question</li>
-<li><span>&#9744;</span><strong>Find 5 academic papers</strong> or credible sources</li>
-<li><span>&#9744;</span><strong>Draft 3 possible thesis statements</strong> and pick the strongest</li>
-<li><span>&#9744;</span><strong>Create an argument map</strong> showing your main points and evidence</li>
-<li><span>&#9744;</span><strong>Identify your strongest counterargument</strong> and prepare a response</li>
-</div></div>
+
 </div>
-<div id="scoring" class="section">
-<div class="stitle">&#127942; Scoring &amp; Judging Criteria</div>
-<div class="ssub">What JLI judges look for &mdash; based on past winner analysis</div>
-<div class="rg">
-<div class="ri"><div class="rpct">30%</div><div class="rname">Argument Quality</div><div class="rdesc">Clear thesis, logical structure, no fallacies, addresses counterarguments</div><div class="rbar"><div class="rfill"></div></div></div>
-<div class="ri"><div class="rpct">25%</div><div class="rname">Economic Analysis</div><div class="rdesc">Correct use of economic concepts, models, and frameworks</div><div class="rbar"><div class="rfill"></div></div></div>
-<div class="ri"><div class="rpct">20%</div><div class="rname">Evidence &amp; Data</div><div class="rdesc">Specific statistics, credible sources, real-world examples</div><div class="rbar"><div class="rfill"></div></div></div>
-<div class="ri"><div class="rpct">15%</div><div class="rname">Originality</div><div class="rdesc">Novel angle, unexpected insight, goes beyond obvious points</div><div class="rbar"><div class="rfill"></div></div></div>
-<div class="ri"><div class="rpct">10%</div><div class="rname">Writing Quality</div><div class="rdesc">Clear prose, precise language, appropriate academic register</div><div class="rbar"><div class="rfill"></div></div></div>
-</div>
-<div class="sh">&#128161; What Separates Winners from Runners-Up</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn">1</div><div><div class="tipt">Take a clear, defensible position</div><div class="tipd">Judges reward intellectual courage. "It depends" is not a thesis. State your view and defend it rigorously.</div></div></div>
-<div class="tip"><div class="tipn">2</div><div><div class="tipt">Use economic concepts precisely</div><div class="tipd">Name the model. Say "monopsony" not "unfair wages." Say "deadweight loss" not "inefficiency." Precision signals mastery.</div></div></div>
-<div class="tip"><div class="tipn">3</div><div><div class="tipt">Engage the strongest counterargument</div><div class="tipd">Find the best argument against your thesis and address it directly. Ignoring it signals weakness.</div></div></div>
-<div class="tip"><div class="tipn">4</div><div><div class="tipt">Use specific data, not vague claims</div><div class="tipd">"Sweden has 98% digital transactions" beats "many countries are going cashless." Specificity = credibility.</div></div></div>
-<div class="tip"><div class="tipn">5</div><div><div class="tipt">Show institutional awareness</div><div class="tipd">The best essays consider how laws, regulations, and market structures shape outcomes. Pure theory without context loses marks.</div></div></div>
-<div class="tip"><div class="tipn">6</div><div><div class="tipt">Write for a smart non-specialist</div><div class="tipd">Explain concepts briefly but don't over-explain. Assume an intelligent reader who is not an economist.</div></div></div>
-</div>
-<div class="sh">&#128683; Common Mistakes to Avoid</div>
-<div class="al">
-<li><span>&#10060;</span><strong>Descriptive not analytical:</strong> Describing what Amazon does instead of analysing whether it constitutes exploitation</li>
-<li><span>&#10060;</span><strong>Weak thesis:</strong> "There are arguments on both sides" &mdash; this is not a thesis, it is an observation</li>
-<li><span>&#10060;</span><strong>Missing counterarguments:</strong> Only presenting one side makes the essay look like advocacy, not analysis</li>
-<li><span>&#10060;</span><strong>Vague evidence:</strong> "Studies show..." without citing which studies or what they found</li>
-<li><span>&#10060;</span><strong>Over-long introduction:</strong> Judges want your argument quickly. Get to your thesis by paragraph 1.</li>
-<li><span>&#10060;</span><strong>Ignoring the question:</strong> Answering a related but different question. Re-read the question before every paragraph.</li>
-</div>
-</div>
-<div id="resources" class="section">
-<div class="stitle">&#128218; Essential Reading &amp; Resources</div>
-<div class="ssub">Curated reading list for all three questions</div>
-<div class="sh">&#128218; Core Economics Books</div>
-<div class="readgrid">
-<div class="bk"><div class="bki" style="background:#dbeafe">&#128218;</div><div><div class="bkt">The Wealth of Nations</div><div class="bka">Adam Smith &mdash; Foundation text</div><span class="bktag" style="background:#dbeafe;color:#1d4ed8">All Questions</span></div></div>
-<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">Thinking, Fast and Slow</div><div class="bka">Daniel Kahneman &mdash; Behavioural economics</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Q2 Pricing</span></div></div>
-<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">The Everything Store</div><div class="bka">Brad Stone &mdash; Amazon biography</div><span class="bktag" style="background:#d1fae5;color:#065f46">Q3 Bezos</span></div></div>
-<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">The Age of Surveillance Capitalism</div><div class="bka">Shoshana Zuboff</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Q1 Cashless</span></div></div>
-<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">Capital in the 21st Century</div><div class="bka">Thomas Piketty &mdash; Inequality</div><span class="bktag" style="background:#fef3c7;color:#92400e">Q3 Bezos</span></div></div>
-<div class="bk"><div class="bki" style="background:#fee2e2">&#128218;</div><div><div class="bkt">The Price of Everything</div><div class="bka">Eduardo Porter &mdash; Pricing economics</div><span class="bktag" style="background:#fee2e2;color:#991b1b">Q2 Pricing</span></div></div>
-</div>
-<div class="sh">&#127760; Key Data Sources</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:var(--q1)">Q1</div><div><div class="tipt">Cashless Society Sources</div><div class="tipd">Riksbank (Sweden data) &bull; World Bank Financial Inclusion Database &bull; Atlantic Council CBDC Tracker &bull; ECB cash usage reports &bull; BIS working papers on digital currency</div></div></div>
-<div class="tip"><div class="tipn" style="background:var(--q2)">Q2</div><div><div class="tipt">Personalised Pricing Sources</div><div class="tipd">OECD reports on algorithmic pricing &bull; Competition &amp; Markets Authority (UK) reports &bull; Varian (1989) "Price Discrimination" &bull; Pigou's Economics of Welfare &bull; FTC reports on data brokers</div></div></div>
-<div class="tip"><div class="tipn" style="background:var(--q3)">Q3</div><div><div class="tipt">Amazon / Bezos Sources</div><div class="tipd">Strategic Organising Centre injury reports &bull; Amazon annual reports &bull; BLS occupational injury data &bull; Lina Khan "Amazon's Antitrust Paradox" (Yale Law Journal) &bull; Forbes wealth data</div></div></div>
-</div>
-<div class="sh">&#128161; Writing Tips from Past Winners</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn">A</div><div><div class="tipt">Start with a hook, not a definition</div><div class="tipd">Open with a striking fact or paradox. "In 2023, Sweden's central bank warned that going cashless too fast could threaten financial stability" is better than "A cashless society is one where..."</div></div></div>
-<div class="tip"><div class="tipn">B</div><div><div class="tipt">Use the Toulmin structure</div><div class="tipd">Claim &rarr; Grounds (evidence) &rarr; Warrant (why evidence supports claim) &rarr; Qualifier (limits) &rarr; Rebuttal (counterargument). This is the gold standard for analytical essays.</div></div></div>
-<div class="tip"><div class="tipn">C</div><div><div class="tipt">End paragraphs with analysis, not summary</div><div class="tipd">The last sentence of each body paragraph should advance your argument, not just summarise what you said. Ask: "So what does this mean for my thesis?"</div></div></div>
-<div class="tip"><div class="tipn">D</div><div><div class="tipt">Cite economists by name</div><div class="tipd">Naming Pigou, Varian, or Tirole signals you have read the literature. It also gives your argument authority beyond just your own reasoning.</div></div></div>
-</div>
-</div>
-<div id="mentorship" class="section">
-<div class="stitle">&#127891; Mentorship &amp; Support Organizations</div>
-<div class="ssub">Vetted programs to help you prepare &mdash; from free resources to premium coaching</div>
-<div class="sh">&#11088; Tier 1 &mdash; Essay Competition Specialists</div>
-<div class="readgrid">
-<div class="bk"><div class="bki" style="background:#dbeafe">&#127891;</div><div><div class="bkt"><a href="https://www.polygence.org/" target="_blank">Polygence</a></div><div class="bka">1-on-1 PhD mentorship &bull; Harvard, MIT, Oxford mentors</div><span class="bktag" style="background:#dbeafe;color:#1d4ed8">$$$ &bull; Book 4-6 wks ahead</span></div></div>
-<div class="bk"><div class="bki" style="background:#ede9fe">&#127891;</div><div><div class="bkt"><a href="https://www.lumiere-education.com/" target="_blank">Lumiere Education</a></div><div class="bka">Research mentorship + essay coaching &bull; PhD supervisors</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">$$$ &bull; Apply 4-8 wks ahead</span></div></div>
-<div class="bk"><div class="bki" style="background:#d1fae5">&#127891;</div><div><div class="bkt"><a href="https://www.crimsoneducation.org/" target="_blank">Crimson Education</a></div><div class="bka">Essay coaching &bull; Ivy League/Oxbridge tutors &bull; Competition prep</div><span class="bktag" style="background:#d1fae5;color:#065f46">$$$$ &bull; 2-4 wks</span></div></div>
-</div>
-<div class="sh">&#127979; Tier 2 &mdash; Academic Enrichment</div>
-<div class="readgrid">
-<div class="bk"><div class="bki" style="background:#fef3c7">&#127979;</div><div><div class="bkt"><a href="https://www.johnlockeinstitute.com/" target="_blank">John Locke Institute (Direct)</a></div><div class="bka">Summer school Oxford &bull; Online economics courses &bull; Past winning essays</div><span class="bktag" style="background:#fef3c7;color:#92400e">$$$ &bull; Most relevant</span></div></div>
-<div class="bk"><div class="bki" style="background:#fee2e2">&#127979;</div><div><div class="bkt"><a href="https://www.oxford-royale.com/" target="_blank">Oxford Royale Academy</a></div><div class="bka">Oxford/Cambridge summer programs &bull; Essay workshops &bull; Economics courses</div><span class="bktag" style="background:#fee2e2;color:#991b1b">$$$ &bull; 2-3 months ahead</span></div></div>
-<div class="bk"><div class="bki" style="background:#e0f2fe">&#127979;</div><div><div class="bkt"><a href="https://www.immerse.education/" target="_blank">Cambridge Immerse</a></div><div class="bka">Cambridge-based economics courses &bull; Essay writing workshops</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">$$$ &bull; Plan ahead</span></div></div>
-</div>
-<div class="sh">&#128218; Tier 3 &mdash; Economics Community</div>
-<div class="readgrid">
-<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt"><a href="https://www.youngeconomistssociety.org/" target="_blank">Young Economists Society</a></div><div class="bka">Economics competitions &bull; Research mentorship &bull; Professor connections</div><span class="bktag" style="background:#d1fae5;color:#065f46">$ &bull; Flexible</span></div></div>
-<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt"><a href="https://www.emerginginvestigators.org/" target="_blank">Journal of Emerging Investigators</a></div><div class="bka">Peer-reviewed journal for students &bull; Harvard grad mentors &bull; Free to submit</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Free</span></div></div>
-<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt"><a href="https://www.tcr.org/" target="_blank">Concord Review</a></div><div class="bka">Exemplary high school essays &bull; Sets standard for academic writing</div><span class="bktag" style="background:#fef3c7;color:#92400e">~$40/yr</span></div></div>
-</div>
-<div class="sh">&#127881; Tier 4 &mdash; Free Resources (Start Today)</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:#16a34a">Free</div><div><div class="tipt"><a href="https://mru.org/" target="_blank">Marginal Revolution University</a></div><div class="tipd">Free economics courses by Tyler Cowen &amp; Alex Tabarrok. Covers micro, macro, labour economics. Excellent for Q2 and Q3.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#16a34a">Free</div><div><div class="tipt"><a href="https://www.khanacademy.org/economics-finance-domain" target="_blank">Khan Academy Economics</a></div><div class="tipd">Foundation micro and macroeconomics. Start here to build core knowledge quickly before diving into competition-level analysis.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#16a34a">Free</div><div><div class="tipt"><a href="https://www.nber.org/papers" target="_blank">NBER Working Papers</a></div><div class="tipd">National Bureau of Economic Research. Latest academic economics research. Cite these for maximum credibility with judges.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#16a34a">Free</div><div><div class="tipt"><a href="https://www.economicsnetwork.ac.uk/" target="_blank">Economics Network (UK)</a></div><div class="tipd">UK-focused resources for economics students. Essay writing guides. Directly relevant for JLI (Oxford-based competition).</div></div></div>
-</div>
-<div class="sh">&#128202; Recommendation Matrix</div>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px;font-family:Arial,sans-serif">
-<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Organization</th><th style="padding:10px">Cost</th><th style="padding:10px">JLI Relevance</th><th style="padding:10px">Timeline</th><th style="padding:10px;text-align:left">Best For</th></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Polygence</td><td style="padding:9px;text-align:center">$$$</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">4-6 wks</td><td style="padding:9px">1-on-1 economics mentorship</td></tr>
-<tr><td style="padding:9px;font-weight:600">Lumiere Education</td><td style="padding:9px;text-align:center">$$$</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">4-8 wks</td><td style="padding:9px">Research + essay coaching</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">John Locke Institute</td><td style="padding:9px;text-align:center">$$$</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">Now</td><td style="padding:9px">Direct competition prep</td></tr>
-<tr><td style="padding:9px;font-weight:600">Crimson Education</td><td style="padding:9px;text-align:center">$$$$</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">2-4 wks</td><td style="padding:9px">Essay coaching</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Young Economists Society</td><td style="padding:9px;text-align:center">$</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">Flexible</td><td style="padding:9px">Economics community</td></tr>
-<tr><td style="padding:9px;font-weight:600">Marginal Revolution Uni</td><td style="padding:9px;text-align:center">Free</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">Immediate</td><td style="padding:9px">Economics knowledge</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">School Teacher</td><td style="padding:9px;text-align:center">Free</td><td style="padding:9px;text-align:center">&#11088;&#11088;&#11088;&#11088;</td><td style="padding:9px;text-align:center">Immediate</td><td style="padding:9px">Feedback and guidance</td></tr>
-</table></div>
-<div class="sh">&#9989; Immediate Action Plan</div>
-<div class="card"><div class="ctitle">This Week &mdash; Free Actions</div>
-<div class="al">
-<li><span>1</span><strong>Email your economics teacher</strong> &mdash; ask for mentorship and reading recommendations</li>
-<li><span>2</span><strong>Sign up for Marginal Revolution University</strong> &mdash; start economics courses today</li>
-<li><span>3</span><strong>Read past JLI winning essays</strong> &mdash; available on johnlockeinstitute.com</li>
-<li><span>4</span><strong>Subscribe to The Economist</strong> &mdash; student rate ~&pound;5/month</li>
-</div></div>
-<div class="card" style="margin-top:12px"><div class="ctitle">Within 2 Weeks</div>
-<div class="al">
-<li><span>5</span><strong>Contact Young Economists Society</strong> &mdash; join the community</li>
-<li><span>6</span><strong>Access NBER papers</strong> &mdash; find academic sources for your question</li>
-<li><span>7</span><strong>Email a university economics department</strong> &mdash; ask about student outreach</li>
-</div></div>
-<div class="sh">&#128683; Red Flags to Avoid</div>
-<div class="al">
-<li><span>&#10060;</span><strong>Organizations that write essays FOR students</strong> &mdash; academic dishonesty, disqualification risk</li>
-<li><span>&#10060;</span><strong>Programs that promise guaranteed wins</strong> &mdash; no legitimate program can guarantee this</li>
-<li><span>&#10060;</span><strong>Mentors without relevant academic credentials</strong> &mdash; check their economics background</li>
-<li><span>&#10060;</span><strong>Very short turnaround programs</strong> &mdash; good mentorship takes time; avoid last-minute fixes</li>
-</div>
-</div>
-<div id="pastq" class="section">
-<div class="stitle">&#128203; Past Questions Analysis (2019&ndash;2024)</div>
-<div class="ssub">Pattern recognition &mdash; what JLI asks, what they reward, and how 2026 fits the mould</div>
-<div class="sh">&#128197; Questions by Year</div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:18px">
-<div class="card"><div class="ctitle">2024</div><div class="al"><li>Is it possible to be too rich?</li><li>Should we worry about the national debt?</li><li>Is free trade always beneficial?</li></div></div>
-<div class="card"><div class="ctitle">2023</div><div class="al"><li>Should we tax the rich more?</li><li>Is economic growth always desirable?</li><li>Should we worry about automation?</li></div></div>
-<div class="card"><div class="ctitle">2022</div><div class="al"><li>Is capitalism the best economic system?</li><li>Should we have a universal basic income?</li><li>Is globalisation good for the poor?</li></div></div>
-<div class="card"><div class="ctitle">2021</div><div class="al"><li>Should we worry about inequality?</li><li>Is there a case for protectionism?</li><li>Should we tax carbon?</li></div></div>
-<div class="card"><div class="ctitle">2020</div><div class="al"><li>Is economic growth compatible with environmental sustainability?</li><li>Should we worry about the power of big tech?</li><li>Is there a case for a minimum wage?</li></div></div>
-<div class="card"><div class="ctitle">2019</div><div class="al"><li>Should we worry about the national debt?</li><li>Is free trade always beneficial?</li><li>Should we tax the rich more?</li></div></div>
-</div>
-<div class="sh">&#128202; Question Type Breakdown</div>
-<div class="sg" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
-<div class="sc" style="border-top:4px solid var(--q1)"><div class="si">&#128308;</div><div class="sv" style="color:var(--q1)">60%</div><div class="sl">Normative "Should we..." (most common)</div></div>
-<div class="sc" style="border-top:4px solid var(--q2)"><div class="si">&#128309;</div><div class="sv" style="color:var(--q2)">25%</div><div class="sl">Evaluative "Is X always/best..."</div></div>
-<div class="sc" style="border-top:4px solid var(--q3)"><div class="si">&#128992;</div><div class="sv" style="color:var(--q3)">15%</div><div class="sl">Causal/Analytical "Is X compatible with..."</div></div>
-</div>
-<div class="sh">&#128200; Recurring Themes &amp; 2026 Relevance</div>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px;font-family:Arial,sans-serif">
-<tr style="background:#1e293b;color:#fff"><th style="padding:10px;text-align:left">Theme</th><th style="padding:10px">Years Appeared</th><th style="padding:10px">2026 Relevance</th><th style="padding:10px;text-align:left">Linked Question</th></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Inequality &amp; redistribution</td><td style="padding:9px;text-align:center">2019, 2021, 2023, 2024</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px;font-size:11px">HIGH</span></td><td style="padding:9px">Q3 Bezos</td></tr>
-<tr><td style="padding:9px;font-weight:600">Technology &amp; economy</td><td style="padding:9px;text-align:center">2020, 2023</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px;font-size:11px">HIGH</span></td><td style="padding:9px">Q1, Q2</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Market systems</td><td style="padding:9px;text-align:center">2020, 2022</td><td style="padding:9px;text-align:center"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px;font-size:11px">MEDIUM</span></td><td style="padding:9px">Q2</td></tr>
-<tr><td style="padding:9px;font-weight:600">Trade &amp; globalisation</td><td style="padding:9px;text-align:center">2019, 2021, 2022</td><td style="padding:9px;text-align:center"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px;font-size:11px">MEDIUM</span></td><td style="padding:9px">Background context</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Debt &amp; fiscal policy</td><td style="padding:9px;text-align:center">2019, 2024</td><td style="padding:9px;text-align:center"><span style="background:#fee2e2;color:#991b1b;padding:2px 8px;border-radius:10px;font-size:11px">LOW</span></td><td style="padding:9px">Not in 2026</td></tr>
-</table></div>
-<div class="sh">&#127775; 2026 Questions vs. Historical Patterns</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:var(--q1)">Q1</div><div><div class="tipt">Cashless Society &mdash; Historical Parallel: "Should we worry about big tech?" (2020)</div><div class="tipd">Type: Normative "Should we..." (most common type &mdash; 60% of all questions). Advantage: clear normative framing makes thesis easy to construct. Key difference: more specific (cashless) vs. general (big tech).</div></div></div>
-<div class="tip"><div class="tipn" style="background:var(--q2)">Q2</div><div><div class="tipt">Personalised Pricing &mdash; Historical Parallel: "Is globalisation good for the poor?" (2022)</div><div class="tipd">Type: Analytical/Effects (less common &mdash; 15%). Challenge: no normative framing makes thesis harder to construct. Risk of being descriptive. Requires multi-stakeholder welfare analysis.</div></div></div>
-<div class="tip"><div class="tipn" style="background:var(--q3)">Q3</div><div><div class="tipt">Bezos &mdash; Historical Parallel: "Is it possible to be too rich?" (2024) + "Should we worry about inequality?" (2021)</div><div class="tipd">Type: Evaluative/Causal hybrid. Advantage: concrete Amazon data available; clear zero-sum analytical framework. Risk: being descriptive rather than analytical.</div></div></div>
-</div>
-<div class="sh">&#127775; Winning Strategies by Question Type</div>
-<div class="sf">
-<div class="ss"><div class="sn" style="background:#2563eb;color:#fff">1</div><div class="sb"><div class="stit">Policy Evaluation: "Should we [do X]?"</div><div class="spts">Don't give a simple yes/no. Best answers are conditional. Framework: "It depends on [conditions A, B, C]." Define the policy precisely, identify goals (efficiency/equity), evaluate against each, consider implementation, conclude with conditional recommendation.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">2</div><div class="sb"><div class="stit">Assumption Challenge: "Is X always/ever Y?"</div><div class="spts">Answer is almost always "no, not always." Find the exceptions. Identify conditions under which the assumption holds and fails. Conclude with a more nuanced principle than the question implies.</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">3</div><div class="sb"><div class="stit">Systemic/Conceptual: "Is X compatible with Y?"</div><div class="spts">Define both terms precisely. Distinguish between different versions of X and interpretations of Y. Argue for a specific version of X that could achieve Y. Acknowledge what would need to change.</div></div></div>
-<div class="ss"><div class="sn" style="background:#d97706;color:#fff">4</div><div class="sb"><div class="stit">Distributional: "Is X good for group Y?"</div><div class="spts">Disaggregate the group. "The poor" is not homogeneous. Distinguish absolute vs. relative gains. Use specific country/group data. Conclude with conditions under which X helps or harms.</div></div></div>
-</div>
-<div class="sh">&#128202; The "It Depends" Framework</div>
-<div class="card"><div class="ctitle">For almost any economics question, the winning answer involves these 6 factors</div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px">
-<div style="background:#f1f5f9;border-radius:10px;padding:12px"><div style="font-weight:700;color:#1e293b;margin-bottom:4px">&#128337; Time Horizon</div><div style="font-size:12px;color:#64748b">Short-term vs. long-term effects? What looks bad now may be good later (and vice versa).</div></div>
-<div style="background:#f1f5f9;border-radius:10px;padding:12px"><div style="font-weight:700;color:#1e293b;margin-bottom:4px">&#128200; Scale</div><div style="font-size:12px;color:#64748b">Does it work at small scale but not large? Many policies fail when universalised.</div></div>
-<div style="background:#f1f5f9;border-radius:10px;padding:12px"><div style="font-weight:700;color:#1e293b;margin-bottom:4px">&#127963; Context</div><div style="font-size:12px;color:#64748b">Does it depend on institutions, culture, or history? What works in Sweden may not work in India.</div></div>
-<div style="background:#f1f5f9;border-radius:10px;padding:12px"><div style="font-weight:700;color:#1e293b;margin-bottom:4px">&#128100; Distribution</div><div style="font-size:12px;color:#64748b">Who gains and who loses? Aggregate welfare can rise while specific groups suffer.</div></div>
-<div style="background:#f1f5f9;border-radius:10px;padding:12px"><div style="font-weight:700;color:#1e293b;margin-bottom:4px">&#9878; Alternatives</div><div style="font-size:12px;color:#64748b">Compared to what? Every policy should be evaluated against the realistic alternative, not the ideal.</div></div>
-<div style="background:#f1f5f9;border-radius:10px;padding:12px"><div style="font-weight:700;color:#1e293b;margin-bottom:4px">&#128203; Implementation</div><div style="font-size:12px;color:#64748b">Does theory match practice? Many good ideas fail in execution due to political economy or information problems.</div></div>
-</div></div>
-<div class="sh">&#128683; Common Mistakes to Avoid</div>
-<div class="al">
-<li><span>&#10060;</span><strong>Taking the question at face value:</strong> "Should we tax carbon?" needs more than yes/no &mdash; what kind? At what level? With what revenue use?</li>
-<li><span>&#10060;</span><strong>Ignoring counterarguments:</strong> Dedicate 20-25% of essay to the strongest objections and your responses</li>
-<li><span>&#10060;</span><strong>Being too abstract:</strong> "Inequality is bad" &mdash; use specific data: "UK Gini rose from 0.25 to 0.34 between 1979 and 2019"</li>
-<li><span>&#10060;</span><strong>Moralising without analysis:</strong> Explain WHY something is wrong economically, not just that it feels unfair</li>
-<li><span>&#10060;</span><strong>Ignoring trade-offs:</strong> Every policy has costs &mdash; acknowledge them and explain why benefits outweigh them</li>
-</div>
-<div class="sh">&#127942; Key Takeaways</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn">1</div><div><div class="tipt">Questions repeat themes</div><div class="tipd">Government intervention, inequality, and technology appear almost every year. Master these themes and you can handle any question.</div></div></div>
-<div class="tip"><div class="tipn">2</div><div><div class="tipt">Question types are predictable</div><div class="tipd">Master the four types (policy, assumption challenge, systemic, distributional) and you have a framework for any question JLI throws at you.</div></div></div>
-<div class="tip"><div class="tipn">3</div><div><div class="tipt">Nuance wins every time</div><div class="tipd">Simple yes/no answers never win. Conditional answers with specific evidence always outperform confident but simplistic positions.</div></div></div>
-<div class="tip"><div class="tipn">4</div><div><div class="tipt">Original angles differentiate</div><div class="tipd">Find the perspective others won't have. Reject the binary. Reframe the question. This is what separates winners from runners-up.</div></div></div>
-</div>
-</div>
-<div id="deepdive" class="section">
-<div class="stitle">&#128300; Economics Deep Dive 2026</div>
-<div class="ssub">Predicted 2026 topics with academic frameworks, key data, and winning argument structures</div>
-<div class="sh">&#128202; Topic Priority for 2026</div>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="background:#1e293b;color:#fff"><th style="padding:9px;text-align:left">Priority</th><th style="padding:9px;text-align:left">Topic</th><th style="padding:9px">Probability</th><th style="padding:9px;text-align:left">Why Likely</th></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;text-align:center;font-weight:700">1</td><td style="padding:9px;font-weight:600">AI Governance &amp; Regulation</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Follows 2025 AI taxation question; EU AI Act live</td></tr>
-<tr><td style="padding:9px;text-align:center;font-weight:700">2</td><td style="padding:9px;font-weight:600">Housing &amp; Wealth Inequality</td><td style="padding:9px;text-align:center"><span style="background:#d1fae5;color:#065f46;padding:2px 8px;border-radius:10px">HIGH</span></td><td style="padding:9px">Major gap; wealth tax appeared 2024; universal crisis</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;text-align:center;font-weight:700">3</td><td style="padding:9px;font-weight:600">Industrial Policy</td><td style="padding:9px;text-align:center"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px">MEDIUM</span></td><td style="padding:9px">CHIPS Act, IRA, EU Green Deal; trade theme recurring</td></tr>
-<tr><td style="padding:9px;text-align:center;font-weight:700">4</td><td style="padding:9px;font-weight:600">Gig Economy &amp; Labour Rights</td><td style="padding:9px;text-align:center"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px">MEDIUM</span></td><td style="padding:9px">Labour markets 2019, 2022; EU Platform Work Directive</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;text-align:center;font-weight:700">5</td><td style="padding:9px;font-weight:600">Debt &amp; Fiscal Sustainability</td><td style="padding:9px;text-align:center"><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:10px">MEDIUM</span></td><td style="padding:9px">Post-pandemic debt; monetary policy 2023-2025</td></tr>
-<tr><td style="padding:9px;text-align:center;font-weight:700">6</td><td style="padding:9px;font-weight:600">Food Security &amp; Agriculture</td><td style="padding:9px;text-align:center"><span style="background:#fee2e2;color:#991b1b;padding:2px 8px;border-radius:10px">LOW</span></td><td style="padding:9px">Not covered since 2019; climate + Ukraine war context</td></tr>
-</table></div>
-<div class="sh" style="color:#2563eb">&#129302; Topic 1: AI Governance &amp; Regulation</div>
-<div class="card"><div class="ctitle">Possible Questions</div><div class="al"><li>Should AI development be paused?</li><li>Is AI safety a market failure?</li><li>Should governments regulate AI like pharmaceuticals?</li><li>Is open-source AI dangerous?</li></div></div>
-<div class="tipgrid" style="margin-top:12px">
-<div class="tip"><div class="tipn" style="background:#2563eb">For</div><div><div class="tipt">Pro-Regulation Arguments</div><div class="tipd">AI poses existential risks markets cannot price &bull; Rapid development outpaces safety research &bull; Concentration of AI power in few companies &bull; Precautionary principle should apply</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">Against</div><div><div class="tipt">Anti-Regulation Arguments</div><div class="tipd">Regulation stifles innovation &bull; Risks are speculative &bull; Government lacks technical expertise &bull; Authoritarian regimes will develop AI regardless</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">Thesis</div><div><div class="tipt">Winning Argument (Nuanced)</div><div class="tipd">Not whether to regulate AI, but how. The pharmaceutical model &mdash; safety testing before deployment &mdash; offers a template. Key: risk-based, adaptive regulation that addresses genuine market failures without foreclosing beneficial innovation.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">Data</div><div><div class="tipt">Key Statistics</div><div class="tipd">AI companies spend &lt;5% of R&amp;D on safety (Anthropic) &bull; EU AI Act: &euro;35M fines for violations &bull; 50% of AI researchers believe &gt;10% chance of human extinction (AI Impacts Survey) &bull; OpenAI valued at $80B+</div></div></div>
-</div>
-<div class="sh" style="color:#059669">&#127968; Topic 2: Housing &amp; Wealth Inequality</div>
-<div class="card"><div class="ctitle">Possible Questions</div><div class="al"><li>Is homeownership a right?</li><li>Should we tax land?</li><li>Are landlords productive?</li><li>Should governments build housing?</li></div></div>
-<div class="tipgrid" style="margin-top:12px">
-<div class="tip"><div class="tipn" style="background:#059669">For</div><div><div class="tipt">Pro-Intervention Arguments</div><div class="tipd">Housing is a basic need, not just a commodity &bull; Land is fixed in supply &mdash; classic case for taxation &bull; Speculation drives prices beyond fundamentals &bull; Intergenerational inequality entrenched through housing</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">Against</div><div><div class="tipt">Pro-Market Arguments</div><div class="tipd">Price signals allocate housing efficiently &bull; Rent control reduces supply (Diamond et al. 2019: -15% in SF) &bull; Government housing projects have poor track record &bull; Property rights are fundamental</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">Thesis</div><div><div class="tipt">Winning Argument (Land Value Tax)</div><div class="tipd">Land supply is fixed while demand grows. Solution: capture land value gains through taxation (Henry George) and invest in supply. Treat housing as infrastructure, not just a market. Milton Friedman called land value tax "the least bad tax."</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">Data</div><div><div class="tipt">Key Statistics</div><div class="tipd">UK house prices: 8x average income (vs. 4x in 1990) &bull; 70% of US household wealth is in housing (Federal Reserve) &bull; Singapore homeownership: 90% via state land model &bull; Land value = 50% of UK national wealth (ONS)</div></div></div>
-</div>
-<div class="sh" style="color:#d97706">&#127981; Topic 3: Industrial Policy &amp; Economic Nationalism</div>
-<div class="card"><div class="ctitle">Possible Questions</div><div class="al"><li>Is the return of industrial policy justified?</li><li>Should governments subsidize strategic industries?</li><li>Is economic nationalism ever justified?</li></div></div>
-<div class="tipgrid" style="margin-top:12px">
-<div class="tip"><div class="tipn" style="background:#d97706">For</div><div><div class="tipt">Pro-Industrial Policy</div><div class="tipd">Market failures in strategic industries (semiconductors, clean energy) &bull; National security requires domestic capacity &bull; China&apos;s state-led model is winning &bull; Climate transition requires coordinated investment</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">Against</div><div><div class="tipt">Anti-Industrial Policy</div><div class="tipd">Governments cannot pick winners &bull; Subsidies invite rent-seeking and corruption &bull; Beggar-thy-neighbor: one country&apos;s subsidy is another&apos;s unfair competition &bull; WTO rules prohibit many forms</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">Thesis</div><div><div class="tipt">Winning Argument</div><div class="tipd">Industrial policy is justified when correcting genuine market failures (externalities, coordination problems, national security). The question is not whether to have industrial policy, but whether governments have the institutional capacity to implement it well. Success depends on state capacity, not just policy design.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">Data</div><div><div class="tipt">Key Statistics</div><div class="tipd">US CHIPS Act: $52B for semiconductor manufacturing &bull; EU Green Deal: &euro;1T investment &bull; South Korea semiconductors: 60% global DRAM market via industrial policy &bull; UK industrial policy failures: British Leyland</td></div></div></div>
-</div>
-<div class="sh" style="color:#7c3aed">&#128188; Topic 4: Gig Economy &amp; Labour Rights</div>
-<div class="card"><div class="ctitle">Possible Questions</div><div class="al"><li>Should gig workers be employees?</li><li>Is flexibility worth insecurity?</li><li>Are platforms exploitative or empowering?</li></div></div>
-<div class="tipgrid" style="margin-top:12px">
-<div class="tip"><div class="tipn" style="background:#7c3aed">For</div><div><div class="tipt">Pro-Worker Classification</div><div class="tipd">Gig workers lack benefits, protections, bargaining power &bull; "Flexibility" is often employer-imposed &bull; Platforms externalise costs onto workers and society &bull; Power imbalance requires legal intervention</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">Against</div><div><div class="tipt">Pro-Contractor Status</div><div class="tipd">Many workers genuinely prefer flexibility &bull; Classification increases costs, reduces opportunities &bull; One-size-fits-all regulation ignores worker heterogeneity &bull; Innovation in work arrangements should be allowed</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">Thesis</div><div><div class="tipt">Winning Argument (Third Category)</div><div class="tipd">The binary employee/contractor choice is obsolete. We need a "dependent contractor" category with portable benefits and basic protections while preserving flexibility. Goal: ensure gig work is a genuine choice, not a last resort.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">Data</div><div><div class="tipt">Key Statistics</div><div class="tipd">16% of US workers have done gig work (Pew) &bull; Uber drivers earn $9.21/hr after expenses (MIT) &bull; 79% of gig workers value flexibility (McKinsey) &bull; UK Supreme Court: Uber drivers are workers (2021) &bull; California Prop 22: $200M platform campaign</div></div></div>
-</div>
-<div class="sh" style="color:#dc2626">&#128181; Topic 5: Debt &amp; Fiscal Sustainability</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:#dc2626">Hawks</div><div><div class="tipt">Debt Hawks View</div><div class="tipd">High debt crowds out private investment &bull; Interest payments divert resources from public services &bull; Debt burdens future generations &bull; Inflation is the ultimate constraint</div></div></div>
-<div class="tip"><div class="tipn" style="background:#2563eb">Doves</div><div><div class="tipt">Debt Doves / MMT View</div><div class="tipd">Governments issuing own currency cannot default &bull; Debt is money spent but not taxed back &bull; Real resources, not money, are the constraint &bull; Austerity is self-defeating in recessions</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">Thesis</div><div><div class="tipt">Winning Argument</div><div class="tipd">Not whether debt is "too high" in the abstract, but whether borrowing is used productively. Debt financing investment in infrastructure, education, and climate transition can pay for itself; debt financing consumption or tax cuts for the wealthy cannot. r &lt; g for most of history (Blanchard 2019).</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">Data</div><div><div class="tipt">Key Statistics</div><div class="tipd">US debt: 120% of GDP (2024) &bull; Japan debt: 260% of GDP, no crisis &bull; US interest payments: $1T/year &bull; Infrastructure investment multiplier: 1.5-2.0x (IMF)</div></div></div>
-</div>
-<div class="sh" style="color:#16a34a">&#127807; Topic 6: Food Security &amp; Agricultural Economics</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:#16a34a">For</div><div><div class="tipt">Pro-Intervention</div><div class="tipd">Food security is a national security issue &bull; Agriculture has positive externalities (rural communities, landscape) &bull; Climate change requires transition support &bull; Small farmers cannot compete with agribusiness</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">Against</div><div><div class="tipt">Pro-Market</div><div class="tipd">Agricultural subsidies distort trade and harm developing countries &bull; Subsidies flow to large agribusiness, not family farms &bull; Price signals should guide production &bull; Food is abundant; distribution is the problem</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">Thesis</div><div><div class="tipt">Winning Argument</div><div class="tipd">Current subsidies are indefensible &mdash; they flow to wealthy landowners and encourage environmental damage. Solution: redirect support toward public goods: soil health, biodiversity, carbon sequestration, and food system resilience. Payment for ecosystem services, not commodity support.</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">Data</div><div><div class="tipt">Key Statistics</div><div class="tipd">US farm subsidies: $20B/year &bull; 80% of EU CAP goes to 20% of farms &bull; Agriculture: 10% of global emissions (IPCC) &bull; 3 companies control 60% of global seed market &bull; Food prices rose 30% (2021-2022)</div></div></div>
-</div>
-<div class="sh">&#128218; Cross-Cutting Reading List</div>
-<div class="readgrid">
-<div class="bk"><div class="bki" style="background:#dbeafe">&#129302;</div><div><div class="bkt">Human Compatible</div><div class="bka">Stuart Russell &mdash; AI Governance</div><span class="bktag" style="background:#dbeafe;color:#1d4ed8">Topic 1</span></div></div>
-<div class="bk"><div class="bki" style="background:#d1fae5">&#127968;</div><div><div class="bkt">Rethinking the Economics of Land and Housing</div><div class="bka">Ryan-Collins et al. &mdash; Housing</div><span class="bktag" style="background:#d1fae5;color:#065f46">Topic 2</span></div></div>
-<div class="bk"><div class="bki" style="background:#fef3c7">&#127981;</div><div><div class="bkt">The Entrepreneurial State</div><div class="bka">Mariana Mazzucato &mdash; Industrial Policy</div><span class="bktag" style="background:#fef3c7;color:#92400e">Topic 3</span></div></div>
-<div class="bk"><div class="bki" style="background:#ede9fe">&#128188;</div><div><div class="bkt">Cloud Empires</div><div class="bka">Vili Lehdonvirta &mdash; Gig Economy</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Topic 4</span></div></div>
-<div class="bk"><div class="bki" style="background:#fee2e2">&#128181;</div><div><div class="bkt">The Deficit Myth</div><div class="bka">Stephanie Kelton &mdash; Fiscal Policy (+ critiques)</div><span class="bktag" style="background:#fee2e2;color:#991b1b">Topic 5</span></div></div>
-<div class="bk"><div class="bki" style="background:#d1fae5">&#127807;</div><div><div class="bkt">Stuffed and Starved</div><div class="bka">Raj Patel &mdash; Food Security</div><span class="bktag" style="background:#d1fae5;color:#065f46">Topic 6</span></div></div>
-</div>
-</div>
-<div id="econres" class="section">
-<div class="stitle">&#128202; Economics Research Guide</div>
-<div class="ssub">Competition overview, research topics, and essay strategy for JLI 2026</div>
-<div class="sh">&#127919; What Judges Look For</div>
-<div class="sg" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
-<div class="sc"><div class="si">&#128161;</div><div class="sl">Original thinking &mdash; not textbook answers</div></div>
-<div class="sc"><div class="si">&#128203;</div><div class="sl">Clear argumentation with logical structure</div></div>
-<div class="sc"><div class="si">&#9878;</div><div class="sl">Engagement with counterarguments</div></div>
-<div class="sc"><div class="si">&#128202;</div><div class="sl">Evidence-based reasoning with data</div></div>
-<div class="sc"><div class="si">&#9997;</div><div class="sl">Clear, concise, sophisticated prose</div></div>
-</div>
-<div class="sh">&#128218; Core Economics Themes (Historical)</div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:18px">
-<div class="card"><div class="ctitle">Market Mechanisms</div><div class="al"><li>Market failures and government intervention</li><li>Price mechanisms and resource allocation</li><li>Externalities and public goods</li></div></div>
-<div class="card"><div class="ctitle">Inequality &amp; Distribution</div><div class="al"><li>Wealth and income inequality</li><li>Redistribution policies</li><li>Intergenerational mobility</li></div></div>
-<div class="card"><div class="ctitle">Monetary &amp; Fiscal Policy</div><div class="al"><li>Central bank independence</li><li>Inflation targeting</li><li>Government debt and deficits</li></div></div>
-<div class="card"><div class="ctitle">International Economics</div><div class="al"><li>Trade policy and protectionism</li><li>Globalisation effects</li><li>Currency and exchange rates</li></div></div>
-<div class="card"><div class="ctitle">Behavioural Economics</div><div class="al"><li>Rationality assumptions</li><li>Nudge theory and paternalism</li><li>Decision-making biases</li></div></div>
-<div class="card"><div class="ctitle">Environmental Economics</div><div class="al"><li>Carbon pricing mechanisms</li><li>Sustainability and growth</li><li>Climate change economics</li></div></div>
-</div>
-<div class="sh">&#128300; Research Topics to Explore</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:#2563eb">1</div><div><div class="tipt">Economics of Artificial Intelligence</div><div class="tipd">Will AI increase or decrease inequality? &bull; How should governments respond to AI-driven job displacement? &bull; Key: Acemoglu &amp; Restrepo (2019), Brynjolfsson &amp; McAfee, OECD AI reports</div></div></div>
-<div class="tip"><div class="tipn" style="background:#7c3aed">2</div><div><div class="tipt">Universal Basic Income (UBI)</div><div class="tipd">Is UBI economically feasible? &bull; What are the labour supply effects? &bull; Key: Finland UBI experiment, GiveDirectly Kenya, Milton Friedman negative income tax</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">3</div><div><div class="tipt">Central Bank Digital Currencies (CBDCs)</div><div class="tipd">Should central banks issue digital currencies? &bull; Privacy implications? &bull; Key: BIS CBDC reports, China digital yuan pilot, ECB digital euro project</div></div></div>
-<div class="tip"><div class="tipn" style="background:#d97706">4</div><div><div class="tipt">Carbon Pricing &amp; Climate Economics</div><div class="tipd">Carbon tax vs. cap-and-trade? &bull; Can growth decouple from emissions? &bull; Key: Nordhaus Nobel Prize work, EU ETS data, Carbon Border Adjustment Mechanism</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">5</div><div><div class="tipt">Economics of Healthcare</div><div class="tipd">Is healthcare a public good? &bull; How to incentivise pharmaceutical innovation? &bull; Key: Arrow (1963) "Uncertainty and Welfare Economics of Medical Care", OECD Health Statistics</div></div></div>
-<div class="tip"><div class="tipn" style="background:#16a34a">6</div><div><div class="tipt">Degrowth vs. Green Growth</div><div class="tipd">Is perpetual economic growth possible or desirable? &bull; Can technology solve environmental limits? &bull; Key: Kate Raworth "Doughnut Economics", Tim Jackson "Prosperity Without Growth"</div></div></div>
-</div>
-<div class="sh">&#128197; Essay Writing Strategy (4 Phases)</div>
-<div class="sf">
-<div class="ss"><div class="sn" style="background:#2563eb;color:#fff">1</div><div class="sb"><div class="stit">Topic Selection (Week 1-2)</div><div class="spts">Wait for official 2026 questions (April 1). Evaluate each question against your interests and knowledge. Choose where you can offer the most original perspective.</div></div></div>
-<div class="ss"><div class="sn" style="background:#7c3aed;color:#fff">2</div><div class="sb"><div class="stit">Research Deep Dive (Week 2-4)</div><div class="spts">Read foundational academic papers. Gather current data and statistics. Identify 2-3 case studies. Map out counterarguments before writing.</div></div></div>
-<div class="ss"><div class="sn" style="background:#059669;color:#fff">3</div><div class="sb"><div class="stit">Outline &amp; Draft (Week 4-6)</div><div class="spts">Create detailed outline with thesis statement. Write first draft focusing on argument flow. Ensure each paragraph advances the argument &mdash; no filler.</div></div></div>
-<div class="ss"><div class="sn" style="background:#d97706;color:#fff">4</div><div class="sb"><div class="stit">Revision &amp; Polish (Week 6-8)</div><div class="spts">Get feedback from mentors/teachers. Strengthen weak arguments. Refine prose and eliminate redundancy. Final proofread before submission.</div></div></div>
-</div>
-<div class="sh">&#128218; Recommended Reading List</div>
-<div class="readgrid">
-<div class="bk"><div class="bki" style="background:#dbeafe">&#128218;</div><div><div class="bkt">Good Economics for Hard Times</div><div class="bka">Banerjee &amp; Duflo &mdash; Policy debates</div><span class="bktag" style="background:#dbeafe;color:#1d4ed8">Contemporary</span></div></div>
-<div class="bk"><div class="bki" style="background:#ede9fe">&#128218;</div><div><div class="bkt">Thinking, Fast and Slow</div><div class="bka">Daniel Kahneman &mdash; Behavioural economics</div><span class="bktag" style="background:#ede9fe;color:#5b21b6">Behavioural</span></div></div>
-<div class="bk"><div class="bki" style="background:#d1fae5">&#128218;</div><div><div class="bkt">Capital in the 21st Century</div><div class="bka">Thomas Piketty &mdash; Inequality</div><span class="bktag" style="background:#d1fae5;color:#065f46">Inequality</span></div></div>
-<div class="bk"><div class="bki" style="background:#fef3c7">&#128218;</div><div><div class="bkt">The Deficit Myth</div><div class="bka">Stephanie Kelton &mdash; Modern Monetary Theory</div><span class="bktag" style="background:#fef3c7;color:#92400e">Fiscal</span></div></div>
-<div class="bk"><div class="bki" style="background:#fee2e2">&#128218;</div><div><div class="bkt">Narrative Economics</div><div class="bka">Robert Shiller &mdash; How stories drive economies</div><span class="bktag" style="background:#fee2e2;color:#991b1b">Theory</span></div></div>
-<div class="bk"><div class="bki" style="background:#e0f2fe">&#128218;</div><div><div class="bkt">They Say / I Say</div><div class="bka">Graff &amp; Birkenstein &mdash; Academic argumentation</div><span class="bktag" style="background:#e0f2fe;color:#0369a1">Writing</span></div></div>
-</div>
-<div class="sh">&#128101; Key Economists to Reference</div>
-<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px">
-<tr style="background:#1e293b;color:#fff"><th style="padding:9px;text-align:left">Economist</th><th style="padding:9px;text-align:left">Key Contribution</th><th style="padding:9px;text-align:left">Relevant For</th></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Adam Smith</td><td style="padding:9px">Invisible hand, division of labour</td><td style="padding:9px">Market mechanisms</td></tr>
-<tr><td style="padding:9px;font-weight:600">John Maynard Keynes</td><td style="padding:9px">Aggregate demand, fiscal policy</td><td style="padding:9px">Government intervention</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Milton Friedman</td><td style="padding:9px">Monetarism, free markets</td><td style="padding:9px">Monetary policy</td></tr>
-<tr><td style="padding:9px;font-weight:600">Amartya Sen</td><td style="padding:9px">Capabilities approach, welfare</td><td style="padding:9px">Development, inequality</td></tr>
-<tr style="background:#f8fafc"><td style="padding:9px;font-weight:600">Daron Acemoglu</td><td style="padding:9px">Institutions, technology &amp; growth</td><td style="padding:9px">AI economics, growth</td></tr>
-<tr><td style="padding:9px;font-weight:600">Esther Duflo</td><td style="padding:9px">RCTs in development economics</td><td style="padding:9px">Evidence-based policy</td></tr>
-</table></div>
-<div class="sh">&#127760; Key Data Sources</div>
-<div class="tipgrid">
-<div class="tip"><div class="tipn" style="background:#2563eb">1</div><div><div class="tipt"><a href="https://data.worldbank.org" target="_blank">World Bank Open Data</a></div><div class="tipd">Global development indicators &mdash; essential for cross-country comparisons and inequality data</div></div></div>
-<div class="tip"><div class="tipn" style="background:#dc2626">2</div><div><div class="tipt"><a href="https://fred.stlouisfed.org" target="_blank">FRED (Federal Reserve)</a></div><div class="tipd">US economic data &mdash; inflation, employment, GDP, monetary policy indicators</div></div></div>
-<div class="tip"><div class="tipn" style="background:#059669">3</div><div><div class="tipt"><a href="https://stats.oecd.org" target="_blank">OECD Statistics</a></div><div class="tipd">Comparative country data &mdash; tax rates, health spending, education, labour markets</div></div></div>
-<div class="tip"><div class="tipn" style="background:#d97706">4</div><div><div class="tipt"><a href="https://ourworldindata.org" target="_blank">Our World in Data</a></div><div class="tipd">Visualisations and datasets on global trends &mdash; excellent for finding striking statistics</div></div></div>
-</div>
-</div>
-<div class="footer">&#127891; John Locke Institute 2026 Economics Essay &mdash; Visual Guide &bull; Created for student preparation &bull; <a href="https://www.johnlockeinstitute.com" target="_blank">johnlockeinstitute.com</a></div>
+
+<div class="footer">&#127891; John Locke Institute 2026 Essay Competition &mdash; Economics &amp; Politics Visual Guide &bull; Created for student preparation &bull; <a href="https://www.johnlockeinstitute.com" target="_blank">johnlockeinstitute.com</a></div>
+
 <script>
 function show(id) {
   document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
@@ -688,7 +923,7 @@ function show(id) {
   var el = document.getElementById(id);
   if (el) el.classList.add("active");
   var tabs = document.querySelectorAll(".nav-tab");
-  var map={overview:0,q1:1,q2:2,q3:3,timeline:4,scoring:5,resources:6,mentorship:7,pastq:8,deepdive:9,econres:10};
+  var map={overview:0,q1:1,q2:2,q3:3,'politics-overview':4,'pol-q1':5,'pol-q2':6,'pol-q3':7,'pol-deepdive':8,'pol-pastq':9};
   if (map[id] !== undefined && tabs[map[id]]) tabs[map[id]].classList.add("active");
 }
 (function() {

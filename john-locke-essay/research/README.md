@@ -1,23 +1,39 @@
-# John Locke Institute Essay Competition - Economics Research Hub
+# John Locke Institute Essay Competition - Research Hub
 
 ## 📚 Research Documentation Index
 
-This folder contains comprehensive research and planning materials for the John Locke Institute Essay Competition, focusing on **Economics** topics.
+This folder contains comprehensive research and planning materials for the John Locke Institute Essay Competition, covering both **Economics** and **Politics** topics.
 
 ---
 
 ## Quick Links
 
+### 🏛️ POLITICS (NEW - 2026)
+
 | Document | Purpose |
 |----------|---------|
-| [economics-official-2026-questions.md](./economics-official-2026-questions.md) | ⭐ **START HERE** - Deep dive on the 3 official 2026 questions |
-| [q1-cashless-society-research.md](./q1-cashless-society-research.md) | Detailed research notes for Q1: Cashless Society (academic sources + frameworks) |
-| [economics-research.md](./economics-research.md) | Overview of competition, typical themes, reading list, key economists |
-| [economics-deep-dive-topics.md](./economics-deep-dive-topics.md) | Detailed analysis of 5 evergreen topics with arguments and frameworks |
-| [economics-deep-dive-2026.md](./economics-deep-dive-2026.md) | Deep dive on 6 predicted 2026 topics with winning strategies |
-| [past-questions-analysis.md](./past-questions-analysis.md) | Analysis of 2019-2025 questions with patterns and winning strategies |
-| [action-plan-timeline.md](./action-plan-timeline.md) | Week-by-week execution plan with checklists and templates |
-| [mentorship-organizations.md](./mentorship-organizations.md) | Research & mentorship organizations to support essay preparation |
+| [politics-official-2026-questions.md](./politics-official-2026-questions.md) | ⭐ **START HERE** - Deep dive on all 3 official 2026 Politics questions |
+| [q1-self-determination-research.md](./q1-self-determination-research.md) | 🎯 **FOCUS** - Comprehensive research for Q1: Is self-determination absolute? |
+| [politics-deep-dive-topics.md](./politics-deep-dive-topics.md) | Detailed analysis of 5 Politics topics with arguments and frameworks |
+| [politics-past-questions-analysis.md](./politics-past-questions-analysis.md) | Analysis of 2020-2025 Politics questions with patterns and strategies |
+
+### 💰 ECONOMICS
+
+| Document | Purpose |
+|----------|---------|
+| [economics-official-2026-questions.md](./economics-official-2026-questions.md) | ⭐ **START HERE** - Deep dive on the 3 official 2026 Economics questions |
+| [q1-cashless-society-research.md](./q1-cashless-society-research.md) | Detailed research notes for Q1: Cashless Society |
+| [economics-research.md](./economics-research.md) | Overview of competition, typical themes, reading list |
+| [economics-deep-dive-topics.md](./economics-deep-dive-topics.md) | Detailed analysis of 5 evergreen Economics topics |
+| [economics-deep-dive-2026.md](./economics-deep-dive-2026.md) | Deep dive on 6 predicted 2026 topics |
+| [past-questions-analysis.md](./past-questions-analysis.md) | Analysis of 2019-2025 Economics questions |
+
+### 📋 GENERAL
+
+| Document | Purpose |
+|----------|---------|
+| [action-plan-timeline.md](./action-plan-timeline.md) | Week-by-week execution plan with checklists |
+| [mentorship-organizations.md](./mentorship-organizations.md) | Research & mentorship organizations |
 
 ---
 
@@ -26,28 +42,40 @@ This folder contains comprehensive research and planning materials for the John 
 | Detail | Information |
 |--------|-------------|
 | **Competition** | John Locke Institute Essay Competition 2026 |
-| **Category** | Economics |
+| **Categories** | Economics, Politics, Philosophy, History, Psychology, Law, Theology |
 | **Submissions Open** | April 1, 2026 |
 | **Deadline** | May 31, 2026 |
-| **Word Limit** | ~2,000 words (check official guidelines) |
+| **Word Limit** | ~2,000 words |
 | **Secondary Competition** | May 10, 2026 |
 
 ---
 
-## 🏆 Official 2026 Economics Questions
+## 🏛️ Official 2026 Politics Questions
 
-1. **Q1: Should we fear a cashless society?** - Privacy, financial inclusion, monetary freedom
-2. **Q2: Technology now allows personalised pricing. If this came to be widely used, what effects should we expect?** - Price discrimination, efficiency, fairness
-3. **Q3: Did Jeff Bezos get rich at the expense of his customers, his employees, neither or both?** - Wealth creation, labor, consumer surplus
+1. **Q1: Is the right to self-determination absolute?** ⭐ RECOMMENDED
+   - International law, political philosophy, case studies (Kosovo, Catalonia, Taiwan)
+   - Key thinkers: Allen Buchanan, Margaret Moore, Antonio Cassese
 
-Each question includes:
-- Question analysis and key terms to define
-- Core debate (both sides)
-- 3 winning thesis options
-- Recommended essay structure
-- Key data points with sources
-- Original angles to differentiate
-- Sample opening paragraph
+2. **Q2: Should states have the right to control their borders?**
+   - Sovereignty vs. human rights, cosmopolitanism vs. communitarianism
+   - Key thinkers: Joseph Carens, David Miller, Michael Walzer
+
+3. **Q3: Is nationalism compatible with liberalism?**
+   - Civic vs. ethnic nationalism, liberal nationalism
+   - Key thinkers: Yael Tamir, David Miller, Ernest Gellner
+
+---
+
+## 💰 Official 2026 Economics Questions
+
+1. **Q1: Should we fear a cashless society?**
+   - Privacy, financial inclusion, monetary freedom
+
+2. **Q2: Technology now allows personalised pricing. What effects should we expect?**
+   - Price discrimination, efficiency, fairness
+
+3. **Q3: Did Jeff Bezos get rich at the expense of his customers, his employees, neither or both?**
+   - Wealth creation, labor economics, consumer surplus
 
 ---
 
@@ -90,31 +118,25 @@ May 31       │ 🏁 JOHN LOCKE DEADLINE
 
 ## 📖 Essential Reading List
 
-### Must-Read Books
+### Politics - Self-Determination
+- **Allen Buchanan** - "Justice, Legitimacy, and Self-Determination" (2004)
+- **Margaret Moore** - "A Political Theory of Territory" (2015)
+- **Antonio Cassese** - "Self-Determination of Peoples" (1995)
+- **David Miller** - "On Nationality" (1995)
+
+### Politics - Borders & Migration
+- **Joseph Carens** - "The Ethics of Immigration"
+- **David Miller** - "Strangers in Our Midst"
+- **Michael Walzer** - "Spheres of Justice"
+
+### Politics - Nationalism & Liberalism
+- **Yael Tamir** - "Liberal Nationalism"
+- **Ernest Gellner** - "Nations and Nationalism"
+
+### Economics
 - "Good Economics for Hard Times" - Banerjee & Duflo
 - "Thinking, Fast and Slow" - Daniel Kahneman
 - "Prosperity Without Growth" - Tim Jackson
-
-### Key Academic Papers
-- Acemoglu & Restrepo (2019) - "Automation and New Tasks"
-- Autor, Dorn, Hanson - "The China Shock"
-- Arrow (1963) - "Uncertainty and the Welfare Economics of Medical Care"
-
-### Data Sources
-- [FRED Economic Data](https://fred.stlouisfed.org/)
-- [Our World in Data](https://ourworldindata.org/)
-- [World Bank Open Data](https://data.worldbank.org/)
-
----
-
-## ✅ Immediate Next Steps
-
-1. **Today:** Read through all documentation in this folder
-2. **This Week:** 
-   - Contact school about mentorship support
-   - Start reading "Good Economics for Hard Times"
-   - Identify top 2-3 topics of personal interest
-3. **By April 1:** Be ready to analyze official questions when released
 
 ---
 
@@ -122,11 +144,50 @@ May 31       │ 🏁 JOHN LOCKE DEADLINE
 
 ```
 research/john-locke-essay/
-├── README.md                      # This file - overview and index
-├── economics-research.md          # Competition overview and themes
-├── economics-deep-dive-topics.md  # Detailed topic analysis
-└── action-plan-timeline.md        # Execution plan with checklists
+├── README.md                           # This file - overview and index
+│
+├── POLITICS
+│   ├── politics-official-2026-questions.md  # All 3 Politics questions
+│   ├── q1-self-determination-research.md    # Deep dive on Q1
+│   ├── politics-deep-dive-topics.md         # 5 Politics topics
+│   └── politics-past-questions-analysis.md  # Historical patterns
+│
+├── ECONOMICS
+│   ├── economics-official-2026-questions.md # All 3 Economics questions
+│   ├── q1-cashless-society-research.md      # Deep dive on Q1
+│   ├── economics-research.md                # Overview
+│   ├── economics-deep-dive-topics.md        # 5 Economics topics
+│   ├── economics-deep-dive-2026.md          # 2026 predictions
+│   └── past-questions-analysis.md           # Historical patterns
+│
+└── GENERAL
+    ├── action-plan-timeline.md              # Execution plan
+    └── mentorship-organizations.md          # Support resources
 ```
+
+---
+
+## 🎯 Recommended Focus: Politics Q1 - Self-Determination
+
+**Why this question?**
+- Highest originality potential among 2026 Politics questions
+- Rich case study material (Kosovo, Catalonia, Scotland, Crimea, Taiwan)
+- Clear philosophical frameworks (Buchanan vs. Moore)
+- Timely and relevant (ongoing conflicts)
+
+**Winning Thesis Direction:**
+> "Self-determination is a fundamental right but not an absolute one. It must be balanced against territorial integrity, minority rights, and procedural legitimacy. The right is strongest when exercised by oppressed peoples through democratic processes, and weakest when manufactured by external powers or used to fragment functioning democracies."
+
+---
+
+## ✅ Immediate Next Steps
+
+1. **Today:** Read `politics-official-2026-questions.md` and `q1-self-determination-research.md`
+2. **This Week:** 
+   - Read Allen Buchanan's "Justice, Legitimacy, and Self-Determination" (key chapters)
+   - Research Kosovo and Catalonia cases in depth
+   - Develop your thesis position
+3. **By April 1:** Have outline ready for when official questions are confirmed
 
 ---
 
@@ -134,19 +195,12 @@ research/john-locke-essay/
 
 1. **Start with the question, not the answer** - Let the official question guide your thesis
 2. **Argue against yourself** - The best essays anticipate and address objections
-3. **Use specific examples** - Abstract arguments need concrete illustrations
-4. **Read your essay aloud** - Catches awkward phrasing and flow issues
-5. **Get feedback early** - Don't wait until the final draft
-
----
-
-## 🆘 Need Help?
-
-- **School Resources:** Contact economics teacher or counselor
-- **External Mentorship:** Consider specialized research publication organizations
-- **Online Resources:** John Locke Institute website, past winning essays
+3. **Use specific cases** - Kosovo, Catalonia, Scotland, Crimea, Taiwan
+4. **Engage with key thinkers** - Buchanan, Moore, Cassese
+5. **Read your essay aloud** - Catches awkward phrasing and flow issues
+6. **Get feedback early** - Don't wait until the final draft
 
 ---
 
 *Created: March 13, 2026*
-*Last Updated: March 13, 2026*
+*Last Updated: March 20, 2026*
